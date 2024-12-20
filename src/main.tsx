@@ -1,13 +1,11 @@
+import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import { Provider } from "./components/ui/provider";
 import { Backdrop } from "./Backdrop.tsx";
 
 import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { InstantSearch } from "react-instantsearch";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
@@ -25,19 +23,14 @@ const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_API_KEY
 );
 
-const queryClient = new QueryClient();
-
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
+    <Backdrop>
       <Provider>
-        <Backdrop>
-          <InstantSearch searchClient={searchClient} indexName="routes_index">
-            <RouterProvider router={router} />
-          </InstantSearch>
-        </Backdrop>
+        <InstantSearch searchClient={searchClient} indexName="routes_index">
+          <RouterProvider router={router} />
+        </InstantSearch>
       </Provider>
-    </QueryClientProvider>
+    </Backdrop>
   </StrictMode>
 );

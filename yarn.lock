@@ -1788,58 +1788,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/eslint-plugin-query@npm:^5.62.1":
-  version: 5.62.1
-  resolution: "@tanstack/eslint-plugin-query@npm:5.62.1"
-  dependencies:
-    "@typescript-eslint/utils": "npm:^8.15.0"
-  peerDependencies:
-    eslint: ^8.57.0 || ^9.0.0
-  checksum: 10/a4e86171898f2372f76eb4312f69f243eeaa213dfde1a6c5f3944b4fe6ec936f2063c2417353b7da719715cdd31135b91711e5b9786daa9c74206bd7b64d937f
-  languageName: node
-  linkType: hard
-
 "@tanstack/history@npm:1.90.0":
   version: 1.90.0
   resolution: "@tanstack/history@npm:1.90.0"
   checksum: 10/5bbbcab8b30f5254dfe87739723dc9631ca69e1b42b31a546809437ff88dfec637ebc665b934c925b67bafa521836817861e98b08b59529adc3b11e44bee68e1
-  languageName: node
-  linkType: hard
-
-"@tanstack/query-core@npm:5.62.8":
-  version: 5.62.8
-  resolution: "@tanstack/query-core@npm:5.62.8"
-  checksum: 10/6ce74cc1fba12f219db45423602603a129fdf30d29418f9b5950525725119b8dc136c504ee90fb8aa9e5c10b1f9f4eb3ef0b07fe4b71b194c97c32b8d738d09b
-  languageName: node
-  linkType: hard
-
-"@tanstack/query-devtools@npm:5.61.4":
-  version: 5.61.4
-  resolution: "@tanstack/query-devtools@npm:5.61.4"
-  checksum: 10/5267732b37781865c24241b9ffdd4d84d04d4e193f29fa9f0220967dcc738a3be25edcd45784fbeed340012200742a18bae25ce34f13190cc8dcb65bbee076ea
-  languageName: node
-  linkType: hard
-
-"@tanstack/react-query-devtools@npm:^5.62.8":
-  version: 5.62.8
-  resolution: "@tanstack/react-query-devtools@npm:5.62.8"
-  dependencies:
-    "@tanstack/query-devtools": "npm:5.61.4"
-  peerDependencies:
-    "@tanstack/react-query": ^5.62.8
-    react: ^18 || ^19
-  checksum: 10/6be35af231f6b08f40c1563a167f488dd855dfd5d706339598a9e304e291b5dc60ef1610523bbfb97f4606a9bccbbc8f35fa10cd9c716e5d5fe80e9d5a8c4e00
-  languageName: node
-  linkType: hard
-
-"@tanstack/react-query@npm:^5.62.8":
-  version: 5.62.8
-  resolution: "@tanstack/react-query@npm:5.62.8"
-  dependencies:
-    "@tanstack/query-core": "npm:5.62.8"
-  peerDependencies:
-    react: ^18 || ^19
-  checksum: 10/26d642aea205a75a624abc55daa11e5336eddad921a0dd17a6ffc1780b8366feb6cacf25d81cee14c48f2dcc9e4ba46a480d2fe68c7e1b68ff0d83e3ad363fa5
   languageName: node
   linkType: hard
 
@@ -2188,7 +2140,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.18.1, @typescript-eslint/utils@npm:^8.15.0":
+"@typescript-eslint/utils@npm:8.18.1":
   version: 8.18.1
   resolution: "@typescript-eslint/utils@npm:8.18.1"
   dependencies:
@@ -5112,9 +5064,6 @@ __metadata:
     "@chakra-ui/react": "npm:^3.2.3"
     "@emotion/react": "npm:^11.14.0"
     "@eslint/js": "npm:^9.17.0"
-    "@tanstack/eslint-plugin-query": "npm:^5.62.1"
-    "@tanstack/react-query": "npm:^5.62.8"
-    "@tanstack/react-query-devtools": "npm:^5.62.8"
     "@tanstack/react-router": "npm:^1.91.3"
     "@tanstack/router-devtools": "npm:^1.91.3"
     "@tanstack/router-plugin": "npm:^1.91.1"
