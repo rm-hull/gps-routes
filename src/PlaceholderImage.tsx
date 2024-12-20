@@ -1,14 +1,18 @@
 import { useState } from "react";
 import { Box, Image, Spinner, Center } from "@chakra-ui/react";
 
-type PlaceholderImageProps = { 
-    src: string; 
-    alt: string;
-    height?: number;
-    fit?: number;
-}
+type PlaceholderImageProps = {
+  src: string;
+  alt: string;
+  height?: number;
+};
 
-const PlaceholderImage = ({ src, alt, height, fit, ...rest }: PlaceholderImageProps) => {
+const PlaceholderImage = ({
+  src,
+  alt,
+  height,
+  ...rest
+}: PlaceholderImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
@@ -24,7 +28,7 @@ const PlaceholderImage = ({ src, alt, height, fit, ...rest }: PlaceholderImagePr
         onLoad={() => setIsLoaded(true)}
         w="full"
         h="full"
-        objectFit={fit}
+        objectFit="cover"
         display={isLoaded ? "block" : "none"}
         // transition="opacity 0.1s ease-in-out"
         // opacity={isLoaded ? 1 : 0}
