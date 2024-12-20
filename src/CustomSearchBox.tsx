@@ -31,8 +31,7 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
         border={0}
         outline={0}
         borderRadius={20}
-        color="white"
-        // color="var(--chakra-colors-text)"
+        color="var(--chakra-colors-fg)"
         backgroundColor="color-mix(in srgb, var(--chakra-colors-bg-panel) 50%, transparent)"
         value={inputValue}
         onChange={(event) => {
