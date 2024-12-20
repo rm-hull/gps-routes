@@ -4425,6 +4425,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gps-routes@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "gps-routes@workspace:."
+  dependencies:
+    "@chakra-ui/cli": "npm:^3.2.3"
+    "@chakra-ui/react": "npm:^3.2.3"
+    "@emotion/react": "npm:^11.14.0"
+    "@eslint/js": "npm:^9.17.0"
+    "@tanstack/react-router": "npm:^1.91.3"
+    "@tanstack/router-devtools": "npm:^1.91.3"
+    "@tanstack/router-plugin": "npm:^1.91.1"
+    "@types/node": "npm:^22.10.2"
+    "@types/react": "npm:^18.3.16"
+    "@types/react-dom": "npm:^18.3.5"
+    "@vitejs/plugin-react": "npm:^4.3.4"
+    "@vitest/coverage-v8": "npm:2.1.8"
+    algoliasearch: "npm:^5.18.0"
+    eslint: "npm:^9.17.0"
+    eslint-plugin-react-hooks: "npm:^5.1.0"
+    eslint-plugin-react-refresh: "npm:^0.4.16"
+    globals: "npm:^15.14.0"
+    next-themes: "npm:^0.4.4"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    react-icons: "npm:^5.4.0"
+    react-instantsearch: "npm:^7.13.9"
+    ts-md5: "npm:^1.3.1"
+    typescript: "npm:~5.7.2"
+    typescript-eslint: "npm:^8.18.1"
+    vite: "npm:^6.0.5"
+    vitest: "npm:^2.1.8"
+  languageName: unknown
+  linkType: soft
+
 "graceful-fs@npm:^4.2.6":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
@@ -5055,40 +5089,6 @@ __metadata:
   checksum: 10/aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d
   languageName: node
   linkType: hard
-
-"multimeter@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "multimeter@workspace:."
-  dependencies:
-    "@chakra-ui/cli": "npm:^3.2.3"
-    "@chakra-ui/react": "npm:^3.2.3"
-    "@emotion/react": "npm:^11.14.0"
-    "@eslint/js": "npm:^9.17.0"
-    "@tanstack/react-router": "npm:^1.91.3"
-    "@tanstack/router-devtools": "npm:^1.91.3"
-    "@tanstack/router-plugin": "npm:^1.91.1"
-    "@types/node": "npm:^22.10.2"
-    "@types/react": "npm:^18.3.16"
-    "@types/react-dom": "npm:^18.3.5"
-    "@vitejs/plugin-react": "npm:^4.3.4"
-    "@vitest/coverage-v8": "npm:2.1.8"
-    algoliasearch: "npm:^5.18.0"
-    eslint: "npm:^9.17.0"
-    eslint-plugin-react-hooks: "npm:^5.1.0"
-    eslint-plugin-react-refresh: "npm:^0.4.16"
-    globals: "npm:^15.14.0"
-    next-themes: "npm:^0.4.4"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
-    react-icons: "npm:^5.4.0"
-    react-instantsearch: "npm:^7.13.9"
-    ts-md5: "npm:^1.3.1"
-    typescript: "npm:~5.7.2"
-    typescript-eslint: "npm:^8.18.1"
-    vite: "npm:^6.0.5"
-    vitest: "npm:^2.1.8"
-  languageName: unknown
-  linkType: soft
 
 "mz@npm:^2.7.0":
   version: 2.7.0
