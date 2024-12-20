@@ -1,11 +1,11 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@chakra-ui/react";
 import { Hits, Pagination } from "react-instantsearch";
 import { SearchResult } from "../../SearchResult";
 import { CustomSearchBox } from "../../CustomSearchBox";
 import { GlassPane } from "../../GlassPane";
 
-export const Route = createLazyFileRoute("/gps-routes/")({
+export const Route = createFileRoute("/gps-routes/")({
   component: Index,
 });
 
