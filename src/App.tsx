@@ -8,6 +8,8 @@ function App() {
     <>
       <Container margin={20} centerContent>
         <CustomSearchBox />
+        <Pagination />
+
       </Container>
       <Card.Root
         flex={1}
@@ -21,7 +23,6 @@ function App() {
       >
         <Card.Body>
           <Hits hitComponent={SearchResult} />
-          <Pagination />
         </Card.Body>
 
       </Card.Root>
