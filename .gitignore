@@ -114,3 +114,4 @@ dist
 !.yarn/versions
 
 tmp/
+src/routeTree.gen.ts
