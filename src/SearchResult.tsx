@@ -1,5 +1,6 @@
 import { Hit } from "algoliasearch/lite";
 import { Card, Image, Badge } from "@chakra-ui/react";
+import PlaceholderImage from "./PlaceholderImage";
 
 type Nearby = {
   objectID: string;
