@@ -1,4 +1,4 @@
-import { Box, Container, Card } from "@chakra-ui/react";
+import { Container, Card } from "@chakra-ui/react";
 import { Hits, Pagination } from "react-instantsearch";
 import { SearchResult } from "./SearchResult";
 import { CustomSearchBox } from "./CustomSearchBox";

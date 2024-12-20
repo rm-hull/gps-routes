@@ -1,5 +1,5 @@
 import { Hit } from "algoliasearch/lite";
-import { Card, Image } from "@chakra-ui/react";
+import { Card, Image, Badge } from "@chakra-ui/react";
 
 type Nearby = {
   objectID: string;
@@ -47,6 +47,7 @@ export function SearchResult({ hit }: SearchResulProps) {
         height={60}
         fit="cover"
       />
+      <Badge colorPalette="blue" position="absolute" top={1} right={1}>{hit.distance_km} km</Badge>
       <Card.Body padding={2}>
         <Card.Title truncate>{hit.title}</Card.Title>
         <Card.Description lineClamp={3}>{hit.description}</Card.Description>
