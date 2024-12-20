@@ -1,27 +1,13 @@
-import { SearchResults } from "./SearchResults";
-import { Box, Input, Container } from "@chakra-ui/react";
-import { InputGroup } from "./components/ui/input-group";
-import { LuSearch } from "react-icons/lu";
+import { Box, Container } from "@chakra-ui/react";
+import { Hits, Pagination } from "react-instantsearch";
+import { SearchResult } from "./SearchResult";
+import { CustomSearchBox } from "./CustomSearchBox";
 
 function App() {
   return (
     <>
       <Container margin={20} centerContent>
-        <InputGroup
-          flex="1"
-          startElement={<LuSearch />}
-          backdropFilter="blur(5px)"
-        >
-          <Input
-            size="lg"
-            width={600}
-            placeholder="Search"
-            border={0}
-            outline={0}
-            borderRadius={20}
-            backgroundColor="rgba(255, 255, 255, 0.6)"
-          />
-        </InputGroup>
+        <CustomSearchBox />
       </Container>
       <Box
         flex={1}
@@ -35,7 +21,9 @@ function App() {
         boxShadow="0 4px 10px rgba(0, 0, 0, 0.1)"
       >
         <Box>
-          <SearchResults />
+          <Hits hitComponent={SearchResult} />
+          <Pagination />
+        
         </Box>
       </Box>
     </>
