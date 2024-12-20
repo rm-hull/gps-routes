@@ -19,7 +19,12 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
   };
 
   return (
-    <InputGroup flex="1" startElement={<LuSearch />} backdropFilter="blur(5px)">
+    <InputGroup
+      flex="1"
+      startElement={<LuSearch />}
+      backdropFilter="blur(5px)"
+      borderRadius={20}
+    >
       <Input
         size="lg"
         width="xl"
@@ -31,7 +36,7 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
         autoFocus
         border={0}
         outline={0}
-        borderRadius={20}
+        borderRadius="inherit"
         color="var(--chakra-colors-fg)"
         backgroundColor="color-mix(in srgb, var(--chakra-colors-bg-panel) 50%, transparent)"
         value={inputValue}

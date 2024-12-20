@@ -25,12 +25,12 @@ const searchClient = algoliasearch(
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Backdrop>
-      <Provider>
+    <Provider>
+      <Backdrop>
         <InstantSearch searchClient={searchClient} indexName="routes_index">
           <RouterProvider router={router} />
         </InstantSearch>
-      </Provider>
-    </Backdrop>
+      </Backdrop>
+    </Provider>
   </StrictMode>
 );
