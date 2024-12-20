@@ -1,4 +1,4 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Container, Card } from "@chakra-ui/react";
 import { Hits, Pagination } from "react-instantsearch";
 import { SearchResult } from "./SearchResult";
 import { CustomSearchBox } from "./CustomSearchBox";
@@ -9,23 +9,22 @@ function App() {
       <Container margin={20} centerContent>
         <CustomSearchBox />
       </Container>
-      <Box
+      <Card.Root
         flex={1}
         width="calc(100% - 40px)"
         margin="20px auto"
-        padding={5}
-        background="rgba(255, 255, 255, 0.4)"
+        background="color-mix(in srgb, var(--chakra-colors-bg-panel) 30%, transparent)"
         backdropFilter="blur(5px)"
         borderRadius={10}
+        border={0}
         overflowY="auto"
-        boxShadow="0 4px 10px rgba(0, 0, 0, 0.1)"
       >
-        <Box>
+        <Card.Body>
           <Hits hitComponent={SearchResult} />
           <Pagination />
-        
-        </Box>
-      </Box>
+        </Card.Body>
+
+      </Card.Root>
     </>
   );
 }

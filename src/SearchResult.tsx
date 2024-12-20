@@ -39,11 +39,6 @@ type SearchResulProps = {
 };
 
 export function SearchResult({ hit }: SearchResulProps) {
-  console.log({ hit });
-  if (!hit) {
-    return undefined;
-  }
-
   return (
     <Card.Root width="xs" overflow="hidden" border={0} shadow="md">
       <Image

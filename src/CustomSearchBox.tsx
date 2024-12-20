@@ -21,7 +21,7 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
     <InputGroup flex="1" startElement={<LuSearch />} backdropFilter="blur(5px)">
       <Input
         size="lg"
-        width={600}
+        width="xl"
         placeholder="Search"
         autoComplete="off"
         autoCorrect="off"
@@ -31,7 +31,9 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
         border={0}
         outline={0}
         borderRadius={20}
-        backgroundColor="rgba(255, 255, 255, 0.6)"
+        color="white"
+        // color="var(--chakra-colors-text)"
+        backgroundColor="color-mix(in srgb, var(--chakra-colors-bg-panel) 50%, transparent)"
         value={inputValue}
         onChange={(event) => {
           setQuery(event.currentTarget.value);
