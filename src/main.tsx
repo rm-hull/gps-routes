@@ -8,20 +8,27 @@ import { Backdrop } from "./Backdrop.tsx";
 
 import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { InstantSearch } from "react-instantsearch";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const searchClient = algoliasearch(
   import.meta.env.VITE_ALGOLIA_APP_ID,
   import.meta.env.VITE_ALGOLIA_API_KEY
 );
 
+const queryClient = new QueryClient();
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Provider>
-      <Backdrop>
-        <InstantSearch searchClient={searchClient} indexName="routes_index">
-          <App />
-        </InstantSearch>
-      </Backdrop>
-    </Provider>
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
+      <Provider>
+        <Backdrop>
+          <InstantSearch searchClient={searchClient} indexName="routes_index">
+            <App />
+          </InstantSearch>
+        </Backdrop>
+      </Provider>
+    </QueryClientProvider>
   </StrictMode>
 );
