@@ -5133,6 +5133,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     react-icons: "npm:^5.4.0"
     react-instantsearch: "npm:^7.13.9"
+    ts-md5: "npm:^1.3.1"
     typescript: "npm:~5.7.2"
     typescript-eslint: "npm:^8.18.1"
     vite: "npm:^6.0.4"
@@ -6156,6 +6157,13 @@ __metadata:
   version: 0.1.13
   resolution: "ts-interface-checker@npm:0.1.13"
   checksum: 10/9f7346b9e25bade7a1050c001ec5a4f7023909c0e1644c5a96ae20703a131627f081479e6622a4ecee2177283d0069e651e507bedadd3904fc4010ab28ffce00
+  languageName: node
+  linkType: hard
+
+"ts-md5@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "ts-md5@npm:1.3.1"
+  checksum: 10/e9f074d287c3fbbad8dd2d17e5179f99f514f268d9a5e4ea0697f0c8a9b94d54ce299bcaef41e8b0ecdec3680667b020c98b347a96ec61ec8d2db961d3b3883e
   languageName: node
   linkType: hard
 
