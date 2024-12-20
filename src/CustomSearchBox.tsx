@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useSearchBox, UseSearchBoxProps } from "react-instantsearch";
 import { Input } from "@chakra-ui/react";
 import { InputGroup } from "./components/ui/input-group";
@@ -12,7 +12,8 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
 
   // const isSearchStalled = status === "stalled";
 
-  const setQuery = (newQuery: string) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const newQuery = event.currentTarget.value;
     setInputValue(newQuery);
     refine(newQuery);
   };
@@ -34,9 +35,7 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
         color="var(--chakra-colors-fg)"
         backgroundColor="color-mix(in srgb, var(--chakra-colors-bg-panel) 50%, transparent)"
         value={inputValue}
-        onChange={(event) => {
-          setQuery(event.currentTarget.value);
-        }}
+        onChange={handleChange}
       />
     </InputGroup>
   );
