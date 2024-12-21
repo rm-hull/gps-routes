@@ -4,10 +4,10 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "./components/ui/provider";
 import { Backdrop } from "./Backdrop.tsx";
 
-import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { InstantSearch } from "react-instantsearch";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
+import { indexName, searchClient } from "./services/algolia.ts";
 
 const router = createRouter({ routeTree });
 
@@ -18,16 +18,17 @@ declare module "@tanstack/react-router" {
   }
 }
 
-const searchClient = algoliasearch(
-  import.meta.env.VITE_ALGOLIA_APP_ID,
-  import.meta.env.VITE_ALGOLIA_API_KEY
-);
-
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider>
       <Backdrop>
-        <InstantSearch searchClient={searchClient} indexName="routes_index">
+        <InstantSearch
+          searchClient={searchClient}
+          indexName={indexName}
+          future={{
+            preserveSharedStateOnUnmount: true,
+          }}
+        >
           <RouterProvider router={router} />
         </InstantSearch>
       </Backdrop>

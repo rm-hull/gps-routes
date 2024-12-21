@@ -1,12 +1,12 @@
 import { Hit } from "algoliasearch/lite";
 
-type Nearby = {
+export type Nearby = {
   objectID: string;
   ref: string;
   description: string;
 };
 
-type Image = {
+export type Image = {
   src: string;
   title: string;
   caption: string;
