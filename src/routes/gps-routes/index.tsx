@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Container } from "@chakra-ui/react";
 import { Hits, Pagination } from "react-instantsearch";
 import { SearchResult } from "../../SearchResult";
-import { CustomSearchBox } from "../../CustomSearchBox";
 import { GlassPane } from "../../GlassPane";
+import { Container } from "@chakra-ui/react";
 
 export const Route = createFileRoute("/gps-routes/")({
   component: Index,
@@ -11,15 +10,11 @@ export const Route = createFileRoute("/gps-routes/")({
 
 function Index() {
   return (
-    <>
-      <Container margin={20} centerContent>
-        <CustomSearchBox />
+    <GlassPane gap={2}>
+      <Hits hitComponent={SearchResult} />
+      <Container centerContent>
         <Pagination />
       </Container>
-
-      <GlassPane>
-        <Hits hitComponent={SearchResult} />
-      </GlassPane>
-    </>
+    </GlassPane>
   );
 }

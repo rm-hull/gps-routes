@@ -1,7 +1,16 @@
 import { Nearby, Result } from "../../types";
 import { GlassPane } from "../../GlassPane";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
-import { Box, Heading, HStack, Link, List, Tabs, Text } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Heading,
+  HStack,
+  Link,
+  List,
+  Tabs,
+  Text,
+} from "@chakra-ui/react";
 import { Md5 } from "ts-md5";
 import { indexName, searchClient } from "../../services/algolia";
 import { Route as refRoute } from "./$ref.tsx";
@@ -18,30 +27,61 @@ function DetailPage() {
   return (
     <GlassPane>
       <HStack alignItems="start" gap={4}>
-        <Box flex={2}>
+        <Box flex={2} spaceY={2}>
           <Heading size="lg">{result.title}</Heading>
-          <Text>{result.description}</Text>
 
-          <NearbySection nearby={result.nearby} />
+          <Text>{result.description}</Text>
+          <HStack spaceX={1}>
+            {result.district && (
+              <Badge colorPalette="blue">{result.district}</Badge>
+            )}
+            {result.county && (
+              <Badge colorPalette="blue">{result.county}</Badge>
+            )}
+            {result.country && (
+              <Badge colorPalette="blue">{result.country}</Badge>
+            )}
+          </HStack>
         </Box>
-        <Tabs.Root flex={3} defaultValue="images">
-          <Tabs.List>
-            <Tabs.Trigger value="map">Map</Tabs.Trigger>
-            <Tabs.Trigger value="images">Images</Tabs.Trigger>
-            <Tabs.Trigger value="video">Video</Tabs.Trigger>
-            <Tabs.Trigger value="raw">Raw JSON</Tabs.Trigger>
-          </Tabs.List>
-          <Tabs.Content value="map">Map - TODO</Tabs.Content>
-          <Tabs.Content value="images">
-            <Carousel images={result.images} />
-          </Tabs.Content>
-          <Tabs.Content value="video">Video - TODO</Tabs.Content>
-          <Tabs.Content value="raw">
-            <Box overflowX="auto" maxW={800}>
-              <pre>{JSON.stringify(result, null, 2)}</pre>
-            </Box>
-          </Tabs.Content>
-        </Tabs.Root>
+        <Box width="60vw" flex={3}>
+          <Tabs.Root defaultValue="images">
+            <Tabs.List>
+              <Tabs.Trigger value="route">Route</Tabs.Trigger>
+              {result.nearby && (
+                <Tabs.Trigger value="nearby">Nearby</Tabs.Trigger>
+              )}
+              {result.images && (
+                <Tabs.Trigger value="images">Images</Tabs.Trigger>
+              )}
+              {result.video_url && (
+                <Tabs.Trigger value="video">Video</Tabs.Trigger>
+              )}
+              <Tabs.Trigger value="raw">Raw JSON</Tabs.Trigger>
+            </Tabs.List>
+            <Tabs.Content value="route">Rote - TODO</Tabs.Content>
+            <Tabs.Content value="nearby">
+              <NearbySection nearby={result.nearby} />
+            </Tabs.Content>
+            <Tabs.Content value="images">
+              <Carousel images={result.images} />
+            </Tabs.Content>
+            <Tabs.Content value="video">
+              <iframe
+                loading="lazy"
+                id="video"
+                width={800}
+                height={600}
+                src={result.video_url}
+                allow="fullscreen"
+              ></iframe>
+            </Tabs.Content>
+            <Tabs.Content value="raw">
+              <Box width="50vw" overflowX="auto">
+                <pre>{JSON.stringify(result, null, 2)}</pre>
+              </Box>
+            </Tabs.Content>
+          </Tabs.Root>
+        </Box>
       </HStack>
     </GlassPane>
   );
@@ -61,20 +101,17 @@ function NearbySection({ nearby }: NearbySectionProps) {
   }
 
   return (
-    <>
-      <Heading size="md">Nearby</Heading>
-      <List.Root>
-        {nearby.sort(byDescription).map(({ ref, description }) => (
-          <List.Item key={ref}>
-            <Link asChild>
-              <RouterLink to={refRoute.to} params={{ ref }}>
-                {description}
-              </RouterLink>
-            </Link>
-          </List.Item>
-        ))}
-      </List.Root>
-    </>
+    <List.Root>
+      {nearby.sort(byDescription).map(({ ref, description }) => (
+        <List.Item key={ref}>
+          <Link asChild>
+            <RouterLink to={refRoute.to} params={{ ref }}>
+              {description}
+            </RouterLink>
+          </Link>
+        </List.Item>
+      ))}
+    </List.Root>
   );
 }
 

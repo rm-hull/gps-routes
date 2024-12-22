@@ -3,10 +3,12 @@ import { Card } from "@chakra-ui/react";
 
 type GlassPaneProps = {
   opacity?: string;
+  gap?: number;
 };
 
 export function GlassPane({
   children,
+  gap,
   opacity = "30%",
 }: PropsWithChildren<GlassPaneProps>) {
   return (
@@ -20,7 +22,7 @@ export function GlassPane({
       border={0}
       overflowY="auto"
     >
-      <Card.Body>{children}</Card.Body>
+      <Card.Body gap={gap}>{children}</Card.Body>
     </Card.Root>
   );
 }

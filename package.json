@@ -29,6 +29,7 @@
   "devDependencies": {
     "@chakra-ui/cli": "^3.2.3",
     "@eslint/js": "^9.17.0",
+    "@svgr/webpack": "^8.1.0",
     "@tanstack/router-devtools": "^1.91.3",
     "@tanstack/router-plugin": "^1.91.1",
     "@types/node": "^22.10.2",
@@ -45,6 +46,7 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.18.1",
     "vite": "^6.0.5",
+    "vite-plugin-svgr": "^4.3.0",
     "vitest": "^2.1.8"
   }
 }

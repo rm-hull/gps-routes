@@ -14,7 +14,7 @@ export function Carousel({ images = [] }: CarouselProps) {
   }
 
   return (
-    <Box maxW="750px" marginX={4}>
+    <Box width="50vw" marginX={4}>
       {/* @ts-expect-error: Slide types dont quite line up properly */}
       <Slider dots infinite speed={750} slidesToShow={1} slidesToScroll={1}>
         {images.map((img) => (
@@ -34,7 +34,7 @@ export function Carousel({ images = [] }: CarouselProps) {
               top={1}
               marginLeft={1}
             >
-              <Text maxW={500} truncate>
+              <Text maxW={300} truncate>
                 {img.title}
               </Text>
             </Badge>

@@ -1,3 +1,4 @@
+import { Navbar } from "../Navbar";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import React, { Suspense } from "react";
 
@@ -14,6 +15,7 @@ const TanStackRouterDevtools =
 export const Route = createRootRoute({
   component: () => (
     <>
+      <Navbar />
       <Outlet />
       <Suspense>
         <TanStackRouterDevtools initialIsOpen={false} />
