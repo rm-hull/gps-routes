@@ -42,12 +42,12 @@ export function MapView({ center }: MapViewProps) {
             maxNativeZoom={15}
           />
         </LayersControl.BaseLayer>
-        <LayersControl.BaseLayer name="Stadia Alidade Smooth Dark">
+        {/* <LayersControl.BaseLayer name="Stadia Alidade Smooth Dark">
           <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" />
         </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="Stadia Alidade Satellite">
           <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.jpg" />
-        </LayersControl.BaseLayer>
+        </LayersControl.BaseLayer> */}
         <LayersControl.BaseLayer name="MTB Map">
           <TileLayer url="http://tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png" />
         </LayersControl.BaseLayer>
