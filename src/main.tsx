@@ -2,7 +2,7 @@ import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "./components/ui/provider";
-import { Backdrop } from "./Backdrop.tsx";
+import { Backdrop } from "./components/Backdrop.tsx";
 
 import { InstantSearch } from "react-instantsearch";
 import { RouterProvider, createRouter } from "@tanstack/react-router";

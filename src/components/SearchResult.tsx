@@ -1,8 +1,8 @@
 import { Card, Image, Badge, Link } from "@chakra-ui/react";
 // import PlaceholderImage from "./PlaceholderImage";
 import { Link as RouterLink } from "@tanstack/react-router";
-import { Route as refRoute } from "./routes/gps-routes/$ref.tsx";
-import { Result } from "./types.ts";
+import { Route as refRoute } from "../routes/gps-routes/$ref.tsx";
+import { Result } from "../types.ts";
 
 type SearchResulProps = {
   hit: Result;

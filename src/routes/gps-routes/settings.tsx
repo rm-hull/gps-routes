@@ -1,5 +1,5 @@
 import { VStack, Heading, Text } from "@chakra-ui/react";
-import { GlassPane } from "../../GlassPane";
+import { GlassPane } from "../../components/GlassPane";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/gps-routes/settings")({

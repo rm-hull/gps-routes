@@ -1,5 +1,5 @@
 import { Box, Badge, Image, Text } from "@chakra-ui/react";
-import { type Image as ImageType } from "./types";
+import { type Image as ImageType } from "../types";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";

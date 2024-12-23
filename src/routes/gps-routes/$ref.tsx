@@ -1,5 +1,4 @@
 import { Nearby, Result } from "../../types";
-import { GlassPane } from "../../GlassPane";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import {
   Badge,
@@ -14,7 +13,9 @@ import {
 import { Md5 } from "ts-md5";
 import { indexName, searchClient } from "../../services/algolia";
 import { Route as refRoute } from "./$ref.tsx";
-import { Carousel } from "../../Carousel.tsx";
+import { GlassPane } from "../../components/GlassPane.tsx";
+import { Carousel } from "../../components/Carousel.tsx";
+import { MapView } from "../../components/map/MapView.tsx";
 
 export const Route = createFileRoute("/gps-routes/$ref")({
   loader: async ({ params }) => fetchResult(params.ref),
@@ -44,7 +45,7 @@ function DetailPage() {
           </HStack>
         </Box>
         <Box width="60vw" flex={3}>
-          <Tabs.Root defaultValue="images">
+          <Tabs.Root defaultValue="route">
             <Tabs.List>
               <Tabs.Trigger value="route">Route</Tabs.Trigger>
               {result.nearby && (
@@ -58,7 +59,9 @@ function DetailPage() {
               )}
               <Tabs.Trigger value="raw">Raw JSON</Tabs.Trigger>
             </Tabs.List>
-            <Tabs.Content value="route">Rote - TODO</Tabs.Content>
+            <Tabs.Content value="route">
+              <MapView center={result._geoloc} />
+            </Tabs.Content>
             <Tabs.Content value="nearby">
               <NearbySection nearby={result.nearby} />
             </Tabs.Content>

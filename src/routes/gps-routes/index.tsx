@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hits, Pagination } from "react-instantsearch";
-import { SearchResult } from "../../SearchResult";
-import { GlassPane } from "../../GlassPane";
+import { SearchResult } from "../../components/SearchResult";
+import { GlassPane } from "../../components/GlassPane";
 import { Container } from "@chakra-ui/react";
 
 export const Route = createFileRoute("/gps-routes/")({

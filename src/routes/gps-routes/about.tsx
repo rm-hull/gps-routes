@@ -1,12 +1,12 @@
-import { GlassPane } from '../../GlassPane'
-import { createFileRoute } from '@tanstack/react-router'
-import { Code, Heading, Link, Text, VStack } from '@chakra-ui/react'
-import { License } from '../../License'
-import { LuExternalLink } from 'react-icons/lu'
+import { GlassPane } from "../../components/GlassPane";
+import { createFileRoute } from "@tanstack/react-router";
+import { Code, Heading, Link, Text, VStack } from "@chakra-ui/react";
+import { License } from "../../components/License";
+import { LuExternalLink } from "react-icons/lu";
 
-export const Route = createFileRoute('/gps-routes/about')({
+export const Route = createFileRoute("/gps-routes/about")({
   component: About,
-})
+});
 
 function About() {
   return (
@@ -14,11 +14,11 @@ function About() {
       <VStack align="left">
         <Heading size="lg">About</Heading>
         <Text>
-          GPS routes is a small web-app that ... Please read the{' '}
+          GPS routes is a small web-app that ... Please read the{" "}
           <Link color="blue" href="/gps-routes/privacy_policy.txt">
             privacy policy <LuExternalLink />
-          </Link>{' '}
-          and the{' '}
+          </Link>{" "}
+          and the{" "}
           <Link color="blue" href="/gps-routes/terms_of_service.txt">
             terms of service <LuExternalLink />
           </Link>
@@ -31,12 +31,12 @@ function About() {
           </Link>
         </Text>
         <Text>
-          Build info: <Code>{import.meta.env.VITE_GIT_COMMIT_HASH}</Code>,{' '}
+          Build info: <Code>{import.meta.env.VITE_GIT_COMMIT_HASH}</Code>,{" "}
           {import.meta.env.VITE_GIT_COMMIT_DATE}
         </Text>
 
         <License />
       </VStack>
     </GlassPane>
-  )
+  );
 }

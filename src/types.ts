@@ -25,7 +25,7 @@ export interface Result extends Hit {
   region?: string;
   district?: string;
   postcode?: string;
-  _geocode: {
+  _geoloc: {
     lat: number;
     lng: number;
   };

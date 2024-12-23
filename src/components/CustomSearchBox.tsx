@@ -1,11 +1,11 @@
 import { ChangeEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
 import { useSearchBox, UseSearchBoxProps } from "react-instantsearch";
 import { IconButton, Input, Link } from "@chakra-ui/react";
-import { InputGroup } from "./components/ui/input-group";
+import { InputGroup } from "./ui/input-group";
 import { LuSearch, LuSettings2 } from "react-icons/lu";
-import { Route as settingsRoute } from "./routes/gps-routes/settings";
+import { Route as settingsRoute } from "../routes/gps-routes/settings";
 import { Link as RouterLink, useNavigate } from "@tanstack/react-router";
-import { Route as homeRoute } from "./routes/gps-routes/index";
+import { Route as homeRoute } from "../routes/gps-routes/index";
 
 export function CustomSearchBox(props: UseSearchBoxProps) {
   const { query, refine } = useSearchBox(props);
