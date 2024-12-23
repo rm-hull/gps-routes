@@ -21,7 +21,12 @@ export function MapView({ center }: MapViewProps) {
       zoom={13}
       scrollWheelZoom={true}
       attributionControl={false}
-      style={{ width: "50vw", height: "60vh" }}
+      style={{
+        width: "50vw",
+        height: "60vh",
+        borderRadius: "10px",
+        boxShadow: "var(--chakra-shadows-md)",
+      }}
     >
       <CurrentLocation />
 
