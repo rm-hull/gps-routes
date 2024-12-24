@@ -1,11 +1,25 @@
-import { Polyline, Popup } from "react-leaflet";
-import { GeoJSONCollection, lineString } from "../../services/geojson";
+import { Polyline, Popup, useMap } from "react-leaflet";
+import {
+  GeoJSONCollection,
+  getBounds,
+  lineString,
+} from "../../services/geojson";
+import { useEffect } from "react";
 
 type RouteProps = {
   data: GeoJSONCollection;
 };
 
 export function Route({ data }: RouteProps) {
+  const map = useMap();
+
+  useEffect(() => {
+    const bounds = getBounds(data);
+    if (bounds !== undefined) {
+      map.flyToBounds(bounds);
+    }
+  }, [data, map]);
+
   if (data === undefined) {
     return undefined;
   }
