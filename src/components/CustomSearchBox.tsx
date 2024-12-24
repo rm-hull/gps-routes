@@ -57,6 +57,8 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
       marginRight={2}
     >
       <Input
+        id="search"
+        name="search"
         ref={inputRef}
         size="lg"
         placeholder="Search"
