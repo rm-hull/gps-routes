@@ -1,5 +1,6 @@
+import { ErrorFallback } from "../components/ErrorFallback";
 import { Navbar } from "../components/Navbar";
-import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { createRootRoute, Outlet, CatchBoundary } from "@tanstack/react-router";
 import React, { Suspense } from "react";
 
 const TanStackRouterDevtools =
@@ -15,8 +16,10 @@ const TanStackRouterDevtools =
 export const Route = createRootRoute({
   component: () => (
     <>
-      <Navbar />
-      <Outlet />
+      <CatchBoundary getResetKey={() => "reset"} errorComponent={ErrorFallback}>
+        <Navbar />
+        <Outlet />
+      </CatchBoundary>
       <Suspense>
         <TanStackRouterDevtools initialIsOpen={false} />
       </Suspense>
