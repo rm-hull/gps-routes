@@ -19,6 +19,7 @@ export interface Result extends Hit {
   description: string;
   headline_image_url: string;
   video_url?: string;
+  gpx_url?: string;
   distance_km: string;
   country?: string;
   county?: string;

@@ -23,7 +23,6 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    console.log({ event });
     if (event.key === "Enter") {
       navigate({ to: homeRoute.to });
     }

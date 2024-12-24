@@ -16,6 +16,11 @@ import { Route as refRoute } from "./$ref.tsx";
 import { GlassPane } from "../../components/GlassPane.tsx";
 import { Carousel } from "../../components/Carousel.tsx";
 import { MapView } from "../../components/map/MapView.tsx";
+import {
+  fetchGeoJSON,
+  SupportedMimeTypes,
+  GeoJSONCollection,
+} from "../../services/geojson.ts";
 
 export const Route = createFileRoute("/gps-routes/$ref")({
   loader: async ({ params }) => fetchResult(params.ref),
@@ -23,13 +28,15 @@ export const Route = createFileRoute("/gps-routes/$ref")({
 });
 
 function DetailPage() {
-  const result = Route.useLoaderData();
+  const [result, route] = Route.useLoaderData();
 
   return (
     <GlassPane>
       <HStack alignItems="start" gap={4}>
         <Box flex={2} spaceY={2}>
-          <Heading size="lg">{result.title}</Heading>
+          <Heading size="lg">
+            {result.title} ({result.distance_km} km)
+          </Heading>
 
           <Text>{result.description}</Text>
           <HStack spaceX={1}>
@@ -60,7 +67,7 @@ function DetailPage() {
               <Tabs.Trigger value="raw">Raw JSON</Tabs.Trigger>
             </Tabs.List>
             <Tabs.Content value="route">
-              <MapView center={result._geoloc} />
+              <MapView route={route} />
             </Tabs.Content>
             <Tabs.Content value="nearby">
               <NearbySection nearby={result.nearby} />
@@ -118,7 +125,20 @@ function NearbySection({ nearby }: NearbySectionProps) {
   );
 }
 
-async function fetchResult(ref: string): Promise<Result> {
+async function fetchResult(
+  ref: string
+): Promise<[Result, GeoJSONCollection, Error | undefined]> {
   const objectID = Md5.hashStr(ref);
-  return searchClient.getObject({ indexName, objectID }) as Promise<Result>;
+  const result = (await searchClient.getObject({
+    indexName,
+    objectID,
+  })) as Result;
+
+  try {
+    const route = await fetchGeoJSON(result.gpx_url, SupportedMimeTypes.GPX);
+    return [result, route, undefined];
+  } catch (error: unknown) {
+    console.error({ error });
+    return [result, undefined, error as Error];
+  }
 }

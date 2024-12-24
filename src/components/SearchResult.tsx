@@ -10,7 +10,7 @@ type SearchResulProps = {
 
 export function SearchResult({ hit }: SearchResulProps) {
   return (
-    <Link asChild>
+    <Link asChild outlineOffset={0}>
       <RouterLink to={refRoute.to} params={{ ref: hit.ref }}>
         <Card.Root width="xs" overflow="hidden" border={0} shadow="md">
           <Image

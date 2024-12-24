@@ -1,4 +1,3 @@
-import { LatLng } from "leaflet";
 import {
   LayersControl,
   MapContainer,
@@ -9,16 +8,17 @@ import { FullscreenControl } from "react-leaflet-fullscreen";
 import "leaflet/dist/leaflet.css";
 import "react-leaflet-fullscreen/styles.css";
 import { CurrentLocation } from "./controls/CurrentLocation";
+import { GeoJSONCollection, getBounds } from "../../services/geojson";
+import { Route } from "./Route";
 
 type MapViewProps = {
-  center?: Pick<LatLng, "lat" | "lng">;
+  route: GeoJSONCollection;
 };
 
-export function MapView({ center }: MapViewProps) {
+export function MapView({ route }: MapViewProps) {
   return (
     <MapContainer
-      center={center}
-      zoom={13}
+      bounds={getBounds(route)}
       scrollWheelZoom={true}
       attributionControl={false}
       style={{
@@ -76,6 +76,8 @@ export function MapView({ center }: MapViewProps) {
       <FullscreenControl />
       <ScaleControl position="bottomright" />
       {/* <Ruler /> */}
+
+      <Route data={route} />
     </MapContainer>
   );
 }
