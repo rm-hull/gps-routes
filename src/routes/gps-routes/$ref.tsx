@@ -1,6 +1,7 @@
 import { Nearby, Result } from "../../types";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import {
+  AspectRatio,
   Badge,
   Box,
   Heading,
@@ -67,7 +68,9 @@ function DetailPage() {
               <Tabs.Trigger value="raw">Raw JSON</Tabs.Trigger>
             </Tabs.List>
             <Tabs.Content value="route">
-              <MapView route={route} />
+              <AspectRatio width="50vw" ratio={3 / 2} shadow="md">
+                <MapView route={route} />
+              </AspectRatio>
             </Tabs.Content>
             <Tabs.Content value="nearby">
               <NearbySection nearby={result.nearby} />
@@ -76,14 +79,15 @@ function DetailPage() {
               <Carousel images={result.images} />
             </Tabs.Content>
             <Tabs.Content value="video">
-              <iframe
-                loading="lazy"
-                id="video"
-                width={800}
-                height={600}
-                src={result.video_url}
-                allow="fullscreen"
-              ></iframe>
+              <AspectRatio width="50vw" ratio={3 / 2} shadow="md">
+                <iframe
+                  loading="lazy"
+                  id="video"
+                  allowFullScreen
+                  src={result.video_url}
+                  allow="fullscreen"
+                ></iframe>
+              </AspectRatio>
             </Tabs.Content>
             <Tabs.Content value="raw">
               <Box width="50vw" overflowX="auto">
