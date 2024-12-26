@@ -1,4 +1,4 @@
-import { Badge, Box, Image, Text } from "@chakra-ui/react";
+import { AspectRatio, Badge, Box, Image, Text } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { type Image as ImageType } from "@/types";
 import "slick-carousel/slick/slick.css";
@@ -14,20 +14,20 @@ export function Carousel({ images = [] }: CarouselProps) {
   }
 
   return (
-    <Box width="50vw" marginX={4}>
+    <Box width="50vw" marginX={6}>
       {/* @ts-expect-error: Slide types dont quite line up properly */}
       <Slider dots infinite speed={750} slidesToShow={1} slidesToScroll={1}>
         {images.map((img) => (
           <Box key={img.src} px={2}>
-            <Image
-              width="100%"
-              fit="cover"
-              src={img.src}
-              alt={img.caption}
-              borderRadius={10}
-              aspectRatio="4/3"
-              shadow="md"
-            />
+            <AspectRatio ratio={4 / 3}>
+              <Image
+                fit="cover"
+                src={img.src}
+                alt={img.caption}
+                borderRadius={10}
+                shadow="md"
+              />
+            </AspectRatio>
             <Badge
               colorPalette="blue"
               position="absolute"
@@ -39,7 +39,9 @@ export function Carousel({ images = [] }: CarouselProps) {
               </Text>
             </Badge>
 
-            <Text>{img.caption}</Text>
+            <Text width="50vw" pr={2}>
+              {img.caption}
+            </Text>
           </Box>
         ))}
       </Slider>
