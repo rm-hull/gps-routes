@@ -1,9 +1,10 @@
 /// <reference types="vitest" />
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
+import { execSync } from "child_process";
 import { defineConfig } from "vite";
 import viteReact from "@vitejs/plugin-react";
-import { execSync } from "child_process";
-import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import svgr from "vite-plugin-svgr";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
@@ -15,7 +16,7 @@ export default defineConfig(() => {
     .trimEnd();
 
   return {
-    plugins: [viteReact(), TanStackRouterVite(), svgr()],
+    plugins: [viteReact(), tsconfigPaths(), TanStackRouterVite(), svgr()],
     base: "/gps-routes",
   };
 });

@@ -1,4 +1,3 @@
-import { Nearby, Result } from "../../types";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import {
   AspectRatio,
@@ -12,16 +11,17 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Md5 } from "ts-md5";
-import { indexName, searchClient } from "../../services/algolia";
 import { Route as refRoute } from "./$ref.tsx";
-import { GlassPane } from "../../components/GlassPane.tsx";
-import { Carousel } from "../../components/Carousel.tsx";
-import { MapView } from "../../components/map/MapView.tsx";
+import { indexName, searchClient } from "@/services/algolia";
+import { Nearby, Result } from "@/types";
 import {
   fetchGeoJSON,
-  SupportedMimeTypes,
   GeoJSONCollection,
-} from "../../services/geojson.ts";
+  SupportedMimeTypes,
+} from "@/services/geojson.ts";
+import { GlassPane } from "@/components/GlassPane.tsx";
+import { Carousel } from "@/components/Carousel.tsx";
+import { MapView } from "@/components/map/MapView.tsx";
 
 export const Route = createFileRoute("/gps-routes/$ref")({
   loader: async ({ params }) => fetchResult(params.ref),

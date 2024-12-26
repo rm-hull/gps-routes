@@ -1,13 +1,13 @@
 import { Box } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 
-import stoneRings from "../assets/backgrounds/stone-rings.webp";
-import burnBridge from "../assets/backgrounds/burn-bridge.webp";
-import burnhamDeepdale from "../assets/backgrounds/burnham-deepdale.webp";
-import holtCountryPark from "../assets/backgrounds/holt-country-park.webp";
-import garden from "../assets/backgrounds/garden.webp";
-import regentsCanal from "../assets/backgrounds/regents-canal.webp";
-import harrogateRingway from "../assets/backgrounds/harrogate-ringway.webp";
+import stoneRings from "@/assets/backgrounds/stone-rings.webp";
+import burnBridge from "@/assets/backgrounds/burn-bridge.webp";
+import burnhamDeepdale from "@/assets/backgrounds/burnham-deepdale.webp";
+import holtCountryPark from "@/assets/backgrounds/holt-country-park.webp";
+import garden from "@/assets/backgrounds/garden.webp";
+import regentsCanal from "@/assets/backgrounds/regents-canal.webp";
+import harrogateRingway from "@/assets/backgrounds/harrogate-ringway.webp";
 
 const backgrounds = [
   stoneRings,

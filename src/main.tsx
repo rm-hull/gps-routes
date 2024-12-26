@@ -1,13 +1,13 @@
 import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Provider } from "./components/ui/provider";
-import { Backdrop } from "./components/Backdrop.tsx";
 
 import { InstantSearch } from "react-instantsearch";
-import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 import { indexName, searchClient } from "./services/algolia.ts";
+import { Backdrop } from "@/components/Backdrop.tsx";
+import { Provider } from "@/components/ui/provider";
 
 const router = createRouter({ routeTree });
 

@@ -1,15 +1,15 @@
 import {
   LayersControl,
   MapContainer,
-  TileLayer,
   ScaleControl,
+  TileLayer,
 } from "react-leaflet";
 import { FullscreenControl } from "react-leaflet-fullscreen";
 import "leaflet/dist/leaflet.css";
 import "react-leaflet-fullscreen/styles.css";
 import { CurrentLocation } from "./controls/CurrentLocation";
-import { GeoJSONCollection, getBounds } from "../../services/geojson";
 import { Route } from "./Route";
+import { GeoJSONCollection, getBounds } from "@/services/geojson";
 
 type MapViewProps = {
   route: GeoJSONCollection;

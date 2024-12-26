@@ -1,8 +1,8 @@
-import { GlassPane } from "../../components/GlassPane";
 import { createFileRoute } from "@tanstack/react-router";
 import { Code, Heading, Link, Text, VStack } from "@chakra-ui/react";
-import { License } from "../../components/License";
 import { LuExternalLink } from "react-icons/lu";
+import { License } from "@/components/License";
+import { GlassPane } from "@/components/GlassPane";
 
 export const Route = createFileRoute("/gps-routes/about")({
   component: About,

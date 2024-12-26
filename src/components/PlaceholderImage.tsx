@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Image, Spinner, Center } from "@chakra-ui/react";
+import { Box, Center, Image, Spinner } from "@chakra-ui/react";
 
 type PlaceholderImageProps = {
   src: string;
