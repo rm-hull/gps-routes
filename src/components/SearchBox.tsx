@@ -1,13 +1,15 @@
 import { ChangeEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
-import { useSearchBox, UseSearchBoxProps } from "react-instantsearch";
-import { IconButton, Input, Link } from "@chakra-ui/react";
+import { Stats, useSearchBox, UseSearchBoxProps } from "react-instantsearch";
+import { Box, IconButton, Input, Link } from "@chakra-ui/react";
 import { LuSearch, LuSettings2 } from "react-icons/lu";
 import { Link as RouterLink, useNavigate } from "@tanstack/react-router";
 import { InputGroup } from "./ui/input-group";
+import { SearchDrawer } from "./SearchDrawer";
+import { SearchFacets } from "./SearchFacets";
 import { Route as settingsRoute } from "@/routes/gps-routes/settings";
 import { Route as homeRoute } from "@/routes/gps-routes/index";
 
-export function CustomSearchBox(props: UseSearchBoxProps) {
+export function SearchBox(props: UseSearchBoxProps) {
   const { query, refine } = useSearchBox(props);
   // const { status } = useInstantSearch();
   const [inputValue, setInputValue] = useState(query);
@@ -37,21 +39,28 @@ export function CustomSearchBox(props: UseSearchBoxProps) {
   return (
     <InputGroup
       flex="1"
-      startElement={<LuSearch />}
+      startElement={<SearchDrawer trigger={<LuSearch cursor="pointer" />} />}
+      startElementProps={{ pointerEvents: "all" }}
       endElement={
-        <Link asChild>
-          <RouterLink to={settingsRoute.to}>
-            <IconButton
-              aria-label="Settings"
-              size="xs"
-              rounded="full"
-              variant="subtle"
-              colorPalette="blue"
-            >
-              <LuSettings2 />
-            </IconButton>
-          </RouterLink>
-        </Link>
+        <Box display="flex" alignItems="center" gap={2}>
+          <Stats />
+          <Box display="none">
+            <SearchFacets />
+          </Box>
+          <Link asChild>
+            <RouterLink to={settingsRoute.to}>
+              <IconButton
+                aria-label="Settings"
+                size="xs"
+                rounded="full"
+                variant="subtle"
+                colorPalette="blue"
+              >
+                <LuSettings2 />
+              </IconButton>
+            </RouterLink>
+          </Link>
+        </Box>
       }
       borderRadius={20}
       marginRight={2}
