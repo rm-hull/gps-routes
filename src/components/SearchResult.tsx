@@ -6,13 +6,20 @@ import { Route as refRoute } from "@/routes/gps-routes/$ref.tsx";
 
 type SearchResulProps = {
   hit: Result;
+  shadow?: boolean;
 };
 
-export function SearchResult({ hit }: SearchResulProps) {
+export function SearchResult({ hit, shadow = true }: SearchResulProps) {
   return (
     <Link asChild outlineOffset={0}>
       <RouterLink to={refRoute.to} params={{ ref: hit.ref }}>
-        <Card.Root width="xs" overflow="hidden" border={0} shadow="md">
+        <Card.Root
+          width="xs"
+          overflow="hidden"
+          border={0}
+          outline={0}
+          shadow={shadow ? "md" : "none"}
+        >
           <Image
             src={hit.headline_image_url}
             alt={hit.title}

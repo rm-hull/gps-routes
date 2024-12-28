@@ -56,15 +56,15 @@ function DetailPage() {
           <Tabs.Root defaultValue="route">
             <Tabs.List>
               <Tabs.Trigger value="route">Route</Tabs.Trigger>
-              {result.nearby && (
-                <Tabs.Trigger value="nearby">Nearby</Tabs.Trigger>
-              )}
-              {result.images && (
-                <Tabs.Trigger value="images">Images</Tabs.Trigger>
-              )}
-              {result.video_url && (
-                <Tabs.Trigger value="video">Video</Tabs.Trigger>
-              )}
+              <Tabs.Trigger value="nearby" disabled={!result.nearby}>
+                Nearby
+              </Tabs.Trigger>
+              <Tabs.Trigger value="images" disabled={!result.images}>
+                Images
+              </Tabs.Trigger>
+              <Tabs.Trigger value="video" disabled={!result.video_url}>
+                Video
+              </Tabs.Trigger>
               <Tabs.Trigger value="raw">Raw JSON</Tabs.Trigger>
             </Tabs.List>
             <Tabs.Content value="route">

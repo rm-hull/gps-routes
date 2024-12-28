@@ -69,3 +69,15 @@ body {
 .ais-ClearRefinements-button--disabled {
   display: none;
 }
+
+.leaflet-popup-content {
+  margin: -2px -2px 0 -2px !important;
+}
+
+.leaflet-popup-content p {
+  margin: unset !important;
+}
+
+.leaflet-popup-content a:focus {
+  outline: 0;
+}

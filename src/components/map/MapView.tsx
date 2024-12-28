@@ -9,16 +9,21 @@ import "leaflet/dist/leaflet.css";
 import "react-leaflet-fullscreen/styles.css";
 import { CurrentLocation } from "./controls/CurrentLocation";
 import { Route } from "./Route";
+import { PointsOfInterest } from "./PointsOfInterest";
 import { GeoJSONCollection, getBounds } from "@/services/geojson";
 
 type MapViewProps = {
-  route: GeoJSONCollection;
+  route?: GeoJSONCollection;
 };
 
 export function MapView({ route }: MapViewProps) {
+  const bounds = getBounds(route);
+
   return (
     <MapContainer
-      bounds={getBounds(route)}
+      center={bounds?.getCenter() ?? [54.4287, -2.9613]}
+      zoom={bounds ? undefined : 15}
+      bounds={bounds}
       scrollWheelZoom={true}
       attributionControl={false}
     >
@@ -71,6 +76,7 @@ export function MapView({ route }: MapViewProps) {
       <ScaleControl position="bottomright" />
       {/* <Ruler /> */}
 
+      <PointsOfInterest />
       <Route data={route} />
     </MapContainer>
   );
