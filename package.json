@@ -16,7 +16,7 @@
     "@chakra-ui/react": "^3.2.3",
     "@emotion/react": "^11.14.0",
     "@react-leaflet/core": "^2.1.0",
-    "@tanstack/react-router": "^1.92.3",
+    "@tanstack/react-router": "^1.92.11",
     "@tmcw/togeojson": "^6.0.0",
     "algoliasearch": "^5.18.0",
     "axios": "^1.7.9",
