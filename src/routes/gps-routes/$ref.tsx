@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { Md5 } from "ts-md5";
 import { Route as refRoute } from "./$ref.tsx";
-import { indexName, searchClient } from "@/services/algolia";
 import { Nearby, Result } from "@/types";
 import {
   fetchGeoJSON,
@@ -22,6 +21,7 @@ import {
 import { GlassPane } from "@/components/GlassPane.tsx";
 import { Carousel } from "@/components/Carousel.tsx";
 import { MapView } from "@/components/map/MapView.tsx";
+import { getByObjectId } from "@/services/gps-routes-api.ts";
 
 export const Route = createFileRoute("/gps-routes/$ref")({
   loader: async ({ params }) => fetchResult(params.ref),
@@ -38,8 +38,25 @@ function DetailPage() {
           <Heading size="lg">
             {result.title} ({result.distance_km} km)
           </Heading>
+          <Text
+            textStyle="xs"
+            fontWeight="semibold"
+            textTransform="uppercase"
+            color="gray.900"
+          >
+            {result.display_address}
+          </Text>
 
           <Text>{result.description}</Text>
+
+          {result.details.map(({ subtitle, content }) => (
+            <>
+              <Heading key={subtitle} size="sm">
+                {subtitle}
+              </Heading>
+              <Text>{content}</Text>
+            </>
+          ))}
           <HStack spaceX={1}>
             {result.district && (
               <Badge colorPalette="blue">{result.district}</Badge>
@@ -133,10 +150,7 @@ async function fetchResult(
   ref: string
 ): Promise<[Result, GeoJSONCollection, Error | undefined]> {
   const objectID = Md5.hashStr(ref);
-  const result = (await searchClient.getObject({
-    indexName,
-    objectID,
-  })) as Result;
+  const result = await getByObjectId(objectID);
 
   try {
     const route = await fetchGeoJSON(result.gpx_url, SupportedMimeTypes.GPX);
