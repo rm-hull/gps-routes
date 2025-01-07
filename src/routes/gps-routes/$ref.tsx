@@ -42,7 +42,7 @@ function DetailPage() {
             textStyle="xs"
             fontWeight="semibold"
             textTransform="uppercase"
-            color="gray.900"
+            color="var(--chakra-colors-gray-fg)"
           >
             {result.display_address}
           </Text>
