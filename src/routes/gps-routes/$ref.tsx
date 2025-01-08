@@ -49,21 +49,23 @@ function DetailPage() {
 
           <Text>{result.description}</Text>
 
-          {result.details.map(({ subtitle, content }) => (
-            <>
-              <Heading key={subtitle} size="sm">
-                {subtitle}
-              </Heading>
+          {result.details?.map(({ subtitle, content }) => (
+            <Box key={subtitle} spaceY={1}>
+              <Heading size="sm">{subtitle}</Heading>
               <Text>{content}</Text>
-            </>
+            </Box>
           ))}
           <HStack spaceX={1}>
             {result.district && (
               <Badge colorPalette="blue">{result.district}</Badge>
             )}
+            {result.region && (
+              <Badge colorPalette="blue">{result.region}</Badge>
+            )}
             {result.county && (
               <Badge colorPalette="blue">{result.county}</Badge>
             )}
+            {result.state && <Badge colorPalette="blue">{result.state}</Badge>}
             {result.country && (
               <Badge colorPalette="blue">{result.country}</Badge>
             )}

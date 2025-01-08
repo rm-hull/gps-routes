@@ -1,22 +1,20 @@
 import { ChangeEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
-import { Stats, useSearchBox, UseSearchBoxProps } from "react-instantsearch";
 import { Box, IconButton, Input, Link } from "@chakra-ui/react";
 import { LuSearch, LuSettings2 } from "react-icons/lu";
 import { Link as RouterLink, useNavigate } from "@tanstack/react-router";
-import { InputGroup } from "./ui/input-group";
-import { SearchDrawer } from "./SearchDrawer";
-import { SearchFacets } from "./SearchFacets";
+import { InputGroup } from "../ui/input-group";
+import { SearchDrawer } from "../SearchDrawer";
+import { Stats } from "./Stats";
 import { Route as settingsRoute } from "@/routes/gps-routes/settings";
 import { Route as homeRoute } from "@/routes/gps-routes/index";
+import { useSearch } from "@/hooks/useSearch";
 
-export function SearchBox(props: UseSearchBoxProps) {
-  const { query, refine } = useSearchBox(props);
-  // const { status } = useInstantSearch();
+export function SearchBox() {
+  const { query, refine } = useSearch();
   const [inputValue, setInputValue] = useState(query);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const navigate = useNavigate();
-  // const isSearchStalled = status === "stalled";
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newQuery = event.currentTarget.value;
@@ -44,9 +42,6 @@ export function SearchBox(props: UseSearchBoxProps) {
       endElement={
         <Box display="flex" alignItems="center" gap={2}>
           <Stats />
-          <Box display="none">
-            <SearchFacets />
-          </Box>
           <Link asChild>
             <RouterLink to={settingsRoute.to}>
               <IconButton

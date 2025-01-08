@@ -1,5 +1,5 @@
-import { ClearRefinements, Stats } from "react-instantsearch";
-import { SearchFacets } from "./SearchFacets";
+import { Stats } from "@/components/search/Stats";
+import { Facets } from "./search/Facets";
 import {
   DrawerBackdrop,
   DrawerBody,
@@ -29,15 +29,15 @@ export function SearchDrawer({ trigger }: SearchDrawerProps) {
         <DrawerHeader>
           <DrawerTitle>
             Search Facets
-            <ClearRefinements
+            {/* <ClearRefinements
               translations={{
                 resetButtonText: "clear",
               }}
-            />
+            /> */}
           </DrawerTitle>
         </DrawerHeader>
         <DrawerBody spaceY={2}>
-          <SearchFacets />
+          <Facets />
         </DrawerBody>
         <DrawerFooter>
           <Stats />

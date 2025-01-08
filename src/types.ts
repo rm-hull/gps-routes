@@ -17,15 +17,23 @@ export type Detail = {
   content: string;
 };
 
-export interface Result extends Hit {
+export type Summary = {
+  objectID: string;
   ref: string;
-  created_at: string;
   title: string;
   description: string;
   headline_image_url: string;
+  distance_km: string;
+  _geoloc: {
+    lat: number;
+    lng: number;
+  };
+};
+
+export interface Result extends Summary, Hit {
+  created_at: string;
   video_url?: string;
   gpx_url?: string;
-  distance_km: string;
   country?: string;
   state?: string;
   county?: string;
@@ -33,11 +41,21 @@ export interface Result extends Hit {
   district?: string;
   postcode?: string;
   display_address?: string;
-  _geoloc: {
-    lat: number;
-    lng: number;
-  };
-  nearby: Nearby[];
-  images: Image[];
-  details: Detail[];
+  nearby?: Nearby[];
+  images?: Image[];
+  details?: Detail[];
 }
+
+export type SearchRequest = {
+  query: string;
+  offset: number;
+  limit: number;
+  boundingBox?: number[];
+  facets?: Record<string, string[]>;
+};
+
+export type SearchResponse = {
+  hits: Summary[];
+  total: number;
+  facets: Record<string, Record<string, number>>;
+};

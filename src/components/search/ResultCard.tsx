@@ -1,15 +1,15 @@
 import { Badge, Card, Image, Link } from "@chakra-ui/react";
 // import PlaceholderImage from "./PlaceholderImage";
 import { Link as RouterLink } from "@tanstack/react-router";
-import { Result } from "@/types.ts";
+import { Summary } from "@/types.ts";
 import { Route as refRoute } from "@/routes/gps-routes/$ref.tsx";
 
-type SearchResulProps = {
-  hit: Result;
+type ResultCardProps = {
+  hit: Summary;
   shadow?: boolean;
 };
 
-export function SearchResult({ hit, shadow = true }: SearchResulProps) {
+export function ResultCard({ hit, shadow = true }: ResultCardProps) {
   return (
     <Link asChild outlineOffset={0}>
       <RouterLink to={refRoute.to} params={{ ref: hit.ref }}>

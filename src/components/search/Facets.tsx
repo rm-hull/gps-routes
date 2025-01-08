@@ -1,12 +1,17 @@
 import { Box, Heading } from "@chakra-ui/react";
-import { RefinementList } from "react-instantsearch";
+import { RefinementList } from "./RefinementList";
+// import { RefinementList } from "react-instantsearch";
 
-export function SearchFacets() {
+export function Facets() {
   return (
     <>
       <Box>
         <Heading size="sm">Country</Heading>
         <RefinementList attribute="country" />
+      </Box>
+      <Box>
+        <Heading size="sm">State</Heading>
+        <RefinementList attribute="state" />
       </Box>
       <Box>
         <Heading size="sm">Region</Heading>

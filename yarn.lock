@@ -6549,6 +6549,7 @@ __metadata:
     ts-md5: "npm:^1.3.1"
     typescript: "npm:~5.7.2"
     typescript-eslint: "npm:^8.19.1"
+    use-debounce: "npm:^10.0.4"
     vite: "npm:^6.0.7"
     vite-plugin-svgr: "npm:^4.3.0"
     vite-tsconfig-paths: "npm:^5.1.4"
@@ -9360,6 +9361,15 @@ __metadata:
   dependencies:
     punycode: "npm:^2.1.0"
   checksum: 10/b271ca7e3d46b7160222e3afa3e531505161c9a4e097febae9664e4b59912f4cbe94861361a4175edac3a03fee99d91e44b6a58c17a634bc5a664b19fc76fbcb
+  languageName: node
+  linkType: hard
+
+"use-debounce@npm:^10.0.4":
+  version: 10.0.4
+  resolution: "use-debounce@npm:10.0.4"
+  peerDependencies:
+    react: "*"
+  checksum: 10/e193bbed307204b655abab545704ca608b23db10680f299f4b9b48b935a9fd68b68827c79de3bf5517010524bfa15709bf6b0ab1f915d6305b5d2ce27bf11ad7
   languageName: node
   linkType: hard
 

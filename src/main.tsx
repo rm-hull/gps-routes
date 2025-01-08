@@ -2,10 +2,10 @@ import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import { InstantSearch } from "react-instantsearch";
+// import { InstantSearch } from "react-instantsearch";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
-import { indexName, searchClient } from "./services/algolia.ts";
+// import { indexName, searchClient } from "./services/algolia.ts";
 import { Backdrop } from "@/components/Backdrop.tsx";
 import { Provider } from "@/components/ui/provider";
 
@@ -22,15 +22,15 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider>
       <Backdrop>
-        <InstantSearch
+        {/* <InstantSearch
           searchClient={searchClient}
           indexName={indexName}
           future={{
             preserveSharedStateOnUnmount: true,
           }}
-        >
+        > */}
           <RouterProvider router={router} />
-        </InstantSearch>
+        {/* </InstantSearch> */}
       </Backdrop>
     </Provider>
   </StrictMode>

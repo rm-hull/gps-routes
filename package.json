@@ -35,7 +35,8 @@
     "react-slick": "^0.30.3",
     "screenfull": "^6.0.2",
     "slick-carousel": "^1.8.1",
-    "ts-md5": "^1.3.1"
+    "ts-md5": "^1.3.1",
+    "use-debounce": "^10.0.4"
   },
   "devDependencies": {
     "@chakra-ui/cli": "^3.2.5",
