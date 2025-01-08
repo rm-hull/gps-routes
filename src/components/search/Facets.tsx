@@ -19,11 +19,11 @@ export function Facets() {
       </Box>
       <Box>
         <Heading size="sm">County</Heading>
-        <RefinementList attribute="county" showMore showMoreLimit={50} />
+        <RefinementList attribute="county" showMore />
       </Box>
       <Box>
         <Heading size="sm">District</Heading>
-        <RefinementList attribute="district" showMore showMoreLimit={100} />
+        <RefinementList attribute="district" showMore />
       </Box>
     </>
   );
