@@ -1,10 +1,10 @@
-import { ChangeEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { Box, IconButton, Input, Link } from "@chakra-ui/react";
 import { LuSearch, LuSettings2 } from "react-icons/lu";
 import { Link as RouterLink, useNavigate } from "@tanstack/react-router";
+import { Stats } from "./Stats";
 import { InputGroup } from "../ui/input-group";
 import { SearchDrawer } from "../SearchDrawer";
-import { Stats } from "./Stats";
 import { Route as settingsRoute } from "@/routes/gps-routes/settings";
 import { Route as homeRoute } from "@/routes/gps-routes/index";
 import { useSearch } from "@/hooks/useSearch";
@@ -20,12 +20,7 @@ export function SearchBox() {
     const newQuery = event.currentTarget.value;
     setInputValue(newQuery);
     refine(newQuery);
-  };
-
-  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      navigate({ to: homeRoute.to });
-    }
+    navigate({ to: homeRoute.to });
   };
 
   useEffect(() => {
@@ -78,7 +73,6 @@ export function SearchBox() {
         backgroundColor="color-mix(in srgb, var(--chakra-colors-bg-panel) 60%, transparent)"
         value={inputValue}
         onChange={handleChange}
-        onKeyDown={handleKeyDown}
       />
     </InputGroup>
   );

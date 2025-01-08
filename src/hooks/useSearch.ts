@@ -1,5 +1,6 @@
 import { atom, useAtom } from "jotai";
 import { useDebouncedCallback } from "use-debounce";
+import { LatLng } from "leaflet";
 import { SearchRequest, SearchResponse } from "@/types";
 import { search } from "@/services/gps-routes-api";
 
@@ -36,17 +37,33 @@ export function useSearch() {
   };
 
   const refine = useDebouncedCallback((query) => {
-    refetch({ ...store.request, query: query.trim(), offset: 0 });
+    refetch({ ...INIT_REQUEST, query: query.trim() });
   }, 500);
 
   const goto = (offset: number) => {
     refetch({ ...store.request, offset });
   };
 
+  const boundingBox = useDebouncedCallback(
+    (bbox: { northEast: LatLng; southWest: LatLng }) => {
+      refetch({
+        ...store.request,
+        boundingBox: [
+          bbox.southWest.lng,
+          bbox.southWest.lat,
+          bbox.northEast.lng,
+          bbox.northEast.lat,
+        ],
+      });
+    },
+    500
+  );
+
   return {
     query: store.request?.query,
     refine,
     goto,
+    boundingBox,
     store, // FIXME: for debugging only
   };
 }

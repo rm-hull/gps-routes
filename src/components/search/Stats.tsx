@@ -1,5 +1,5 @@
-import { useSearch } from "@/hooks/useSearch";
 import { Text } from "@chakra-ui/react";
+import { useSearch } from "@/hooks/useSearch";
 
 export function Stats() {
   const { store } = useSearch();

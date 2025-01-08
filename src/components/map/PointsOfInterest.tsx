@@ -1,33 +1,31 @@
-// import type { GeoHit } from "instantsearch.js";
-// import { useGeoSearch } from "react-instantsearch";
-// import { LeafletEvent } from "leaflet";
-// import { Marker, Popup, useMap, useMapEvents } from "react-leaflet";
-// import { useEffect } from "react";
+import { LeafletEvent } from "leaflet";
+import { useEffect } from "react";
+import { Marker, Popup, useMap, useMapEvents } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
-// import { SearchResult } from "@/components/SearchResult";
-// import { Result } from "@/types";
+import { ResultCard } from "../search/ResultCard";
+import { useSearch } from "@/hooks/useSearch";
 
 export function PointsOfInterest() {
-  // const { items, refine } = useGeoSearch<GeoHit<Result>>();
+  const { boundingBox, store } = useSearch();
 
-  // const onViewChange = ({ target }: LeafletEvent) => {
-  //   refine({
-  //     northEast: target.getBounds().getNorthEast(),
-  //     southWest: target.getBounds().getSouthWest(),
-  //   });
-  // };
+  const onViewChange = ({ target }: LeafletEvent) => {
+    boundingBox({
+      northEast: target.getBounds().getNorthEast(),
+      southWest: target.getBounds().getSouthWest(),
+    });
+  };
 
-  // const map = useMap();
+  const map = useMap();
 
-  // useEffect(() => {
-  //   refine({
-  //     northEast: map.getBounds().getNorthEast(),
-  //     southWest: map.getBounds().getSouthWest(),
-  //   });
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  useEffect(() => {
+    boundingBox({
+      northEast: map.getBounds().getNorthEast(),
+      southWest: map.getBounds().getSouthWest(),
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  // useMapEvents({ zoom: onViewChange, dragend: onViewChange });
+  useMapEvents({ zoom: onViewChange, dragend: onViewChange });
 
   return (
     <MarkerClusterGroup
@@ -35,13 +33,13 @@ export function PointsOfInterest() {
       showCoverageOnHover={false}
       removeOutsideVisibleBounds
     >
-      {/* {items.map((item) => (
+      {store.response?.hits?.map((item) => (
         <Marker key={item.objectID} position={item._geoloc}>
           <Popup closeButton={false} maxWidth={400}>
-            <SearchResult hit={item} shadow={false} />
+            <ResultCard hit={item} shadow={false} />
           </Popup>
         </Marker>
-      ))} */}
+      ))}
     </MarkerClusterGroup>
   );
 }

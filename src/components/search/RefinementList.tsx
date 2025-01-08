@@ -1,7 +1,8 @@
+/* eslint-disable import/order */
 import { useSearch } from "@/hooks/useSearch";
-import { Text, Box, List, Link } from "@chakra-ui/react";
-import { Checkbox } from "../ui/checkbox";
+import { Link, List, Text } from "@chakra-ui/react";
 import { useState } from "react";
+import { Checkbox } from "../ui/checkbox";
 
 type RefinementListProps = {
   attribute: string;

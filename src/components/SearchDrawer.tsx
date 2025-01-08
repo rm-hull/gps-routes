@@ -1,5 +1,5 @@
-import { Stats } from "@/components/search/Stats";
 import { Facets } from "./search/Facets";
+import { Stats } from "@/components/search/Stats";
 import {
   DrawerBackdrop,
   DrawerBody,
