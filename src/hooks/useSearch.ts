@@ -36,7 +36,7 @@ export function useSearch() {
   };
 
   const refine = useDebouncedCallback((query) => {
-    refetch({ ...store.request, query: query.trim() });
+    refetch({ ...store.request, query: query.trim(), offset: 0 });
   }, 500);
 
   const goto = (offset: number) => {
