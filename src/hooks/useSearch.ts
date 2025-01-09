@@ -2,7 +2,7 @@ import { atom, useAtom } from "jotai";
 import { useDebouncedCallback } from "use-debounce";
 import { LatLng } from "leaflet";
 import { SearchRequest, SearchResponse } from "@/types";
-import { search } from "@/services/gps-routes-api";
+import { search } from "@/services/api-backend";
 
 type Store = {
   request: SearchRequest;

@@ -42,8 +42,6 @@ jobs:
 
       - name: Build
         env:
-          VITE_ALGOLIA_APP_ID: ${{ secrets.VITE_ALGOLIA_APP_ID }}
-          VITE_ALGOLIA_API_KEY: ${{ secrets.VITE_ALGOLIA_API_KEY }}
           VITE_GPS_ROUTES_API_URL: ${{ secrets.VITE_GPS_ROUTES_API_URL }}
         run: yarn build && cp ./dist/index.html ./dist/404.html
 

@@ -21,7 +21,7 @@ import {
 import { GlassPane } from "@/components/GlassPane.tsx";
 import { Carousel } from "@/components/Carousel.tsx";
 import { MapView } from "@/components/map/MapView.tsx";
-import { getByObjectId } from "@/services/gps-routes-api.ts";
+import { getByObjectId } from "@/services/api-backend.ts";
 
 export const Route = createFileRoute("/gps-routes/$ref")({
   loader: async ({ params }) => fetchResult(params.ref),

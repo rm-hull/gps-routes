@@ -1,5 +1,3 @@
-import { Hit } from "algoliasearch/lite";
-
 export type Nearby = {
   objectID: string;
   ref: string;
@@ -30,7 +28,7 @@ export type Summary = {
   };
 };
 
-export interface Result extends Summary, Hit {
+export interface Result extends Summary {
   created_at: string;
   video_url?: string;
   gpx_url?: string;
