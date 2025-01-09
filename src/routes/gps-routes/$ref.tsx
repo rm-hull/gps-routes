@@ -71,7 +71,7 @@ function DetailPage() {
             )}
           </HStack>
         </Box>
-        <Box width="60vw" flex={3}>
+        <Box width="60vw" flex={3} position="sticky" top={6}>
           <Tabs.Root defaultValue="route">
             <Tabs.List>
               <Tabs.Trigger value="route">Route</Tabs.Trigger>
