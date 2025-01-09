@@ -39,7 +39,7 @@ export function Carousel({ images = [] }: CarouselProps) {
               </Text>
             </Badge>
 
-            <Text width="50vw" pr={2}>
+            <Text width="50vw" pr={2} fontSize="sm">
               {img.caption}
             </Text>
           </Box>
