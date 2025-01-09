@@ -15,7 +15,6 @@ export function Carousel({ images = [] }: CarouselProps) {
 
   return (
     <Box width="50vw" marginX={6}>
-      {/* @ts-expect-error: Slide types dont quite line up properly */}
       <Slider dots infinite speed={750} slidesToShow={1} slidesToScroll={1}>
         {images.map((img) => (
           <Box key={img.src} px={2}>
