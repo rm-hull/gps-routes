@@ -3,12 +3,13 @@ import {
   AspectRatio,
   Badge,
   Box,
+  Group,
   Heading,
-  HStack,
   Link,
   List,
   Tabs,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { Md5 } from "ts-md5";
 import { Route as refRoute } from "./$ref.tsx";
@@ -30,11 +31,17 @@ export const Route = createFileRoute("/gps-routes/$ref")({
 
 function DetailPage() {
   const [result, route] = Route.useLoaderData();
+  const desktopMode = useBreakpointValue({ base: false, lg: true });
 
   return (
     <GlassPane>
-      <HStack alignItems="start" gap={4}>
-        <Box flex={2} spaceY={2}>
+      <Box
+        display="flex"
+        flexDirection={desktopMode ? "row" : "column"}
+        alignItems="start"
+        gap={4}
+      >
+        <Box spaceY={2}>
           <Heading size="lg">
             {result.title} ({result.distance_km} km)
           </Heading>
@@ -55,7 +62,7 @@ function DetailPage() {
               <Text>{content}</Text>
             </Box>
           ))}
-          <HStack spaceX={1}>
+          <Group flexWrap="wrap">
             {result.district && (
               <Badge colorPalette="blue">{result.district}</Badge>
             )}
@@ -69,10 +76,14 @@ function DetailPage() {
             {result.country && (
               <Badge colorPalette="blue">{result.country}</Badge>
             )}
-          </HStack>
+          </Group>
         </Box>
-        <Box width="60vw" flex={3} position="sticky" top={6}>
-          <Tabs.Root defaultValue="route">
+
+        <Box width={desktopMode ? "60vw" : "full"} position="sticky" top={6}>
+          <Tabs.Root
+            defaultValue="route"
+            width={desktopMode ? "50vw" : undefined}
+          >
             <Tabs.List>
               <Tabs.Trigger value="route">Route</Tabs.Trigger>
               <Tabs.Trigger value="nearby" disabled={!result.nearby}>
@@ -87,7 +98,7 @@ function DetailPage() {
               <Tabs.Trigger value="raw">Raw JSON</Tabs.Trigger>
             </Tabs.List>
             <Tabs.Content value="route">
-              <AspectRatio width="50vw" ratio={3 / 2} shadow="md">
+              <AspectRatio ratio={3 / 2} shadow="md">
                 <MapView route={route} />
               </AspectRatio>
             </Tabs.Content>
@@ -98,7 +109,7 @@ function DetailPage() {
               <Carousel images={result.images} />
             </Tabs.Content>
             <Tabs.Content value="video">
-              <AspectRatio width="50vw" ratio={3 / 2} shadow="md">
+              <AspectRatio ratio={3 / 2} shadow="md">
                 <iframe
                   loading="lazy"
                   id="video"
@@ -109,13 +120,13 @@ function DetailPage() {
               </AspectRatio>
             </Tabs.Content>
             <Tabs.Content value="raw">
-              <Box width="50vw" overflowX="auto">
+              <Box overflowX="auto" fontSize="xs">
                 <pre>{JSON.stringify(result, null, 2)}</pre>
               </Box>
             </Tabs.Content>
           </Tabs.Root>
         </Box>
-      </HStack>
+      </Box>
     </GlassPane>
   );
 }
@@ -135,7 +146,7 @@ function NearbySection({ nearby }: NearbySectionProps) {
 
   return (
     <List.Root>
-      {nearby.sort(byDescription).map(({ ref, description }) => (
+      {nearby.toSorted(byDescription).map(({ ref, description }) => (
         <List.Item key={ref}>
           <Link asChild>
             <RouterLink to={refRoute.to} params={{ ref }}>

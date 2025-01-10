@@ -14,7 +14,7 @@ export function Carousel({ images = [] }: CarouselProps) {
   }
 
   return (
-    <Box width="50vw" marginX={6}>
+    <Box marginX={6}>
       <Slider dots infinite speed={750} slidesToShow={1} slidesToScroll={1}>
         {images.map((img) => (
           <Box key={img.src} px={2}>
@@ -25,6 +25,7 @@ export function Carousel({ images = [] }: CarouselProps) {
                 alt={img.caption}
                 borderRadius={10}
                 shadow="md"
+                loading="lazy"
               />
             </AspectRatio>
             <Badge
@@ -38,7 +39,7 @@ export function Carousel({ images = [] }: CarouselProps) {
               </Text>
             </Badge>
 
-            <Text width="50vw" pr={2} fontSize="sm">
+            <Text pr={2} fontSize="sm">
               {img.caption}
             </Text>
           </Box>

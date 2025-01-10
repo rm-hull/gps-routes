@@ -1,5 +1,11 @@
 import { ChangeEvent, useEffect, useRef, useState } from "react";
-import { Box, IconButton, Input, Link } from "@chakra-ui/react";
+import {
+  Box,
+  IconButton,
+  Input,
+  Link,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { LuSearch, LuSettings2 } from "react-icons/lu";
 import { Link as RouterLink, useNavigate } from "@tanstack/react-router";
 import { Stats } from "./Stats";
@@ -13,6 +19,7 @@ export function SearchBox() {
   const { query, refine } = useSearch();
   const [inputValue, setInputValue] = useState(query);
   const inputRef = useRef<HTMLInputElement>(null);
+  const desktopMode = useBreakpointValue({ base: false, md: true });
 
   const navigate = useNavigate();
 
@@ -36,7 +43,7 @@ export function SearchBox() {
       startElementProps={{ pointerEvents: "all" }}
       endElement={
         <Box display="flex" alignItems="center" gap={2}>
-          <Stats />
+          {desktopMode && <Stats />}
           <Link asChild>
             <RouterLink to={settingsRoute.to}>
               <IconButton
