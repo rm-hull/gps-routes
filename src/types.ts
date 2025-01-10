@@ -49,7 +49,7 @@ export type SearchRequest = {
   offset: number;
   limit: number;
   boundingBox?: number[];
-  facets?: Record<string, string[]>;
+  facets?: Record<string, string[] | undefined>;
 };
 
 export type SearchResponse = {

@@ -8,7 +8,7 @@ export function Stats() {
   }
 
   return (
-    <Text>
+    <Text color="var(--chakra-colors-fg-muted)">
       {plural(store.response.total, "result")} in {store.transitTime}ms
     </Text>
   );

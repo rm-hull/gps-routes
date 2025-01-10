@@ -38,10 +38,47 @@ export function useSearch() {
 
   const refine = useDebouncedCallback((query) => {
     refetch({ ...INIT_REQUEST, query: query.trim() });
-  }, 500);
+  }, 300);
 
   const goto = (offset: number) => {
     refetch({ ...store.request, offset });
+  };
+
+  const addFacetValue = (attribute: string, value: string) => {
+    const current = store.request?.facets?.[attribute] || [];
+    const newValues = new Set([...current, value]);
+
+    refetch({
+      ...store.request,
+      offset: 0,
+      facets: {
+        ...store.request.facets,
+        [attribute]: newValues.size === 0 ? undefined : [...newValues],
+      },
+    });
+  };
+
+  const removeFacetValue = (attribute: string, value: string) => {
+    // debugger;
+    const current = store.request?.facets?.[attribute] || [];
+    const newValues = current.filter((v) => v != value);
+
+    refetch({
+      ...store.request,
+      offset: 0,
+      facets: {
+        ...store.request.facets,
+        [attribute]: newValues.length === 0 ? undefined : [...newValues],
+      },
+    });
+  };
+
+  const resetFacets = () => {
+    refetch({
+      ...store.request,
+      offset: 0,
+      facets: undefined,
+    });
   };
 
   const boundingBox = useDebouncedCallback(
@@ -58,20 +95,23 @@ export function useSearch() {
         ],
       });
     },
-    500
+    300
   );
 
-  const resetBoundingBox = () => {
+  const resetBoundingBox = useDebouncedCallback(() => {
     refetch({
       ...store.request,
       limit: INIT_REQUEST.limit,
       boundingBox: undefined,
     });
-  };
+  }, 10);
 
   return {
     query: store.request?.query,
     refine,
+    addFacetValue,
+    removeFacetValue,
+    resetFacets,
     goto,
     boundingBox,
     resetBoundingBox,

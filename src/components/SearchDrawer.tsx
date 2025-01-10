@@ -1,4 +1,5 @@
 import { Facets } from "./search/Facets";
+import { ClearRefinements } from "./search/ClearRefinements";
 import { Stats } from "@/components/search/Stats";
 import {
   DrawerBackdrop,
@@ -24,16 +25,13 @@ export function SearchDrawer({ trigger }: SearchDrawerProps) {
       <DrawerContent
         placeContent="flex-start"
         backdropFilter={"blur(10px)"}
-        background={`color-mix(in srgb, var(--chakra-colors-bg-panel) 40%, transparent)`}
+        color="var(--chakra-colors-color-palette-fg)"
+        background="color-mix(in srgb, var(--chakra-colors-bg-panel) 60%, transparent)"
       >
         <DrawerHeader>
           <DrawerTitle>
             Search Facets
-            {/* <ClearRefinements
-              translations={{
-                resetButtonText: "clear",
-              }}
-            /> */}
+            <ClearRefinements />
           </DrawerTitle>
         </DrawerHeader>
         <DrawerBody spaceY={2}>
