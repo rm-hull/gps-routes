@@ -9,6 +9,7 @@ export function SearchHits() {
 
   useEffect(() => {
     resetBoundingBox();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
