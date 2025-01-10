@@ -1,6 +1,6 @@
-import { Badge, Card, Image, Link } from "@chakra-ui/react";
-// import PlaceholderImage from "./PlaceholderImage";
+import { Badge, Card, Link } from "@chakra-ui/react";
 import { Link as RouterLink } from "@tanstack/react-router";
+import { FadeInImage } from "../FadeInImage";
 import { Summary } from "@/types.ts";
 import { Route as refRoute } from "@/routes/gps-routes/$ref.tsx";
 
@@ -20,11 +20,10 @@ export function ResultCard({ hit, shadow = true }: ResultCardProps) {
           outline={0}
           shadow={shadow ? "md" : "none"}
         >
-          <Image
+          <FadeInImage
             src={hit.headline_image_url}
             alt={hit.title}
             height={60}
-            fit="cover"
           />
           <Badge colorPalette="blue" position="absolute" top={1} right={1}>
             {hit.distance_km} km

@@ -15,61 +15,6 @@ body {
   overflow: hidden;
 }
 
-.ais-Hits-list {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-}
-
-.ais-Pagination-item {
-  margin-right: 20px;
-  display: inline-block;
-}
-
-.ais-RefinementList-label {
-  display: flex;
-  gap: 8px;
-}
-
-.ais-RefinementList-label > * {
-  cursor: pointer;
-}
-
-.ais-RefinementList-labelText {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.ais-RefinementList-count {
-  font-size: x-small;
-  color: var(--chakra-colors-blue-fg);
-  margin-left: auto;
-}
-
-.ais-ClearRefinements {
-  display: inline-flex;
-  margin-left: 8px;
-}
-
-.ais-RefinementList-showMore,
-.ais-ClearRefinements-button {
-  font-size: small;
-  cursor: pointer;
-  font-weight: normal;
-}
-
-.ais-RefinementList-showMore:hover,
-.ais-ClearRefinements-button:hover {
-  color: var(--chakra-colors-blue-fg);
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-.ais-ClearRefinements-button--disabled {
-  display: none;
-}
-
 .leaflet-popup-content {
   margin: -2px -2px 0 -2px !important;
 }
