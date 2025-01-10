@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import { Box, Container } from "@chakra-ui/react";
 import { ResultCard } from "./search/ResultCard";
 import { Pagination } from "./search/Pagination";
 import { useSearch } from "@/hooks/useSearch";
 
 export function SearchHits() {
-  const { store } = useSearch();
+  const { store, resetBoundingBox } = useSearch();
+
+  useEffect(() => {
+    resetBoundingBox();
+  }, []);
 
   return (
     <>

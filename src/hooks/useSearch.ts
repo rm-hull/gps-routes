@@ -48,6 +48,8 @@ export function useSearch() {
     (bbox: { northEast: LatLng; southWest: LatLng }) => {
       refetch({
         ...store.request,
+        offset: 0,
+        limit: 100,
         boundingBox: [
           bbox.southWest.lng,
           bbox.southWest.lat,
@@ -59,11 +61,20 @@ export function useSearch() {
     500
   );
 
+  const resetBoundingBox = () => {
+    refetch({
+      ...store.request,
+      limit: INIT_REQUEST.limit,
+      boundingBox: undefined,
+    });
+  };
+
   return {
     query: store.request?.query,
     refine,
     goto,
     boundingBox,
+    resetBoundingBox,
     store, // FIXME: for debugging only
   };
 }
