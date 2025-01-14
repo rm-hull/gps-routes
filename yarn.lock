@@ -2891,26 +2891,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-generator@npm:^1.95.1":
-  version: 1.95.1
-  resolution: "@tanstack/router-generator@npm:1.95.1"
+"@tanstack/router-generator@npm:^1.95.6":
+  version: 1.95.6
+  resolution: "@tanstack/router-generator@npm:1.95.6"
   dependencies:
     "@tanstack/virtual-file-routes": "npm:^1.87.6"
     prettier: "npm:^3.4.2"
     tsx: "npm:^4.19.2"
     zod: "npm:^3.23.8"
   peerDependencies:
-    "@tanstack/react-router": ^1.95.1
+    "@tanstack/react-router": ^1.95.6
   peerDependenciesMeta:
     "@tanstack/react-router":
       optional: true
-  checksum: 10/ea96132d0cf0435e0c3e59678245434991b0e277e9c6334d8f98b28edb17210e682b0d6c6435da26914f44fdf040118a770978ef48c7f7ce03ea15c5adcc8795
+  checksum: 10/652a7dd250f50554be2a41a4674ee7274834e5acb8f4a8b08a4dc8cbee7e3a592aad9a8ecb74267a088ee837ea8a00283816221410a43018968b0ffdf1b20cc0
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.95.1":
-  version: 1.95.1
-  resolution: "@tanstack/router-plugin@npm:1.95.1"
+"@tanstack/router-plugin@npm:^1.95.6":
+  version: 1.95.6
+  resolution: "@tanstack/router-plugin@npm:1.95.6"
   dependencies:
     "@babel/core": "npm:^7.26.0"
     "@babel/generator": "npm:^7.26.3"
@@ -2920,7 +2920,7 @@ __metadata:
     "@babel/template": "npm:^7.25.9"
     "@babel/traverse": "npm:^7.26.4"
     "@babel/types": "npm:^7.26.3"
-    "@tanstack/router-generator": "npm:^1.95.1"
+    "@tanstack/router-generator": "npm:^1.95.6"
     "@tanstack/virtual-file-routes": "npm:^1.87.6"
     "@types/babel__core": "npm:^7.20.5"
     "@types/babel__generator": "npm:^7.6.8"
@@ -2941,7 +2941,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/50975c85fc04f059409a42e8de5a32c9d0a25a3107e1b41f5c550f927bf9f962a8c06a69d2d80626bee3a6edd1668fc604bd67d95471d2adca5a1382af4f2d20
+  checksum: 10/b13b9fe3837ec25fdbab749bff7d22f855550296b270945c1929816c27f7ec5e4c23ee375b0cad0941a09f6321e4803620dd30f47ee2e87e3827498bcacc809a
   languageName: node
   linkType: hard
 
@@ -6189,7 +6189,7 @@ __metadata:
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.95.1"
     "@tanstack/router-devtools": "npm:^1.95.1"
-    "@tanstack/router-plugin": "npm:^1.95.1"
+    "@tanstack/router-plugin": "npm:^1.95.6"
     "@tmcw/togeojson": "npm:^6.0.0"
     "@types/geojson": "npm:^7946.0.15"
     "@types/leaflet": "npm:^1.9.16"
