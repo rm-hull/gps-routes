@@ -2841,18 +2841,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/history@npm:1.95.0":
-  version: 1.95.0
-  resolution: "@tanstack/history@npm:1.95.0"
-  checksum: 10/84986cfab61b24a4cba30b29855b5ccf8d7f8981eced69ce2faded294aea080e3fc1ed72561ca8026b203aa3bf31e74d02519df643eaa65d312ed617ab1e75cf
+"@tanstack/history@npm:1.97.0":
+  version: 1.97.0
+  resolution: "@tanstack/history@npm:1.97.0"
+  checksum: 10/4f77cabd5d7abb66b1cf7c342cffdef4f47f3a2a2907f2b9c7696e1d0fe731c5d61af02ff54f6459e74bb02835a11b75f3ba392ec250d88756b6cf72f7aa90fe
   languageName: node
   linkType: hard
 
-"@tanstack/react-router@npm:^1.95.1":
-  version: 1.95.1
-  resolution: "@tanstack/react-router@npm:1.95.1"
+"@tanstack/react-router@npm:^1.97.0":
+  version: 1.97.0
+  resolution: "@tanstack/react-router@npm:1.97.0"
   dependencies:
-    "@tanstack/history": "npm:1.95.0"
+    "@tanstack/history": "npm:1.97.0"
     "@tanstack/react-store": "npm:^0.7.0"
     jsesc: "npm:^3.0.2"
     tiny-invariant: "npm:^1.3.3"
@@ -2860,7 +2860,7 @@ __metadata:
   peerDependencies:
     react: ">=18"
     react-dom: ">=18"
-  checksum: 10/d5cadd1ca149aa3d11764a1900ce51f74bb8ce8af40e8b066deda17a8dd6ea8f78e714a68f11766f5a7713c7c225abf4e42b40d31e775c38c972ee9b7452acc6
+  checksum: 10/ee02f24f53b3be087d825929441e9a4fb2d5eef057ad18cadf483963a71ab182e7eadf8f559cc55f2020391b51a95f9dbd8167c0fe6664b419227690b3afb25a
   languageName: node
   linkType: hard
 
@@ -6187,7 +6187,7 @@ __metadata:
     "@eslint/js": "npm:^9.17.0"
     "@react-leaflet/core": "npm:^2.1.0"
     "@svgr/webpack": "npm:^8.1.0"
-    "@tanstack/react-router": "npm:^1.95.1"
+    "@tanstack/react-router": "npm:^1.97.0"
     "@tanstack/router-devtools": "npm:^1.95.1"
     "@tanstack/router-plugin": "npm:^1.95.1"
     "@tmcw/togeojson": "npm:^6.0.0"
