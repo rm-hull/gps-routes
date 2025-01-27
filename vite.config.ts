@@ -16,7 +16,7 @@ export default defineConfig(() => {
     .trimEnd();
 
   return {
-    plugins: [viteReact(), tsconfigPaths(), TanStackRouterVite(), svgr()],
+    plugins: [viteReact({babel: {plugins: ["babel-plugin-react-compiler"]}}), tsconfigPaths(), TanStackRouterVite(), svgr()],
     base: "/gps-routes",
   };
 });
