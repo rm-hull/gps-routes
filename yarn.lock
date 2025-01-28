@@ -2730,26 +2730,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-generator@npm:^1.97.24":
-  version: 1.97.24
-  resolution: "@tanstack/router-generator@npm:1.97.24"
+"@tanstack/router-generator@npm:^1.97.25":
+  version: 1.97.25
+  resolution: "@tanstack/router-generator@npm:1.97.25"
   dependencies:
     "@tanstack/virtual-file-routes": "npm:^1.97.8"
     prettier: "npm:^3.4.2"
     tsx: "npm:^4.19.2"
     zod: "npm:^3.24.1"
   peerDependencies:
-    "@tanstack/react-router": ^1.97.24
+    "@tanstack/react-router": ^1.97.25
   peerDependenciesMeta:
     "@tanstack/react-router":
       optional: true
-  checksum: 10/0f4f848c2953e8e51cabfb442e6c22417485752289d1d031ed16e0a6eb6696a296be6d593cf8c5bba16731c177249cae88c85b7850cb76adf03f57324372fb1a
+  checksum: 10/7e64c5009947a05b6868f5a594fcdedc8530787287edd0e2f61e42f62562c0436b512120a235377f250f784d674def7401f7be22b9743489139e8f867170acee
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.97.24":
-  version: 1.97.24
-  resolution: "@tanstack/router-plugin@npm:1.97.24"
+"@tanstack/router-plugin@npm:^1.97.25":
+  version: 1.97.25
+  resolution: "@tanstack/router-plugin@npm:1.97.25"
   dependencies:
     "@babel/core": "npm:^7.26.7"
     "@babel/generator": "npm:^7.26.5"
@@ -2759,7 +2759,7 @@ __metadata:
     "@babel/template": "npm:^7.25.9"
     "@babel/traverse": "npm:^7.26.7"
     "@babel/types": "npm:^7.26.7"
-    "@tanstack/router-generator": "npm:^1.97.24"
+    "@tanstack/router-generator": "npm:^1.97.25"
     "@tanstack/virtual-file-routes": "npm:^1.97.8"
     "@types/babel__core": "npm:^7.20.5"
     "@types/babel__generator": "npm:^7.6.8"
@@ -2783,7 +2783,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/c478505d40a4047ef472824ef01c9dad3c63bd63c0d868134631ca8b137632e5d4e2276af925d81388eb297cfdb83d7c40c0b2095e037b2ef5dc395b405b0f7e
+  checksum: 10/36799e2b03f05d680f33e1319c303a1991472ee35a6c264d9a4da46db04a8ba968e35e7d597f2d97ab8636eed01ee78c80bce2ed248d374802dabb3dc3dbc8b8
   languageName: node
   linkType: hard
 
@@ -5983,7 +5983,7 @@ __metadata:
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.97.24"
     "@tanstack/router-devtools": "npm:^1.97.24"
-    "@tanstack/router-plugin": "npm:^1.97.24"
+    "@tanstack/router-plugin": "npm:^1.97.25"
     "@tmcw/togeojson": "npm:^6.0.0"
     "@types/geojson": "npm:^7946.0.16"
     "@types/leaflet": "npm:^1.9.16"
