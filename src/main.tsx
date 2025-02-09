@@ -17,11 +17,11 @@ declare module "@tanstack/react-router" {
 }
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+  <>
     <Provider>
       <Backdrop>
         <RouterProvider router={router} />
       </Backdrop>
     </Provider>
-  </StrictMode>
+  </>
 );
