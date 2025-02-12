@@ -2817,20 +2817,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router@npm:^1.101.2":
-  version: 1.101.2
-  resolution: "@tanstack/react-router@npm:1.101.2"
+"@tanstack/react-router@npm:^1.102.5":
+  version: 1.102.5
+  resolution: "@tanstack/react-router@npm:1.102.5"
   dependencies:
     "@tanstack/history": "npm:1.99.13"
     "@tanstack/react-store": "npm:^0.7.0"
-    "@tanstack/router-core": "npm:^1.99.13"
+    "@tanstack/router-core": "npm:^1.102.5"
     jsesc: "npm:^3.1.0"
     tiny-invariant: "npm:^1.3.3"
     tiny-warning: "npm:^1.0.3"
   peerDependencies:
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/78d20576e81dbd03ae32790333d1cd4573e89e8165709ab816d189923027fc29af6b008631b76b01e6d6ebd8eaaa0c03fe520a250814f8fee7625bbca2daaf35
+  checksum: 10/d580bfbeb5b4ee28d0f28f714392aa23b48511b249b6f4fae6e390f4ad346f84afb1e5d2d174422c0405e5a8b3d183f6a50d8f405cc783ad9c9b8f9518e77d50
   languageName: node
   linkType: hard
 
@@ -2847,13 +2847,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-core@npm:^1.99.13":
-  version: 1.99.13
-  resolution: "@tanstack/router-core@npm:1.99.13"
+"@tanstack/router-core@npm:^1.102.5":
+  version: 1.102.5
+  resolution: "@tanstack/router-core@npm:1.102.5"
   dependencies:
     "@tanstack/history": "npm:1.99.13"
     "@tanstack/store": "npm:^0.7.0"
-  checksum: 10/f1293aa484bfb1c554cb3b33dd1419e3f468fabc09407e61880470f6eced79db96cb37d6b9d34bf662902d093079c742d4f4811c53b2637e1e994d9aa3ab1ec9
+  checksum: 10/95e85bfb17d41814649598a05f3d64589a4019b7f56945826ede8d0592592a15fd584c230a26edb4bc5dc50c84da663e9eaae82b94a9000a8c8f98afa89873b0
   languageName: node
   linkType: hard
 
@@ -6125,7 +6125,7 @@ __metadata:
     "@eslint/js": "npm:^9.20.0"
     "@react-leaflet/core": "npm:^2.1.0"
     "@svgr/webpack": "npm:^8.1.0"
-    "@tanstack/react-router": "npm:^1.101.2"
+    "@tanstack/react-router": "npm:^1.102.5"
     "@tanstack/router-devtools": "npm:^1.101.2"
     "@tanstack/router-plugin": "npm:^1.101.2"
     "@tmcw/togeojson": "npm:^6.0.1"
