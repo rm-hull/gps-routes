@@ -3068,27 +3068,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/history@npm:1.99.13":
-  version: 1.99.13
-  resolution: "@tanstack/history@npm:1.99.13"
-  checksum: 10/c12c1313974148d1f8c6bd23c320ed22a45f070718283eedd064b657d7f03260627f66119fea7ad39355f2ae8a821d4e35981a033412ff4f185f83c8af3f49e4
-  languageName: node
-  linkType: hard
-
-"@tanstack/react-router@npm:^1.112.0":
-  version: 1.112.0
-  resolution: "@tanstack/react-router@npm:1.112.0"
+"@tanstack/react-router@npm:^1.112.17":
+  version: 1.112.17
+  resolution: "@tanstack/react-router@npm:1.112.17"
   dependencies:
-    "@tanstack/history": "npm:1.99.13"
+    "@tanstack/history": "npm:1.112.8"
     "@tanstack/react-store": "npm:^0.7.0"
-    "@tanstack/router-core": "npm:^1.112.0"
+    "@tanstack/router-core": "npm:^1.112.12"
     jsesc: "npm:^3.1.0"
     tiny-invariant: "npm:^1.3.3"
     tiny-warning: "npm:^1.0.3"
   peerDependencies:
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/55cd5e1526dc8a283f5b75c61c90a7de8c775c6dcd50b6e8bb070eeddd61197237c1fe0e254a3e949454aa546873e98095a72ba9185dc56f74c1df74b3bb2859
+  checksum: 10/d9709dcd483dbcbf247a2cacf54a9177ec06d1f762663c7789c99abc6ea8a7843423039efb73914db416330c8136fd33c9b771cd907bd8be039841f3a44e5ccf
   languageName: node
   linkType: hard
 
@@ -3105,13 +3098,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-core@npm:^1.112.0":
-  version: 1.112.0
-  resolution: "@tanstack/router-core@npm:1.112.0"
+"@tanstack/router-core@npm:^1.112.12":
+  version: 1.112.12
+  resolution: "@tanstack/router-core@npm:1.112.12"
   dependencies:
-    "@tanstack/history": "npm:1.99.13"
+    "@tanstack/history": "npm:1.112.8"
     "@tanstack/store": "npm:^0.7.0"
-  checksum: 10/e1c2bc0829d25b07f3babd59150f9384a879e41ce3f59651b3ce7dd1109bb6a3099fccb373f4dd2cdd76ac85302c7009110dacda2ac41337cf4366848eae6d7b
+  checksum: 10/9a4467af8bf88516b9a32a63c45262c91f71692658b82220f8781793e63f98517d4dcd9080a0a5954446bbda9df492191f8893c1e272e2fb82a3afe4f0d4f293
   languageName: node
   linkType: hard
 
@@ -6510,7 +6503,7 @@ __metadata:
     "@eslint/js": "npm:^9.21.0"
     "@react-leaflet/core": "npm:^2.1.0"
     "@svgr/webpack": "npm:^8.1.0"
-    "@tanstack/react-router": "npm:^1.112.0"
+    "@tanstack/react-router": "npm:^1.112.17"
     "@tanstack/router-devtools": "npm:^1.112.0"
     "@tanstack/router-plugin": "npm:^1.112.11"
     "@tmcw/togeojson": "npm:^6.0.1"
