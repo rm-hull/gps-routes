@@ -3125,21 +3125,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-devtools@npm:^1.112.0":
-  version: 1.112.0
-  resolution: "@tanstack/router-devtools@npm:1.112.0"
+"@tanstack/router-devtools@npm:^1.112.17":
+  version: 1.112.17
+  resolution: "@tanstack/router-devtools@npm:1.112.17"
   dependencies:
     clsx: "npm:^2.1.1"
     goober: "npm:^2.1.16"
   peerDependencies:
-    "@tanstack/react-router": ^1.112.0
+    "@tanstack/react-router": ^1.112.17
     csstype: ^3.0.10
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
   peerDependenciesMeta:
     csstype:
       optional: true
-  checksum: 10/f77a0f6f30a69bf6fb7302eb488e38dd889d6659838ce5e3d79b6cc42cd7985ead6dd8d87004ffb6993c8be7c911671432c1f89d56879d3e10091e8a86484140
+  checksum: 10/da7b51d16c5626016b937afbe35eb986bf4828e5ec509120ac1ed16586dec20bd2faf6236cf67f43ea8fae0c2fbdc388d52bc473918393b04a7a283cf4a4ac21
   languageName: node
   linkType: hard
 
@@ -6511,7 +6511,7 @@ __metadata:
     "@react-leaflet/core": "npm:^2.1.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.112.0"
-    "@tanstack/router-devtools": "npm:^1.112.0"
+    "@tanstack/router-devtools": "npm:^1.112.17"
     "@tanstack/router-plugin": "npm:^1.112.11"
     "@tmcw/togeojson": "npm:^6.0.1"
     "@types/geojson": "npm:^7946.0.16"
