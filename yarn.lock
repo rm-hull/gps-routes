@@ -4761,12 +4761,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-react-compiler@npm:19.0.0-beta-40c6c23-20250301":
-  version: 19.0.0-beta-40c6c23-20250301
-  resolution: "babel-plugin-react-compiler@npm:19.0.0-beta-40c6c23-20250301"
+"babel-plugin-react-compiler@npm:19.0.0-beta-714736e-20250131":
+  version: 19.0.0-beta-714736e-20250131
+  resolution: "babel-plugin-react-compiler@npm:19.0.0-beta-714736e-20250131"
   dependencies:
     "@babel/types": "npm:^7.19.0"
-  checksum: 10/01d517805ae09c92c1d43b9048a5e07fe9e612803f856571e9d61da0dd686a38a04f062c323007814430f9f6600c4fc79cbc9e8d43007a932ddb43760f231551
+  checksum: 10/1a91429393a196e3ece4ea657c8b4b0409c797ce27f5b2bcd7f7a869f5010a44094ab557be59bd3e52626b266fe727bd893c00820f6761b40df57b70ccdca812
   languageName: node
   linkType: hard
 
@@ -6546,7 +6546,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:^4.3.4"
     "@vitest/coverage-v8": "npm:3.0.8"
     axios: "npm:^1.8.2"
-    babel-plugin-react-compiler: "npm:19.0.0-beta-40c6c23-20250301"
+    babel-plugin-react-compiler: "npm:19.0.0-beta-714736e-20250131"
     eslint: "npm:^9.22.0"
     eslint-plugin-import: "npm:^2.31.0"
     eslint-plugin-react-compiler: "npm:19.0.0-beta-40c6c23-20250301"
