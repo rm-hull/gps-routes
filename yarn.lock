@@ -6553,7 +6553,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^5.2.0"
     eslint-plugin-react-refresh: "npm:^0.4.19"
     globals: "npm:^16.0.0"
-    jotai: "npm:^2.12.1"
+    jotai: "npm:^2.12.2"
     leaflet: "npm:^1.9.4"
     leaflet.fullscreen: "npm:^4.0.0"
     next-themes: "npm:^0.4.4"
@@ -7085,9 +7085,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jotai@npm:^2.12.1":
-  version: 2.12.1
-  resolution: "jotai@npm:2.12.1"
+"jotai@npm:^2.12.2":
+  version: 2.12.2
+  resolution: "jotai@npm:2.12.2"
   peerDependencies:
     "@types/react": ">=17.0.0"
     react: ">=17.0.0"
@@ -7096,7 +7096,7 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 10/14a16ee56ef0e6496ffb08b48a8ba4cb6d2f9865d51b88cad2d91f72d261175a10a14d8a41efc3145408865f2505cac0c186c1662e31c49ff44dcccb905a0a8a
+  checksum: 10/8ffe817ff2abc76f8902b8c9868759ee8435195efc8714cb90263983cdbc5e9ac414c59c081e12f12030ed4882a2b7b6cc7ba3e4ffe6eb8f766d61b94989a0fc
   languageName: node
   linkType: hard
 
