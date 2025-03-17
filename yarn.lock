@@ -6547,7 +6547,7 @@ __metadata:
     "@react-leaflet/core": "npm:^2.1.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.114.3"
-    "@tanstack/router-core": "npm:^1.114.3"
+    "@tanstack/router-core": "npm:^1.114.17"
     "@tanstack/router-devtools": "npm:^1.114.3"
     "@tanstack/router-devtools-core": "npm:^1.114.20"
     "@tanstack/router-plugin": "npm:^1.114.17"

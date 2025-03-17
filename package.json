@@ -40,7 +40,7 @@
     "@chakra-ui/cli": "^3.12.0",
     "@eslint/js": "^9.22.0",
     "@svgr/webpack": "^8.1.0",
-    "@tanstack/router-core": "^1.114.3",
+    "@tanstack/router-core": "^1.114.17",
     "@tanstack/router-devtools": "^1.114.3",
     "@tanstack/router-devtools-core": "^1.114.20",
     "@tanstack/router-plugin": "^1.114.17",
