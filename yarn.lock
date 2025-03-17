@@ -3075,6 +3075,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/history@npm:1.114.22":
+  version: 1.114.22
+  resolution: "@tanstack/history@npm:1.114.22"
+  checksum: 10/3d7b3c925adb4cd0f6d16d008c50789adcb6aeb242a54cac93b81e7af1f483a21ce63b540c4798cc13e248b69e57f6eb4aa607f1adba16885fe85ca76848c8b7
+  languageName: node
+  linkType: hard
+
 "@tanstack/history@npm:1.114.3":
   version: 1.114.3
   resolution: "@tanstack/history@npm:1.114.3"
@@ -3131,6 +3138,16 @@ __metadata:
     "@tanstack/history": "npm:1.114.12"
     "@tanstack/store": "npm:^0.7.0"
   checksum: 10/723c966d456fb82738259c7862804a7f11e03dc5ce4a5444b6dfbff61a6d4dc8de0ca6a5dc34f1bf183b985e3e735e0affaee848f420b43ebb99bd82f3b96754
+  languageName: node
+  linkType: hard
+
+"@tanstack/router-core@npm:^1.114.23":
+  version: 1.114.23
+  resolution: "@tanstack/router-core@npm:1.114.23"
+  dependencies:
+    "@tanstack/history": "npm:1.114.22"
+    "@tanstack/store": "npm:^0.7.0"
+  checksum: 10/7f35028c8a53aa9af5649367dfbe4a5425e2c918e9af71fc82c724bddff074b98f510e4b083bf839d8616fc756df254a0f5e822166c56180d1db18300a095136
   languageName: node
   linkType: hard
 
@@ -6547,7 +6564,7 @@ __metadata:
     "@react-leaflet/core": "npm:^2.1.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.114.3"
-    "@tanstack/router-core": "npm:^1.114.17"
+    "@tanstack/router-core": "npm:^1.114.23"
     "@tanstack/router-devtools": "npm:^1.114.3"
     "@tanstack/router-devtools-core": "npm:^1.114.20"
     "@tanstack/router-plugin": "npm:^1.114.17"
