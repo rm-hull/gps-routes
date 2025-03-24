@@ -3386,12 +3386,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/leaflet@npm:*, @types/leaflet@npm:^1.9.16":
+"@types/leaflet@npm:*":
   version: 1.9.16
   resolution: "@types/leaflet@npm:1.9.16"
   dependencies:
     "@types/geojson": "npm:*"
   checksum: 10/a5e51da4c9f4d4d3f290752de15bb3b31e354286b32088ed3b61b74e07f8c4c0306479dc52059778690e55a8c2685921234c15fd2c184e13ce6cb13b06422e41
+  languageName: node
+  linkType: hard
+
+"@types/leaflet@npm:^1.9.17":
+  version: 1.9.17
+  resolution: "@types/leaflet@npm:1.9.17"
+  dependencies:
+    "@types/geojson": "npm:*"
+  checksum: 10/6520b42c98a31340f49e456cc8e4c1a2a73f4ff262ca7293fbd9aa931fc34dd61699a70e9c67110773092bd6c397911918690e339b0c3fa1bc471ef21fd55932
   languageName: node
   linkType: hard
 
@@ -6549,7 +6558,7 @@ __metadata:
     "@tanstack/router-plugin": "npm:^1.114.27"
     "@tmcw/togeojson": "npm:^7.0.0"
     "@types/geojson": "npm:^7946.0.16"
-    "@types/leaflet": "npm:^1.9.16"
+    "@types/leaflet": "npm:^1.9.17"
     "@types/leaflet.fullscreen": "npm:^3.0.2"
     "@types/node": "npm:^22.13.11"
     "@types/react": "npm:^19.0.12"
