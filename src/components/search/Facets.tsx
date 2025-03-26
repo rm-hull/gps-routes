@@ -4,6 +4,21 @@ import { RefinementList } from "./RefinementList";
 export function Facets() {
   return (
     <Box spaceY={2}>
+      <RefinementList header="Route Type" attribute="route_type" />
+      <RefinementList
+        header="Estimated Duration"
+        attribute="estimated_duration"
+      />
+      <RefinementList header="Difficulty" attribute="difficulty" />
+      <RefinementList header="Terrain" attribute="terrain" showMore />
+      <RefinementList header="Activities" attribute="activities" showMore />
+      <RefinementList header="Facilities" attribute="facilities" showMore />
+      <RefinementList
+        header="Points of Interest"
+        attribute="points_of_interest"
+        showMore
+      />
+      <hr />
       <RefinementList header="Country" attribute="country" />
       <RefinementList header="State" attribute="state" />
       <RefinementList header="Region" attribute="region" showMore />
