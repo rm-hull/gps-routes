@@ -20,7 +20,7 @@ export type Summary = {
   ref: string;
   title: string;
   description: string;
-  headline_image_url: string;
+  headline_image_url?: string;
   distance_km: string;
   _geoloc: {
     lat: number;

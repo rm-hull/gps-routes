@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Box, Center, Image, Spinner } from "@chakra-ui/react";
-import { LuSkull } from "react-icons/lu";
+import { LuCircleX, LuSkull } from "react-icons/lu";
 
 type FadeInImageProps = {
-  src: string;
+  src?: string;
   alt: string;
   height?: number;
 };
@@ -14,7 +14,7 @@ export function FadeInImage({ src, alt, height, ...rest }: FadeInImageProps) {
 
   return (
     <Box position="relative" w="full" h={height} {...rest}>
-      {!isLoaded && (
+      {src && !isLoaded && (
         <Center position="absolute" top="0" left="0" w="100%" h="100%">
           <Spinner color="blue" size="lg" />
         </Center>
@@ -22,6 +22,11 @@ export function FadeInImage({ src, alt, height, ...rest }: FadeInImageProps) {
       {error && (
         <Center position="absolute" top="0" left="0" w="100%" h="100%">
           <LuSkull color="tomato" size={72} />
+        </Center>
+      )}
+      {!src && (
+        <Center position="absolute" top="0" left="0" w="100%" h="100%">
+          <LuCircleX color="gray" size={72} />
         </Center>
       )}
       <Image
