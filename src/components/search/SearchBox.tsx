@@ -63,6 +63,7 @@ export function SearchBox() {
       marginRight={2}
     >
       <Input
+        type="text"
         id="search"
         name="search"
         ref={inputRef}
