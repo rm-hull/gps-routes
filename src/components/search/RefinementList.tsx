@@ -36,7 +36,7 @@ export function RefinementList({
   const handleShowMore = () => setExpanded((prev) => !prev);
 
   const handleCheckChanged =
-    (value: string) => (details: { checked: boolean }) => {
+    (value: string) => (details: { checked: string | boolean }) => {
       const fn = details.checked ? addFacetValue : removeFacetValue;
       fn(attribute, value);
     };
