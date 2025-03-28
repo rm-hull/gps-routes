@@ -12,17 +12,17 @@ export const Route = createFileRoute("/gps-routes/")({
 function Index() {
   const [settings] = useGeneralSettings();
 
-  if (settings?.searchView === "grid") {
+  if (settings?.searchView === "map") {
     return (
-      <GlassPane gap={2}>
-        <SearchHits />
-      </GlassPane>
+      <AspectRatio width="100%" height="100%">
+        <MapView />
+      </AspectRatio>
     );
   }
 
   return (
-    <AspectRatio width="100%" height="100%">
-      <MapView />
-    </AspectRatio>
+    <GlassPane gap={2}>
+      <SearchHits />
+    </GlassPane>
   );
 }
