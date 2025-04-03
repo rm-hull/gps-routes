@@ -3101,17 +3101,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router-devtools@npm:^1.114.33":
-  version: 1.114.33
-  resolution: "@tanstack/react-router-devtools@npm:1.114.33"
+"@tanstack/react-router-devtools@npm:^1.114.34":
+  version: 1.114.34
+  resolution: "@tanstack/react-router-devtools@npm:1.114.34"
   dependencies:
     "@tanstack/router-devtools-core": "npm:^1.114.33"
     solid-js: "npm:^1.9.5"
   peerDependencies:
-    "@tanstack/react-router": ^1.114.33
+    "@tanstack/react-router": ^1.114.34
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/b19147b12ff584a4f9759c1bc9faec906db59ffbd8dd7683786cbecc4d1af65b286b63533f40929c5e3dde289111e0d22b5be8d0de4df8a11a220368b162fd78
+  checksum: 10/0c04ce976a69bacea2654e839b7087d0716258e1391fc7de0e0a1bee042c0148a33993526aced86cecfdf9ac6c9a3ca03282d7b7d5a183ba56d593dc40ecf34c
   languageName: node
   linkType: hard
 
@@ -3174,22 +3174,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-devtools@npm:^1.114.33":
-  version: 1.114.33
-  resolution: "@tanstack/router-devtools@npm:1.114.33"
+"@tanstack/router-devtools@npm:^1.114.34":
+  version: 1.114.34
+  resolution: "@tanstack/router-devtools@npm:1.114.34"
   dependencies:
-    "@tanstack/react-router-devtools": "npm:^1.114.33"
+    "@tanstack/react-router-devtools": "npm:^1.114.34"
     clsx: "npm:^2.1.1"
     goober: "npm:^2.1.16"
   peerDependencies:
-    "@tanstack/react-router": ^1.114.33
+    "@tanstack/react-router": ^1.114.34
     csstype: ^3.0.10
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
   peerDependenciesMeta:
     csstype:
       optional: true
-  checksum: 10/6c6035035f1bf801aebc15280356967d2eabea444fe611c8636460d7535f313b77be50f510e8ee21401784c9c1efcbcd60c3e4b03c772a2bd0145fe407b3c1ac
+  checksum: 10/31e99e1a234b4d725183ab1dc62fe76e1583a5dfe161792e47c601d40859dd1de0b582aa17488a01b460a8d7e9c4ca89be6ba1bde7ccac5f69ef3b94dd4a5fec
   languageName: node
   linkType: hard
 
@@ -6599,7 +6599,7 @@ __metadata:
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.114.33"
     "@tanstack/router-core": "npm:^1.114.33"
-    "@tanstack/router-devtools": "npm:^1.114.33"
+    "@tanstack/router-devtools": "npm:^1.114.34"
     "@tanstack/router-devtools-core": "npm:^1.114.33"
     "@tanstack/router-plugin": "npm:^1.114.33"
     "@tmcw/togeojson": "npm:^7.0.0"
