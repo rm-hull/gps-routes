@@ -15,7 +15,8 @@ body {
   overflow: hidden;
 }
 
-.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
   background: var(--chakra-colors-bg-panel) !important;
 }
 
@@ -35,4 +36,9 @@ body {
 
 .leaflet-popup-content a:focus {
   outline: 0;
+}
+
+input[type="text"]::selection {
+  background-color: var(--chakra-colors-blue-400);
+  color: var(--chakra-colors-white);
 }

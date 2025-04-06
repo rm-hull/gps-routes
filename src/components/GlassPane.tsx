@@ -21,12 +21,13 @@ export function GlassPane({
 
   return (
     <Card.Root
-      {...additionalProps}
       flex={1}
       background={`color-mix(in srgb, var(--chakra-colors-bg-panel) ${opacity}, transparent)`}
       backdropFilter="blur(5px)"
       border={0}
+      borderRadius={0}
       overflowY="auto"
+      {...additionalProps}
     >
       <Card.Body gap={gap}>{children}</Card.Body>
     </Card.Root>

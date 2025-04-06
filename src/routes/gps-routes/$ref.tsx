@@ -12,6 +12,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { Md5 } from "ts-md5";
+import { Helmet } from "react-helmet";
 import { Route as refRoute } from "./$ref.tsx";
 import { Nearby, Result } from "@/types";
 import {
@@ -29,12 +30,50 @@ export const Route = createFileRoute("/gps-routes/$ref")({
   component: DetailPage,
 });
 
+function truncateText(text: string, maxLength: number = 160): string {
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  const truncated = text.slice(0, maxLength);
+  const lastSpaceIndex = truncated.lastIndexOf(" ");
+
+  if (lastSpaceIndex !== -1) {
+    return truncated.slice(0, lastSpaceIndex).trim() + "…";
+  }
+
+  return truncated.trim() + "…";
+}
+
 function DetailPage() {
   const [result, route] = Route.useLoaderData();
   const desktopMode = useBreakpointValue({ base: false, lg: true });
 
   return (
     <GlassPane>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="title" content={result.title} />
+        <meta name="description" content={result.description} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content={result.title} />
+        <meta
+          property="og:description"
+          content={truncateText(result.description)}
+        />
+        <meta property="og:image" content={result.headline_image_url} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={window.location.href} />
+        <meta name="twitter:title" content={result.title} />
+        <meta
+          name="twitter:description"
+          content={truncateText(result.description)}
+        />
+        <meta name="twitter:image" content={result.headline_image_url} />
+      </Helmet>
       <Box
         display="flex"
         flexDirection={desktopMode ? "row" : "column"}

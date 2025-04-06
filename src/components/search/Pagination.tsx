@@ -15,6 +15,8 @@ export function Pagination() {
 
   return (
     <PaginationRoot
+      size="xs"
+      variant="subtle"
       count={store?.response?.total || 0}
       pageSize={store?.request?.limit}
       page={page}
