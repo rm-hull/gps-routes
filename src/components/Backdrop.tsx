@@ -33,7 +33,7 @@ export function Backdrop({ children }: PropsWithChildren) {
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
       width="100vw"
-      height="100vh"
+      height="100%"
     >
       {children}
     </Box>
