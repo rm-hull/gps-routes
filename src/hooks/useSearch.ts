@@ -10,7 +10,7 @@ type Store = {
   transitTime?: number;
 };
 
-const INIT_REQUEST: SearchRequest = { query: "", offset: 0, limit: 20 };
+const INIT_REQUEST: SearchRequest = { query: "", offset: 0, limit: 24 };
 
 const root = atom<Store>({
   request: { ...INIT_REQUEST },

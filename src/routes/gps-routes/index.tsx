@@ -4,6 +4,7 @@ import { GlassPane } from "@/components/GlassPane";
 import { useGeneralSettings } from "@/hooks/useGeneralSettings";
 import { MapView } from "@/components/map/MapView";
 import { SearchHits } from "@/components/SearchHits";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/gps-routes/")({
   component: Index,
@@ -21,8 +22,11 @@ function Index() {
   }
 
   return (
-    <GlassPane gap={2}>
-      <SearchHits />
-    </GlassPane>
+    <>
+      <GlassPane gap={2}>
+        <SearchHits />
+      </GlassPane>
+      <Footer />
+    </>
   );
 }
