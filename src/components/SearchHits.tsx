@@ -12,7 +12,7 @@ export function SearchHits() {
   }, []);
 
   return (
-    <Box display="flex" flexWrap="wrap" gap={4} justifyContent="space-evenly">
+    <Box display="flex" flexWrap="wrap" gap={6} justifyContent="center">
       {store?.response?.hits?.map((summary) => (
         <ResultCard key={summary.objectID} hit={summary} />
       ))}

@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { Card, useBreakpointValue } from "@chakra-ui/react";
+import { Card } from "@chakra-ui/react";
 
 type GlassPaneProps = {
   opacity?: string;
@@ -11,14 +11,6 @@ export function GlassPane({
   gap,
   opacity = "30%",
 }: PropsWithChildren<GlassPaneProps>) {
-  const desktopMode = useBreakpointValue({ base: false, md: true });
-
-  const additionalProps = desktopMode && {
-    width: "calc(100% - 40px)",
-    margin: "20px auto",
-    borderRadius: 10,
-  };
-
   return (
     <Card.Root
       flex={1}
@@ -27,7 +19,6 @@ export function GlassPane({
       border={0}
       borderRadius={0}
       overflowY="auto"
-      {...additionalProps}
     >
       <Card.Body gap={gap}>{children}</Card.Body>
     </Card.Root>
