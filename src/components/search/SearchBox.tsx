@@ -23,10 +23,10 @@ export function SearchBox() {
 
   const navigate = useNavigate();
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const newQuery = event.currentTarget.value;
     setInputValue(newQuery);
-    refine(newQuery);
+    await refine(newQuery);
     navigate({ to: homeRoute.to });
   };
 
