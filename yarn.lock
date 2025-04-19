@@ -2474,17 +2474,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.25.0":
+"@eslint/js@npm:9.25.0, @eslint/js@npm:^9.25.0":
   version: 9.25.0
   resolution: "@eslint/js@npm:9.25.0"
   checksum: 10/c00b5abc952d8d45efec12f7b84f143f168261f548cc218451fe14cbfcd801cae05e63013d26c3f7e255a85a164d95225b97441bb32ae1be6162473f3a2d9c71
-  languageName: node
-  linkType: hard
-
-"@eslint/js@npm:^9.24.0":
-  version: 9.24.0
-  resolution: "@eslint/js@npm:9.24.0"
-  checksum: 10/d210114c147a1c1ebfaed5f32734e7c1f8ef551a5ea48ea67f9469668aa4079565ccd038412437bca87515d51dc9e8b8c788473dcf3d08e35dfb27e92cb3ce1b
   languageName: node
   linkType: hard
 
@@ -3719,9 +3712,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-react@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "@vitejs/plugin-react@npm:4.4.0"
+"@vitejs/plugin-react@npm:^4.4.1":
+  version: 4.4.1
+  resolution: "@vitejs/plugin-react@npm:4.4.1"
   dependencies:
     "@babel/core": "npm:^7.26.10"
     "@babel/plugin-transform-react-jsx-self": "npm:^7.25.9"
@@ -3730,7 +3723,7 @@ __metadata:
     react-refresh: "npm:^0.17.0"
   peerDependencies:
     vite: ^4.2.0 || ^5.0.0 || ^6.0.0
-  checksum: 10/ba4de3e93faa523268566441893c71485dcc3a9fce21103b471d31b78ea0be35b0f03022af58e34c2fa3da9a2b328f88a57c52d10aa908d230953dcf99c72af3
+  checksum: 10/bce482d4ecd98d1b15323968ff9ad0a6162a6770fab31f380bb77b5f410319c1848e5cf03d3ccd798e3fc74cdb38ae4dc023cd92576378c81b4d55b1f28b1f1c
   languageName: node
   linkType: hard
 
@@ -6720,7 +6713,7 @@ __metadata:
     "@chakra-ui/cli": "npm:^3.16.0"
     "@chakra-ui/react": "npm:^3.16.0"
     "@emotion/react": "npm:^11.14.0"
-    "@eslint/js": "npm:^9.24.0"
+    "@eslint/js": "npm:^9.25.0"
     "@react-leaflet/core": "npm:^2.1.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.116.0"
@@ -6737,7 +6730,7 @@ __metadata:
     "@types/react-helmet": "npm:^6.1.11"
     "@types/react-slick": "npm:^0.23.13"
     "@types/slick-carousel": "npm:^1.6.40"
-    "@vitejs/plugin-react": "npm:^4.4.0"
+    "@vitejs/plugin-react": "npm:^4.4.1"
     "@vitest/coverage-v8": "npm:3.1.1"
     axios: "npm:^1.8.4"
     babel-plugin-react-compiler: "npm:19.0.0-beta-ebf51a3-20250411"

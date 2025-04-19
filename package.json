@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@chakra-ui/cli": "^3.16.0",
-    "@eslint/js": "^9.24.0",
+    "@eslint/js": "^9.25.0",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-router-devtools": "^1.116.0",
     "@tanstack/router-core": "^1.115.3",
@@ -53,7 +53,7 @@
     "@types/react-helmet": "^6.1.11",
     "@types/react-slick": "^0.23.13",
     "@types/slick-carousel": "^1.6.40",
-    "@vitejs/plugin-react": "^4.4.0",
+    "@vitejs/plugin-react": "^4.4.1",
     "@vitest/coverage-v8": "3.1.1",
     "babel-plugin-react-compiler": "19.0.0-beta-ebf51a3-20250411",
     "eslint": "^9.25.0",
