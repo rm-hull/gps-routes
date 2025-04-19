@@ -57,6 +57,7 @@ export type SearchRequest = {
     distanceKm: number;
   };
   facets?: Record<string, string[] | undefined>;
+  truncateText?: boolean;
 };
 
 export type SearchResponse = {

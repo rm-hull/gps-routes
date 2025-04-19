@@ -12,7 +12,12 @@ type Store = {
   loading: boolean;
 };
 
-const INIT_REQUEST: SearchRequest = { query: "", offset: 0, limit: 24 };
+const INIT_REQUEST: SearchRequest = {
+  query: "",
+  offset: 0,
+  limit: 24,
+  truncateText: true,
+};
 
 const root = atom<Store>({
   request: { ...INIT_REQUEST },
