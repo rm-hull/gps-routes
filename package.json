@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@chakra-ui/cli": "^3.16.1",
-    "@eslint/js": "^9.25.0",
+    "@eslint/js": "^9.25.1",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-router-devtools": "^1.116.0",
     "@tanstack/router-core": "^1.115.3",
