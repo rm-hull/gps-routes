@@ -1555,9 +1555,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/react@npm:^3.17.0":
-  version: 3.17.0
-  resolution: "@chakra-ui/react@npm:3.17.0"
+"@chakra-ui/react@npm:^3.18.0":
+  version: 3.18.0
+  resolution: "@chakra-ui/react@npm:3.18.0"
   dependencies:
     "@ark-ui/react": "npm:5.8.0"
     "@emotion/is-prop-valid": "npm:1.3.1"
@@ -1571,7 +1571,7 @@ __metadata:
     "@emotion/react": ">=11"
     react: ">=18"
     react-dom: ">=18"
-  checksum: 10/a2c58a7ce632ee058ab711db37052b4ecb17ec2679938d7f964aea69d1dfb841c593a144e760a48d8fa25ff9818ba1b09df6b06f6f3cc553e930de355955f904
+  checksum: 10/adf965556a02b421f7c83fd99df4487d3b1f8c525a346139dd25705082e73d9c2c6646727b9e2ebe303de75ef34ec7ccdd7170e06bb4a9b34c6ed8c393e87d6a
   languageName: node
   linkType: hard
 
@@ -6952,7 +6952,7 @@ __metadata:
   resolution: "gps-routes@workspace:."
   dependencies:
     "@chakra-ui/cli": "npm:^3.18.0"
-    "@chakra-ui/react": "npm:^3.17.0"
+    "@chakra-ui/react": "npm:^3.18.0"
     "@emotion/react": "npm:^11.14.0"
     "@eslint/js": "npm:^9.26.0"
     "@react-leaflet/core": "npm:^2.1.0"
