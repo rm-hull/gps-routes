@@ -15,6 +15,11 @@ export type Detail = {
   content: string;
 };
 
+export type GeoLoc = {
+  lat: number;
+  lng: number;
+};
+
 export type Summary = {
   objectID: string;
   ref: string;
@@ -22,10 +27,7 @@ export type Summary = {
   description: string;
   headline_image_url?: string;
   distance_km: string;
-  _geoloc: {
-    lat: number;
-    lng: number;
-  };
+  _geoloc: GeoLoc;
 };
 
 export interface Result extends Summary {
@@ -49,7 +51,13 @@ export type SearchRequest = {
   offset: number;
   limit: number;
   boundingBox?: number[];
+  nearby?: {
+    place?: string;
+    center?: GeoLoc;
+    distanceKm: number;
+  };
   facets?: Record<string, string[] | undefined>;
+  truncateText?: boolean;
 };
 
 export type SearchResponse = {
