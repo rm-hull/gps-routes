@@ -3236,20 +3236,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router@npm:^1.120.10":
-  version: 1.120.10
-  resolution: "@tanstack/react-router@npm:1.120.10"
+"@tanstack/react-router@npm:^1.120.13":
+  version: 1.120.13
+  resolution: "@tanstack/react-router@npm:1.120.13"
   dependencies:
     "@tanstack/history": "npm:1.115.0"
     "@tanstack/react-store": "npm:^0.7.0"
-    "@tanstack/router-core": "npm:1.120.10"
+    "@tanstack/router-core": "npm:1.120.13"
     jsesc: "npm:^3.1.0"
     tiny-invariant: "npm:^1.3.3"
     tiny-warning: "npm:^1.0.3"
   peerDependencies:
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/145682cc8f5289291101d386df46b2642863e7d065e365f82026444e50d0d1cbdb255a8ebde1313d0b51066e21f4c568733a6086b84ce92b336fa3cbb5a6c3d7
+  checksum: 10/7780e40d4612e7f5875756703b1588d79c542adefe88cf56448a5768a63b43c98f2fcde03ec1e286e93548cbdd64857b0ba9931d8faf6a73da80952caf53d4da
   languageName: node
   linkType: hard
 
@@ -3266,7 +3266,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-core@npm:1.120.10, @tanstack/router-core@npm:^1.120.10":
+"@tanstack/router-core@npm:1.120.13":
+  version: 1.120.13
+  resolution: "@tanstack/router-core@npm:1.120.13"
+  dependencies:
+    "@tanstack/history": "npm:1.115.0"
+    "@tanstack/store": "npm:^0.7.0"
+    tiny-invariant: "npm:^1.3.3"
+  checksum: 10/b3766083ecc3449ca3e4f83cdbee186a77d2aa9ac36aa0a020a65e7f08fae3df6d27f867e9d3b1640e21559abdd988feba870c295a7af4a6a36bce23d2106d88
+  languageName: node
+  linkType: hard
+
+"@tanstack/router-core@npm:^1.120.10":
   version: 1.120.10
   resolution: "@tanstack/router-core@npm:1.120.10"
   dependencies:
@@ -6748,7 +6759,7 @@ __metadata:
     "@eslint/js": "npm:^9.27.0"
     "@react-leaflet/core": "npm:^2.1.0"
     "@svgr/webpack": "npm:^8.1.0"
-    "@tanstack/react-router": "npm:^1.120.10"
+    "@tanstack/react-router": "npm:^1.120.13"
     "@tanstack/react-router-devtools": "npm:^1.120.10"
     "@tanstack/router-core": "npm:^1.120.10"
     "@tanstack/router-plugin": "npm:^1.120.10"
