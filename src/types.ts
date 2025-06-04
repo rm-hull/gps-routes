@@ -58,6 +58,7 @@ export type SearchRequest = {
   };
   facets?: Record<string, string[] | undefined>;
   truncateText?: boolean;
+  skipFacets?: boolean;
 };
 
 export type SearchResponse = {
