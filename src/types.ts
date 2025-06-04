@@ -26,7 +26,7 @@ export type Summary = {
   title: string;
   description: string;
   headline_image_url?: string;
-  distance_km: string;
+  distance_km: number;
   _geoloc: GeoLoc;
 };
 
@@ -64,5 +64,5 @@ export type SearchRequest = {
 export type SearchResponse = {
   hits: Summary[];
   total: number;
-  facets: Record<string, Record<string, number>>;
+  facets?: Record<string, Record<string, number>>;
 };
