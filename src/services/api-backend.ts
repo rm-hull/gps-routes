@@ -4,7 +4,7 @@ const BASE_URL = import.meta.env.VITE_GPS_ROUTES_API_URL;
 const API_KEY = import.meta.env.VITE_GPS_ROUTES_API_KEY;
 
 export async function getByObjectId(objectId: string): Promise<Result> {
-  const response = await fetch(`${BASE_URL}/${objectId}`);
+  const response = await fetch(`${BASE_URL}/${objectId}`, { headers: { "X-API-Key": API_KEY } });
   return (await response.json()) as Result;
 }
 
