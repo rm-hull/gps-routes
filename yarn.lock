@@ -1524,9 +1524,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/cli@npm:^3.19.2":
-  version: 3.19.2
-  resolution: "@chakra-ui/cli@npm:3.19.2"
+"@chakra-ui/cli@npm:^3.20.0":
+  version: 3.20.0
+  resolution: "@chakra-ui/cli@npm:3.20.0"
   dependencies:
     "@clack/prompts": "npm:0.10.1"
     "@pandacss/is-valid-prop": "npm:0.53.6"
@@ -1551,7 +1551,7 @@ __metadata:
     "@chakra-ui/react": ">=3.0.0-next.0"
   bin:
     chakra: bin/index.js
-  checksum: 10/19704af816c2cf0dee6e0b314903848e5b426f400c6c8b923d321482a6b99bc7d23c78c81e8b63ca304b32af232007861bf6ef8c7696ab27fc40e1940eea95cf
+  checksum: 10/10eafc91204e2409bcd42240bfe69b6ff714204ee95ced2d89aae148b7c48cb5ae38ff18bffa62f48f4e7bbce55ee2280bd439a4bb04557fab365d0086797b9f
   languageName: node
   linkType: hard
 
@@ -6553,7 +6553,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gps-routes@workspace:."
   dependencies:
-    "@chakra-ui/cli": "npm:^3.19.2"
+    "@chakra-ui/cli": "npm:^3.20.0"
     "@chakra-ui/react": "npm:^3.19.2"
     "@emotion/react": "npm:^11.14.0"
     "@eslint/js": "npm:^9.28.0"
