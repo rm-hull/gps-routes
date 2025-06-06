@@ -43,6 +43,7 @@ jobs:
       - name: Build
         env:
           VITE_GPS_ROUTES_API_URL: ${{ secrets.VITE_GPS_ROUTES_API_URL }}
+          VITE_GPS_ROUTES_API_KEY: ${{ secrets.VITE_GPS_ROUTES_API_KEY }}
         run: yarn build && cp ./dist/index.html ./dist/404.html
 
       - name: Store dist files
