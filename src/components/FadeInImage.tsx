@@ -20,6 +20,7 @@ export function FadeInImage({ src, alt, height, ...rest }: FadeInImageProps) {
     } else if (!isLoaded) {
       return <Spinner color="blue" size="lg" />;
     }
+    return null;
   }, [src, isLoaded, error]);
 
   return (
