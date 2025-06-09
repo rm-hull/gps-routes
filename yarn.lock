@@ -3055,17 +3055,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router-devtools@npm:^1.120.18":
-  version: 1.120.18
-  resolution: "@tanstack/react-router-devtools@npm:1.120.18"
+"@tanstack/react-router-devtools@npm:^1.120.20":
+  version: 1.120.20
+  resolution: "@tanstack/react-router-devtools@npm:1.120.20"
   dependencies:
-    "@tanstack/router-devtools-core": "npm:^1.120.17"
+    "@tanstack/router-devtools-core": "npm:^1.120.19"
     solid-js: "npm:^1.9.5"
   peerDependencies:
-    "@tanstack/react-router": ^1.120.18
+    "@tanstack/react-router": ^1.120.20
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/2f616237c62aca619b53ab49b6af4a3e250265551c6eff0446314184cdfa68bf6a880a3d941ecac8d9bf39e55102cd832ad066a5bcb0d948cb1dfe66d5ded2ec
+  checksum: 10/1dc29b909d164840b8a7f56721dc5d773a195a0dbac76e660125ad9b832aa2ab96ee629decbcf22a86c65e76e06bfb3da992a5ebd553afbb1debcb892775dcdf
   languageName: node
   linkType: hard
 
@@ -3110,21 +3110,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-devtools-core@npm:^1.120.17":
-  version: 1.120.17
-  resolution: "@tanstack/router-devtools-core@npm:1.120.17"
+"@tanstack/router-devtools-core@npm:^1.120.19":
+  version: 1.120.19
+  resolution: "@tanstack/router-devtools-core@npm:1.120.19"
   dependencies:
     clsx: "npm:^2.1.1"
     goober: "npm:^2.1.16"
   peerDependencies:
-    "@tanstack/router-core": ^1.120.17
+    "@tanstack/router-core": ^1.120.19
     csstype: ^3.0.10
     solid-js: ">=1.9.5"
     tiny-invariant: ^1.3.3
   peerDependenciesMeta:
     csstype:
       optional: true
-  checksum: 10/88bb89eaa500a7cfc8ea3968c0d0e233e9db794d4084399a1f7d3d57a7c7480f705d20f01fb87391213839c43890997f6c0a67619fbc6160deb30704ebc64213
+  checksum: 10/660f07ed4781e1018f5c1715232e9bd285c48bbf1e92a3a3c0292f5c81022c606401571b42983a3b78beb4495911bcffe75689f4443278a38a49d778bb1acde7
   languageName: node
   linkType: hard
 
@@ -6574,7 +6574,7 @@ __metadata:
     "@react-leaflet/core": "npm:^3.0.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.120.18"
-    "@tanstack/react-router-devtools": "npm:^1.120.18"
+    "@tanstack/react-router-devtools": "npm:^1.120.20"
     "@tanstack/router-core": "npm:^1.120.17"
     "@tanstack/router-plugin": "npm:^1.120.18"
     "@tmcw/togeojson": "npm:^7.1.2"
