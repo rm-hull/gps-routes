@@ -3412,7 +3412,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-core@npm:1.120.17, @tanstack/router-core@npm:^1.120.17":
+"@tanstack/router-core@npm:1.120.17":
   version: 1.120.17
   resolution: "@tanstack/router-core@npm:1.120.17"
   dependencies:
@@ -6924,7 +6924,7 @@ __metadata:
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.120.18"
     "@tanstack/react-router-devtools": "npm:^1.121.34"
-    "@tanstack/router-core": "npm:^1.120.17"
+    "@tanstack/router-core": "npm:^1.121.34"
     "@tanstack/router-plugin": "npm:^1.121.34"
     "@tmcw/togeojson": "npm:^7.1.2"
     "@types/geojson": "npm:^7946.0.16"
