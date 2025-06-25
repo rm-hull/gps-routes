@@ -3202,9 +3202,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-generator@npm:^1.121.34":
-  version: 1.121.34
-  resolution: "@tanstack/router-generator@npm:1.121.34"
+"@tanstack/router-generator@npm:^1.121.37":
+  version: 1.121.37
+  resolution: "@tanstack/router-generator@npm:1.121.37"
   dependencies:
     "@tanstack/router-core": "npm:^1.121.34"
     "@tanstack/router-utils": "npm:^1.121.21"
@@ -3214,13 +3214,13 @@ __metadata:
     source-map: "npm:^0.7.4"
     tsx: "npm:^4.19.2"
     zod: "npm:^3.24.2"
-  checksum: 10/aeca09d420ba8f97b9d89224865a7612ea40bc031425f9f6457b0ad85899da78d06c8bee43bd63aa9499f73876dc4c5c70e1575552de0ffbf0ea15be9600a790
+  checksum: 10/7c4a120830c2285f976e8c2e033768c48feb825b961afd09359ba05d6899cdb531fe51bbc74db5a1fa2ef3e74ccdb25a4d24232c26773876fdf72975d0f475a9
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.121.34":
-  version: 1.121.34
-  resolution: "@tanstack/router-plugin@npm:1.121.34"
+"@tanstack/router-plugin@npm:^1.121.37":
+  version: 1.121.37
+  resolution: "@tanstack/router-plugin@npm:1.121.37"
   dependencies:
     "@babel/core": "npm:^7.26.8"
     "@babel/plugin-syntax-jsx": "npm:^7.25.9"
@@ -3229,7 +3229,7 @@ __metadata:
     "@babel/traverse": "npm:^7.26.8"
     "@babel/types": "npm:^7.26.8"
     "@tanstack/router-core": "npm:^1.121.34"
-    "@tanstack/router-generator": "npm:^1.121.34"
+    "@tanstack/router-generator": "npm:^1.121.37"
     "@tanstack/router-utils": "npm:^1.121.21"
     "@tanstack/virtual-file-routes": "npm:^1.121.21"
     babel-dead-code-elimination: "npm:^1.0.10"
@@ -3253,7 +3253,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/e2ff02572f90e751664ac8cd037308c0d69d6112afb2336c4911cfa8af78dd2d3029963e690c103994beb39a55f90c1c0aed9585106226676c00270b2a69edf7
+  checksum: 10/655902a7a1ba75073deb0d03ce6a4d4a3ffa7072869e7c5ac9b5cf5504f1533c32591a2275d1f193329c80b382f72d37576ed68a184d84e9ae75ed5047421333
   languageName: node
   linkType: hard
 
@@ -6828,7 +6828,7 @@ __metadata:
     "@tanstack/react-router": "npm:^1.121.34"
     "@tanstack/react-router-devtools": "npm:^1.121.34"
     "@tanstack/router-core": "npm:^1.121.34"
-    "@tanstack/router-plugin": "npm:^1.121.34"
+    "@tanstack/router-plugin": "npm:^1.121.37"
     "@tmcw/togeojson": "npm:^7.1.2"
     "@types/geojson": "npm:^7946.0.16"
     "@types/leaflet": "npm:^1.9.19"
