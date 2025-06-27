@@ -3183,6 +3183,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/router-core@npm:^1.122.0":
+  version: 1.122.0
+  resolution: "@tanstack/router-core@npm:1.122.0"
+  dependencies:
+    "@tanstack/history": "npm:1.121.34"
+    "@tanstack/store": "npm:^0.7.0"
+    cookie-es: "npm:^1.2.2"
+    jsesc: "npm:^3.1.0"
+    tiny-invariant: "npm:^1.3.3"
+    tiny-warning: "npm:^1.0.3"
+  checksum: 10/686b9869dbf50682d021409582217556005f230bf0bda8901a0fca878dab1dfb02628f598555d96d93ba1aa10d5ae9ec30eec5ccb723bd993c4e21f8a1e5dad8
+  languageName: node
+  linkType: hard
+
 "@tanstack/router-devtools-core@npm:^1.121.34":
   version: 1.121.34
   resolution: "@tanstack/router-devtools-core@npm:1.121.34"
@@ -5290,6 +5304,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cookie-es@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "cookie-es@npm:1.2.2"
+  checksum: 10/0fd742c11caa185928e450543f84df62d4b2c1fc7b5041196b57b7db04e1c6ac6585fb40e4f579a2819efefd2d6a9cbb4d17f71240d05f4dcd8f74ae81341a20
+  languageName: node
+  linkType: hard
+
 "core-js-compat@npm:^3.38.0, core-js-compat@npm:^3.38.1":
   version: 3.40.0
   resolution: "core-js-compat@npm:3.40.0"
@@ -6827,7 +6848,7 @@ __metadata:
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.121.34"
     "@tanstack/react-router-devtools": "npm:^1.121.34"
-    "@tanstack/router-core": "npm:^1.121.34"
+    "@tanstack/router-core": "npm:^1.122.0"
     "@tanstack/router-plugin": "npm:^1.121.34"
     "@tmcw/togeojson": "npm:^7.1.2"
     "@types/geojson": "npm:^7946.0.16"
