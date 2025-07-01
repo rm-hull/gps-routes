@@ -43,7 +43,7 @@
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-router-devtools": "^1.122.0",
     "@tanstack/router-core": "^1.122.0",
-    "@tanstack/router-plugin": "^1.122.0",
+    "@tanstack/router-plugin": "^1.123.2",
     "@types/geojson": "^7946.0.16",
     "@types/leaflet": "^1.9.19",
     "@types/leaflet.fullscreen": "^3.0.2",
