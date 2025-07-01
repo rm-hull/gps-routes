@@ -3187,6 +3187,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/router-core@npm:^1.123.2":
+  version: 1.123.2
+  resolution: "@tanstack/router-core@npm:1.123.2"
+  dependencies:
+    "@tanstack/history": "npm:1.121.34"
+    "@tanstack/store": "npm:^0.7.0"
+    cookie-es: "npm:^1.2.2"
+    jsesc: "npm:^3.1.0"
+    tiny-invariant: "npm:^1.3.3"
+    tiny-warning: "npm:^1.0.3"
+  checksum: 10/5e2cf3c1d65e1906d1a981264479534487d739b31a2053f45e74ad314c6f5b30c26cfb586fe4b2cd16fe1c300ba122cbe61f145b86cea5b78d8368c477f92b6d
+  languageName: node
+  linkType: hard
+
 "@tanstack/router-devtools-core@npm:^1.122.0":
   version: 1.122.0
   resolution: "@tanstack/router-devtools-core@npm:1.122.0"
@@ -6838,7 +6852,7 @@ __metadata:
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.122.0"
     "@tanstack/react-router-devtools": "npm:^1.122.0"
-    "@tanstack/router-core": "npm:^1.122.0"
+    "@tanstack/router-core": "npm:^1.123.2"
     "@tanstack/router-plugin": "npm:^1.122.0"
     "@tmcw/togeojson": "npm:^7.1.2"
     "@types/geojson": "npm:^7946.0.16"
