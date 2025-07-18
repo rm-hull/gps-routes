@@ -6845,7 +6845,7 @@ __metadata:
     slick-carousel: "npm:^1.8.1"
     solid-js: "npm:^1.9.7"
     tiny-invariant: "npm:^1.3.3"
-    ts-md5: "npm:^1.3.1"
+    ts-md5: "npm:^2.0.1"
     typescript: "npm:~5.8.3"
     typescript-eslint: "npm:^8.35.1"
     use-debounce: "npm:^10.0.5"
@@ -9483,10 +9483,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-md5@npm:^1.3.1":
-  version: 1.3.1
-  resolution: "ts-md5@npm:1.3.1"
-  checksum: 10/e9f074d287c3fbbad8dd2d17e5179f99f514f268d9a5e4ea0697f0c8a9b94d54ce299bcaef41e8b0ecdec3680667b020c98b347a96ec61ec8d2db961d3b3883e
+"ts-md5@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "ts-md5@npm:2.0.1"
+  checksum: 10/6cb5246794cc15d990715e443184433f073cba5e92bc998e34c93d6bd595b2e16d4e48fd150b813171444cc308d27da491280133001d67836516269fce005e07
   languageName: node
   linkType: hard
 
