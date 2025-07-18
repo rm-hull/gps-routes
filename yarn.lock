@@ -3162,6 +3162,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/router-core@npm:^1.128.4":
+  version: 1.128.4
+  resolution: "@tanstack/router-core@npm:1.128.4"
+  dependencies:
+    "@tanstack/history": "npm:1.121.34"
+    "@tanstack/store": "npm:^0.7.0"
+    cookie-es: "npm:^1.2.2"
+    seroval: "npm:^1.3.2"
+    seroval-plugins: "npm:^1.3.2"
+    tiny-invariant: "npm:^1.3.3"
+    tiny-warning: "npm:^1.0.3"
+  checksum: 10/5b0464be4742984d8335ff9627655daf3d6bb81981abbd4afa675f7b171f869674c34ec53a7795de2e5b293784a161d165866ad49879fcca239f654c87cdcb66
+  languageName: node
+  linkType: hard
+
 "@tanstack/router-devtools-core@npm:^1.128.0":
   version: 1.128.0
   resolution: "@tanstack/router-devtools-core@npm:1.128.0"
@@ -3181,11 +3196,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-generator@npm:1.124.0":
-  version: 1.124.0
-  resolution: "@tanstack/router-generator@npm:1.124.0"
+"@tanstack/router-generator@npm:1.128.4":
+  version: 1.128.4
+  resolution: "@tanstack/router-generator@npm:1.128.4"
   dependencies:
-    "@tanstack/router-core": "npm:^1.124.0"
+    "@tanstack/router-core": "npm:^1.128.4"
     "@tanstack/router-utils": "npm:1.121.21"
     "@tanstack/virtual-file-routes": "npm:^1.121.21"
     prettier: "npm:^3.5.0"
@@ -3193,13 +3208,13 @@ __metadata:
     source-map: "npm:^0.7.4"
     tsx: "npm:^4.19.2"
     zod: "npm:^3.24.2"
-  checksum: 10/cbfaaa53b3939b636d1bad89f2768b8f10ca0c1cd37d2c1902fc39decb56c3653abdc6add6a8767c701f67c7b375979b565405ea2df89a19f8be8b07824bbf87
+  checksum: 10/4498822bc29af41838d920c086ffc5ad6baca567f88b2a60335406caa2e913945ea2abc0d4b66666ad6e0f273d7a47b469c05a4b0c15842bb009affebe564d59
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.124.0":
-  version: 1.124.0
-  resolution: "@tanstack/router-plugin@npm:1.124.0"
+"@tanstack/router-plugin@npm:^1.128.4":
+  version: 1.128.4
+  resolution: "@tanstack/router-plugin@npm:1.128.4"
   dependencies:
     "@babel/core": "npm:^7.27.7"
     "@babel/plugin-syntax-jsx": "npm:^7.27.1"
@@ -3207,8 +3222,8 @@ __metadata:
     "@babel/template": "npm:^7.27.2"
     "@babel/traverse": "npm:^7.27.7"
     "@babel/types": "npm:^7.27.7"
-    "@tanstack/router-core": "npm:^1.124.0"
-    "@tanstack/router-generator": "npm:1.124.0"
+    "@tanstack/router-core": "npm:^1.128.4"
+    "@tanstack/router-generator": "npm:1.128.4"
     "@tanstack/router-utils": "npm:1.121.21"
     "@tanstack/virtual-file-routes": "npm:^1.121.21"
     babel-dead-code-elimination: "npm:^1.0.10"
@@ -3217,7 +3232,7 @@ __metadata:
     zod: "npm:^3.24.2"
   peerDependencies:
     "@rsbuild/core": ">=1.0.2"
-    "@tanstack/react-router": ^1.124.0
+    "@tanstack/react-router": ^1.128.4
     vite: ">=5.0.0 || >=6.0.0"
     vite-plugin-solid: ^2.11.2
     webpack: ">=5.92.0"
@@ -3232,7 +3247,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/b0c48b033a1b19b34ad1f6d494859a33edda6ba75cdd40e0f0d6e24abdb91bf968c72f255a0c7a2d0c9471b331355e63fcc13d848fa42b26dd17533dfa72e672
+  checksum: 10/dad128db113bfda8de5b166bf9aa428026fc3200b9cec4306a1f719c6294bdf88c4a37fbbfd1570ba7efedb83d3df11adacb6c4e8dadff0160b492ff113e99ca
   languageName: node
   linkType: hard
 
@@ -6807,7 +6822,7 @@ __metadata:
     "@tanstack/react-router": "npm:^1.124.0"
     "@tanstack/react-router-devtools": "npm:^1.128.0"
     "@tanstack/router-core": "npm:^1.124.0"
-    "@tanstack/router-plugin": "npm:^1.124.0"
+    "@tanstack/router-plugin": "npm:^1.128.4"
     "@tmcw/togeojson": "npm:^7.1.2"
     "@types/geojson": "npm:^7946.0.16"
     "@types/leaflet": "npm:^1.9.19"
@@ -8894,6 +8909,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"seroval-plugins@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "seroval-plugins@npm:1.3.2"
+  peerDependencies:
+    seroval: ^1.0
+  checksum: 10/39f17c3edaf9f15db15dbdd8fb0bb76528db56639799e0dc10821bb8f0151e188ffa9730512120bf155a099b4152bc9f9fc33e4caeb6ce4ea98104e382c5066f
+  languageName: node
+  linkType: hard
+
 "seroval-plugins@npm:~1.3.0":
   version: 1.3.1
   resolution: "seroval-plugins@npm:1.3.1"
@@ -8907,6 +8931,13 @@ __metadata:
   version: 1.2.1
   resolution: "seroval@npm:1.2.1"
   checksum: 10/02d7c4ad3b02cb56a4dc45b1a9224bec4a1b44cc6330a3bd3ac3f989fd09fa8a059aa77c8bff0e216718fa77a68eea50ca5b4a3cf1967b21a550e228dc00c456
+  languageName: node
+  linkType: hard
+
+"seroval@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "seroval@npm:1.3.2"
+  checksum: 10/663380c9dbd55bc58e4fb2577c1339551d1266bec41bbe9e16dfef6182295c766b3774826cdbc6311bd466f8af458a21ffcb7cab02fb57224a349322cc8989eb
   languageName: node
   linkType: hard
 
