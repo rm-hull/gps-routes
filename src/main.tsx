@@ -6,9 +6,6 @@ import { routeTree } from "./routeTree.gen";
 import { Backdrop } from "@/components/Backdrop.tsx";
 import { Provider } from "@/components/ui/provider";
 
-import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
-import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css";
-
 const router = createRouter({ routeTree });
 
 // Register the router instance for type safety
