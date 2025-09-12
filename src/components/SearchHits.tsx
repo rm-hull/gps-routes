@@ -16,7 +16,14 @@ export function SearchHits() {
   }
 
   return (
-    <Box display="flex" flexWrap="wrap" gap={6} justifyContent="center">
+    <Box
+      display="grid"
+      gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))"
+      gap={6}
+      justifyItems="center"
+      marginLeft={4}
+      marginRight={4}
+    >
       {store?.response?.hits?.map((summary) => (
         <ResultCard key={summary.objectID} hit={summary} />
       ))}
