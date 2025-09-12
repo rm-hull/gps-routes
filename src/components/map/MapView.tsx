@@ -7,7 +7,7 @@ import {
 import { FullscreenControl } from "react-leaflet-fullscreen";
 import "leaflet/dist/leaflet.css";
 import "react-leaflet-fullscreen/styles.css";
-import L from 'leaflet';
+import L from "leaflet";
 import { CurrentLocation } from "./controls/CurrentLocation";
 import { Route } from "./Route";
 import { PointsOfInterest } from "./PointsOfInterest";
@@ -23,10 +23,11 @@ type MapViewProps = {
 // Remove the _getIconUrl property from the prototype of L.Icon.Default
 delete (L.Icon.Default.prototype as { _getIconUrl?: unknown })._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-})
+  iconRetinaUrl:
+    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+});
 
 export function MapView({ route }: MapViewProps) {
   const bounds = getBounds(route);
