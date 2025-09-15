@@ -38,7 +38,7 @@
     "use-debounce": "^10.0.6"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^3.26.0",
+    "@chakra-ui/cli": "^3.27.0",
     "@eslint/js": "^9.35.0",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-router-devtools": "^1.131.42",
