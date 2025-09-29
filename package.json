@@ -47,7 +47,7 @@
     "@types/geojson": "^7946.0.16",
     "@types/leaflet": "^1.9.20",
     "@types/leaflet.fullscreen": "^3.0.3",
-    "@types/node": "^24.5.2",
+    "@types/node": "^24.6.0",
     "@types/react": "^19.1.14",
     "@types/react-dom": "^19.1.9",
     "@types/react-helmet": "^6.1.11",
