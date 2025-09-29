@@ -53,7 +53,7 @@
     "@types/react-helmet": "^6.1.11",
     "@types/react-slick": "^0.23.13",
     "@types/slick-carousel": "^1.6.40",
-    "@vitejs/plugin-react": "^5.0.3",
+    "@vitejs/plugin-react": "^5.0.4",
     "@vitest/coverage-v8": "3.2.4",
     "babel-plugin-react-compiler": "19.1.0-rc.3",
     "eslint": "^9.36.0",
