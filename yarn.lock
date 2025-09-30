@@ -2688,6 +2688,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/history@npm:1.132.21":
+  version: 1.132.21
+  resolution: "@tanstack/history@npm:1.132.21"
+  checksum: 10/7dba35b1f2a785e81a10a4c4101f54c6c7435b4aa2480aea25991858f940cf5736aa3cdc688c9f56e40cee78b78e48088d6fa819775f4abf91664f4b4c8bcc9d
+  languageName: node
+  linkType: hard
+
 "@tanstack/react-router-devtools@npm:^1.132.7":
   version: 1.132.7
   resolution: "@tanstack/react-router-devtools@npm:1.132.7"
@@ -2732,7 +2739,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-core@npm:1.132.7, @tanstack/router-core@npm:^1.132.7":
+"@tanstack/router-core@npm:1.132.7":
   version: 1.132.7
   resolution: "@tanstack/router-core@npm:1.132.7"
   dependencies:
@@ -2744,6 +2751,21 @@ __metadata:
     tiny-invariant: "npm:^1.3.3"
     tiny-warning: "npm:^1.0.3"
   checksum: 10/c83ad78e1e62672e2b9f1dba9c9465a2b8ab5f7ab558c93d81e40045c361be4a8dc1f49958c9505a7f0fcbb3bec5a5fc7b384038a5e04e6150dd2be4e32ed573
+  languageName: node
+  linkType: hard
+
+"@tanstack/router-core@npm:^1.132.26":
+  version: 1.132.26
+  resolution: "@tanstack/router-core@npm:1.132.26"
+  dependencies:
+    "@tanstack/history": "npm:1.132.21"
+    "@tanstack/store": "npm:^0.7.0"
+    cookie-es: "npm:^2.0.0"
+    seroval: "npm:^1.3.2"
+    seroval-plugins: "npm:^1.3.2"
+    tiny-invariant: "npm:^1.3.3"
+    tiny-warning: "npm:^1.0.3"
+  checksum: 10/6cf742eb2e03017a7714384d36d9e87d71609d9c83bf021b6a19bcf41de7c6b70bc378b33b5de2b81589095aad1790cbc30ea2a17d9b2998d140f250415cd3c4
   languageName: node
   linkType: hard
 
@@ -6065,7 +6087,7 @@ __metadata:
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.132.7"
     "@tanstack/react-router-devtools": "npm:^1.132.7"
-    "@tanstack/router-core": "npm:^1.132.7"
+    "@tanstack/router-core": "npm:^1.132.26"
     "@tanstack/router-plugin": "npm:^1.132.7"
     "@tmcw/togeojson": "npm:^7.1.2"
     "@types/geojson": "npm:^7946.0.16"
