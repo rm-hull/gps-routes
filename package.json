@@ -41,7 +41,7 @@
     "@chakra-ui/cli": "^3.27.0",
     "@eslint/js": "^9.36.0",
     "@svgr/webpack": "^8.1.0",
-    "@tanstack/react-router-devtools": "^1.132.7",
+    "@tanstack/react-router-devtools": "^1.132.31",
     "@tanstack/router-core": "^1.132.7",
     "@tanstack/router-plugin": "^1.132.7",
     "@types/geojson": "^7946.0.16",
