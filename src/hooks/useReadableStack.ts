@@ -32,12 +32,11 @@ async function decodeStackTrace(stack: string): Promise<string> {
         sourceMapCache.set(mapUrl, rawMap);
       }
 
-      const consumer = await new SourceMapConsumer(rawMap);
+      const consumer = new SourceMapConsumer(rawMap);
       const pos = consumer.originalPositionFor({
         line: Number(lineNum),
         column: Number(colNum),
       });
-      // consumer.destroy();
 
       if (pos.source) {
         const fnName = pos.name ? ` (${pos.name})` : "";
