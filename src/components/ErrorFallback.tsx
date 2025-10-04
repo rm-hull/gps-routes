@@ -1,8 +1,11 @@
-import { Alert, Code, Container, Heading } from "@chakra-ui/react";
+import { Alert, Code, Container, Heading, Text } from "@chakra-ui/react";
 import { ErrorComponentProps } from "@tanstack/react-router";
 import { GlassPane } from "./GlassPane";
+import { useReadableStack } from "@/hooks/useReadableStack";
 
 export function ErrorFallback({ error }: ErrorComponentProps) {
+  const { stack, loading } = useReadableStack(error);
+
   return (
     <GlassPane>
       <Alert.Root status="error">
@@ -15,8 +18,9 @@ export function ErrorFallback({ error }: ErrorComponentProps) {
 
       <Container m={5}>
         <Heading size="sm">Stack trace</Heading>
+        {loading && <Text color="gray.500">Resolving source maps…</Text>}
         <Code background="none">
-          <pre>{error.stack}</pre>
+          <pre>{stack}</pre>
         </Code>
       </Container>
     </GlassPane>
