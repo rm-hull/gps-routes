@@ -2201,6 +2201,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rm-hull/use-local-storage@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@rm-hull/use-local-storage@npm:0.1.0"
+  dependencies:
+    jotai: "npm:^2.15.0"
+    react: "npm:^19.2.0"
+    react-dom: "npm:^19.2.0"
+  peerDependencies:
+    react: ">=19.0.0"
+  checksum: 10/0f957d94f4b1cbccf1de95fafcb6ab5e9ba9a147c5792d1107ff79e4ab48a9148059352cfc93b25b238c41e359da1cf7f2773e55d931ed98dcb1e9ea96e7d473
+  languageName: node
+  linkType: hard
+
 "@rolldown/pluginutils@npm:1.0.0-beta.38":
   version: 1.0.0-beta.38
   resolution: "@rolldown/pluginutils@npm:1.0.0-beta.38"
@@ -6068,6 +6081,7 @@ __metadata:
     "@emotion/react": "npm:^11.14.0"
     "@eslint/js": "npm:^9.37.0"
     "@react-leaflet/core": "npm:^3.0.0"
+    "@rm-hull/use-local-storage": "npm:^0.1.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.132.47"
     "@tanstack/react-router-devtools": "npm:^1.132.51"

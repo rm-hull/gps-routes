@@ -11,7 +11,7 @@ export const Route = createFileRoute("/gps-routes/")({
 });
 
 function Index() {
-  const [settings] = useGeneralSettings();
+  const { settings } = useGeneralSettings();
 
   if (settings?.searchView === "map") {
     return (

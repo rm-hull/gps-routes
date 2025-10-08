@@ -6,7 +6,7 @@ import { Route as homeRoute } from "@/routes/gps-routes/index";
 
 export function ViewSelector() {
   const navigate = useNavigate();
-  const [settings, updateSettings] = useGeneralSettings();
+  const { settings, updateSettings } = useGeneralSettings();
   const desktopMode = useBreakpointValue({ base: false, md: true });
 
   const handleSearchViewChange = (value: SearchView) => {
