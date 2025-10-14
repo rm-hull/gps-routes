@@ -2797,9 +2797,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.132.51":
-  version: 1.132.51
-  resolution: "@tanstack/router-plugin@npm:1.132.51"
+"@tanstack/router-plugin@npm:^1.132.56":
+  version: 1.132.56
+  resolution: "@tanstack/router-plugin@npm:1.132.56"
   dependencies:
     "@babel/core": "npm:^7.27.7"
     "@babel/plugin-syntax-jsx": "npm:^7.27.1"
@@ -2832,7 +2832,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/61baa443814092c83e6c192d8e047692f53d3a4e61936394346588cb8520bb008e3bfff009543b2e788c82fe368e10a7c25b57f13493647f2e52e77748af8586
+  checksum: 10/9cf69c9adfba603defc772acaabb124f504584a44c56acd67d0e209f6e4f878d4bfa296e7254b321ed01072d98d921934aba6a25fa19ac0d0c2da1d2d0ee6bcc
   languageName: node
   linkType: hard
 
@@ -6096,7 +6096,7 @@ __metadata:
     "@tanstack/react-router": "npm:^1.132.47"
     "@tanstack/react-router-devtools": "npm:^1.132.51"
     "@tanstack/router-core": "npm:^1.132.47"
-    "@tanstack/router-plugin": "npm:^1.132.51"
+    "@tanstack/router-plugin": "npm:^1.132.56"
     "@tmcw/togeojson": "npm:^7.1.2"
     "@types/geojson": "npm:^7946.0.16"
     "@types/leaflet": "npm:^1.9.21"
