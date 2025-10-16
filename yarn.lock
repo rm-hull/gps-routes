@@ -2724,20 +2724,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router@npm:^1.132.47":
-  version: 1.132.47
-  resolution: "@tanstack/react-router@npm:1.132.47"
+"@tanstack/react-router@npm:^1.133.3":
+  version: 1.133.3
+  resolution: "@tanstack/react-router@npm:1.133.3"
   dependencies:
-    "@tanstack/history": "npm:1.132.31"
+    "@tanstack/history": "npm:1.133.3"
     "@tanstack/react-store": "npm:^0.7.0"
-    "@tanstack/router-core": "npm:1.132.47"
+    "@tanstack/router-core": "npm:1.133.3"
     isbot: "npm:^5.1.22"
     tiny-invariant: "npm:^1.3.3"
     tiny-warning: "npm:^1.0.3"
   peerDependencies:
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/19e3590e2f905fffb5ef8f6c130aab1165d8ce982565aabac88a2720cf3b189e49b877e5509ae84860cd12afef9512ba536d584324d9265623add6ef79077ac2
+  checksum: 10/2b717210f70a77600a6437019a74d5cd0925372ecfecdcf527ffe959fbe92d82646868d12c82c6d7a4735bc045e131c77794fd841dc3e4ed0e100c3b671df584
   languageName: node
   linkType: hard
 
@@ -6115,7 +6115,7 @@ __metadata:
     "@react-leaflet/core": "npm:^3.0.0"
     "@rm-hull/use-local-storage": "npm:^0.1.0"
     "@svgr/webpack": "npm:^8.1.0"
-    "@tanstack/react-router": "npm:^1.132.47"
+    "@tanstack/react-router": "npm:^1.133.3"
     "@tanstack/react-router-devtools": "npm:^1.133.3"
     "@tanstack/router-core": "npm:^1.132.47"
     "@tanstack/router-plugin": "npm:^1.133.4"
