@@ -2717,20 +2717,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router@npm:^1.133.3":
-  version: 1.133.3
-  resolution: "@tanstack/react-router@npm:1.133.3"
+"@tanstack/react-router@npm:^1.133.10":
+  version: 1.133.10
+  resolution: "@tanstack/react-router@npm:1.133.10"
   dependencies:
     "@tanstack/history": "npm:1.133.3"
     "@tanstack/react-store": "npm:^0.7.0"
-    "@tanstack/router-core": "npm:1.133.3"
+    "@tanstack/router-core": "npm:1.133.10"
     isbot: "npm:^5.1.22"
     tiny-invariant: "npm:^1.3.3"
     tiny-warning: "npm:^1.0.3"
   peerDependencies:
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/2b717210f70a77600a6437019a74d5cd0925372ecfecdcf527ffe959fbe92d82646868d12c82c6d7a4735bc045e131c77794fd841dc3e4ed0e100c3b671df584
+  checksum: 10/e199947d673104c149ab94063986d174b67fd49f43eabf00fa9a37f36fdf25a6a2ae02c00696f84650b7ed056d4b15eb8bb673d6a48d8a6ab5ef3c3ef046fad6
   languageName: node
   linkType: hard
 
@@ -2744,6 +2744,21 @@ __metadata:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
   checksum: 10/50e70a2ff03915d60e6abcd4d8d14d61cf88dff748687addb6d48e5a943e703d94ba8ae6b365f879ec95a08544022af15cb78cc3d428e1f29de9f8ae2ff8af9f
+  languageName: node
+  linkType: hard
+
+"@tanstack/router-core@npm:1.133.10":
+  version: 1.133.10
+  resolution: "@tanstack/router-core@npm:1.133.10"
+  dependencies:
+    "@tanstack/history": "npm:1.133.3"
+    "@tanstack/store": "npm:^0.7.0"
+    cookie-es: "npm:^2.0.0"
+    seroval: "npm:^1.3.2"
+    seroval-plugins: "npm:^1.3.2"
+    tiny-invariant: "npm:^1.3.3"
+    tiny-warning: "npm:^1.0.3"
+  checksum: 10/1a7cc79c676ad1fe71a071335a94d5155dfec8d9fe5046cd6fd1574422f4819c208dfd755266b8af8183c6f54100e79c531bf13e68bf2382a6d0cfb8649c0322
   languageName: node
   linkType: hard
 
@@ -6093,7 +6108,7 @@ __metadata:
     "@react-leaflet/core": "npm:^3.0.0"
     "@rm-hull/use-local-storage": "npm:^0.1.0"
     "@svgr/webpack": "npm:^8.1.0"
-    "@tanstack/react-router": "npm:^1.133.3"
+    "@tanstack/react-router": "npm:^1.133.10"
     "@tanstack/react-router-devtools": "npm:^1.133.3"
     "@tanstack/router-core": "npm:^1.133.3"
     "@tanstack/router-plugin": "npm:^1.133.4"
