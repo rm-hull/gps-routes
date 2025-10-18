@@ -5,10 +5,18 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: npm
+    directory: /
     schedule:
       interval: "daily"
+    versioning-strategy: increase
+    groups:
+      tanstack:
+        patterns:
+          - "@tanstack/*"
+      eslint:
+        patterns:
+          - "*eslint*"
   - package-ecosystem: github-actions
     directory: /
     schedule:
