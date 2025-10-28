@@ -2581,17 +2581,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router-devtools@npm:^1.133.32":
-  version: 1.133.32
-  resolution: "@tanstack/react-router-devtools@npm:1.133.32"
+"@tanstack/react-router-devtools@npm:^1.133.34":
+  version: 1.133.34
+  resolution: "@tanstack/react-router-devtools@npm:1.133.34"
   dependencies:
-    "@tanstack/router-devtools-core": "npm:1.133.28"
+    "@tanstack/router-devtools-core": "npm:1.133.34"
     vite: "npm:^7.1.7"
   peerDependencies:
     "@tanstack/react-router": ^1.133.32
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/6d65743f4f63752f8562ede63cd73dfa45e96e3362db928e3ca0308dbbc77ef89444225b80a117e7bca8899d782e8ad53725dd94b1c4c957b886fcbd4c5192d7
+  checksum: 10/86f14b7928c84004fe6c9f36f7bdf2e2be832bd34c24fa2add9a54033dd455369caaf79af06449a89e4da1ff3dcd9c37d2740c072ceffaf0139657a45177dd87
   languageName: node
   linkType: hard
 
@@ -2640,9 +2640,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-devtools-core@npm:1.133.28":
-  version: 1.133.28
-  resolution: "@tanstack/router-devtools-core@npm:1.133.28"
+"@tanstack/router-devtools-core@npm:1.133.34":
+  version: 1.133.34
+  resolution: "@tanstack/router-devtools-core@npm:1.133.34"
   dependencies:
     clsx: "npm:^2.1.1"
     goober: "npm:^2.1.16"
@@ -2655,7 +2655,7 @@ __metadata:
   peerDependenciesMeta:
     csstype:
       optional: true
-  checksum: 10/cb883510d5721f55ba9b83d226ec0f010b4dc2e1a16d0c27d067f71930164433f98fe281ef2dcc9af1010bd4a4e5a214c70e372af6e33c6beab3effbf716c450
+  checksum: 10/9e2a93eb210649187cb9662dd6068a2b693c91fcce6f8e3064b15bff75845d7c7fd2e3b83e5b7e9a1eacfcd9a29e906eb51f8fac32da599ee7023049e9de754d
   languageName: node
   linkType: hard
 
@@ -5963,7 +5963,7 @@ __metadata:
     "@rm-hull/use-local-storage": "npm:^0.1.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.133.32"
-    "@tanstack/react-router-devtools": "npm:^1.133.32"
+    "@tanstack/react-router-devtools": "npm:^1.133.34"
     "@tanstack/router-core": "npm:^1.133.28"
     "@tanstack/router-plugin": "npm:^1.133.32"
     "@tmcw/togeojson": "npm:^7.1.2"
