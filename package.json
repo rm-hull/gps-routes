@@ -16,6 +16,7 @@
     "@chakra-ui/react": "^3.28.0",
     "@emotion/react": "^11.14.0",
     "@react-leaflet/core": "^3.0.0",
+    "@rm-hull/chakra-error-fallback": "^0.0.2",
     "@rm-hull/use-local-storage": "^0.3.2",
     "@tanstack/react-router": "^1.134.4",
     "@tmcw/togeojson": "^7.1.2",
@@ -35,7 +36,6 @@
     "react-slick": "^0.31.0",
     "screenfull": "^6.0.2",
     "slick-carousel": "^1.8.1",
-    "source-map-js": "^1.2.1",
     "ts-md5": "^2.0.1",
     "use-debounce": "^10.0.6"
   },
