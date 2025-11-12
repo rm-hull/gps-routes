@@ -15,6 +15,9 @@ updates:
       eslint:
         patterns:
           - "*eslint*"
+      tanstack:
+        patterns:
+          - "@tanstack/*"
       vite:
         patterns:
           - "*vite*"
