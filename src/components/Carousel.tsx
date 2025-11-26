@@ -1,8 +1,11 @@
-import { AspectRatio, Badge, Box, Image, Text } from "@chakra-ui/react";
-import Slider from "react-slick";
+import {
+  AspectRatio,
+  Carousel as ChakraCarousel,
+  Em,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import { type Image as ImageType } from "@/types";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 type CarouselProps = {
   images?: ImageType[];
@@ -14,10 +17,10 @@ export function Carousel({ images = [] }: CarouselProps) {
   }
 
   return (
-    <Box marginX={6}>
-      <Slider dots infinite speed={750} slidesToShow={1} slidesToScroll={1}>
-        {images.map((img) => (
-          <Box key={img.src} px={2}>
+    <ChakraCarousel.Root slideCount={images.length}>
+      <ChakraCarousel.ItemGroup width="full">
+        {images.map((img, index) => (
+          <ChakraCarousel.Item key={img.src} index={index}>
             <AspectRatio ratio={4 / 3}>
               <Image
                 fit="cover"
@@ -28,23 +31,18 @@ export function Carousel({ images = [] }: CarouselProps) {
                 loading="lazy"
               />
             </AspectRatio>
-            <Badge
-              colorPalette="blue"
-              position="absolute"
-              top={1}
-              marginLeft={1}
-            >
-              <Text maxW={300} truncate>
-                {img.title}
-              </Text>
-            </Badge>
 
-            <Text pr={2} fontSize="sm">
-              {img.caption}
+            <Text fontSize="sm">{img.caption}</Text>
+            <Text fontSize="xs" maxW={500} truncate color="fg.muted">
+              <Em>{img.title}</Em>
             </Text>
-          </Box>
+          </ChakraCarousel.Item>
         ))}
-      </Slider>
-    </Box>
+      </ChakraCarousel.ItemGroup>
+
+      <ChakraCarousel.Control justifyContent="center" width="full">
+        <ChakraCarousel.Indicators />
+      </ChakraCarousel.Control>
+    </ChakraCarousel.Root>
   );
 }
