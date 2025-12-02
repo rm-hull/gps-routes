@@ -2312,16 +2312,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rm-hull/use-local-storage@npm:^0.3.2":
-  version: 0.3.2
-  resolution: "@rm-hull/use-local-storage@npm:0.3.2"
+"@rm-hull/use-local-storage@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "@rm-hull/use-local-storage@npm:0.3.3"
   dependencies:
-    jotai: "npm:^2.15.0"
+    jotai: "npm:^2.15.2"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
   peerDependencies:
     react: ">=19.0.0"
-  checksum: 10/d7d16eb3480af1e86c672e110de6726bda27c6d5ccbd746180accfeab5f0eaedca5f32e50fbcbda33ee9b78e8ec636a66dbe0e9ca5dfdb13cf7621c1d82dfaa3
+  checksum: 10/1caab6bc62c267c734dff377a678573b647ee7116ba16adc0645bcec453e6be5b56193ae71748bd20cbd272b10f8257b6b7ef331b7420092233c57cc2d83e497
   languageName: node
   linkType: hard
 
@@ -6179,7 +6179,7 @@ __metadata:
     "@eslint/js": "npm:^9.39.1"
     "@react-leaflet/core": "npm:^3.0.0"
     "@rm-hull/chakra-error-fallback": "npm:^0.0.12"
-    "@rm-hull/use-local-storage": "npm:^0.3.2"
+    "@rm-hull/use-local-storage": "npm:^0.3.3"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-router": "npm:^1.139.12"
     "@tanstack/react-router-devtools": "npm:^1.139.12"
@@ -6787,27 +6787,6 @@ __metadata:
     "@pkgjs/parseargs":
       optional: true
   checksum: 10/96f8786eaab98e4bf5b2a5d6d9588ea46c4d06bbc4f2eb861fdd7b6b182b16f71d8a70e79820f335d52653b16d4843b29dd9cdcf38ae80406756db9199497cf3
-  languageName: node
-  linkType: hard
-
-"jotai@npm:^2.15.0":
-  version: 2.15.0
-  resolution: "jotai@npm:2.15.0"
-  peerDependencies:
-    "@babel/core": ">=7.0.0"
-    "@babel/template": ">=7.0.0"
-    "@types/react": ">=17.0.0"
-    react: ">=17.0.0"
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-    "@babel/template":
-      optional: true
-    "@types/react":
-      optional: true
-    react:
-      optional: true
-  checksum: 10/d05469caf6b8e67110c835c1a4cade2e5b36c3b2baa7cbcbbff1fbdb6949c1a819d1d8bd77d47cf3d806ef3576324dc979bbd2589eee70a9f0d7c01145dcd0a1
   languageName: node
   linkType: hard
 
