@@ -6205,7 +6205,7 @@ __metadata:
     globals: "npm:^16.5.0"
     jotai: "npm:^2.15.2"
     leaflet: "npm:^1.9.4"
-    leaflet.fullscreen: "npm:^5.0.0"
+    leaflet.fullscreen: "npm:^5.1.0"
     next-themes: "npm:^0.4.6"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
@@ -6925,12 +6925,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"leaflet.fullscreen@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "leaflet.fullscreen@npm:5.0.0"
+"leaflet.fullscreen@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "leaflet.fullscreen@npm:5.1.0"
   peerDependencies:
     leaflet: ^1.7.0 || >=2.0.0-alpha.1
-  checksum: 10/01275797a6654a0718cd621a7074ffd1bf9b57f004eb96afd91423b1e863a3edd256d94fad5794d508d4120c81e6d00d1ca74d2abc9a192ba78f40f6a9949e96
+  checksum: 10/2e3ad81ebd1949aff9e04a3984cfe56035bb91b3f8d34ef2def0c2052104bb24c839a42c09e2ac650ba01bf5f7c913ad52a6593c695b158739b919fc60299ec1
   languageName: node
   linkType: hard
 
