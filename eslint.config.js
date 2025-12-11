@@ -4,6 +4,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 import importConfig from "eslint-plugin-import";
+import pluginRouter from "@tanstack/eslint-plugin-router";
 import reactCompiler from "eslint-plugin-react-compiler";
 
 export default tseslint.config(
@@ -19,6 +20,7 @@ export default tseslint.config(
       "react-compiler": reactCompiler,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
+      "@tanstack/router": pluginRouter,
       import: importConfig,
     },
     rules: {

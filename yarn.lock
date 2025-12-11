@@ -2742,6 +2742,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/eslint-plugin-router@npm:^1.141.0":
+  version: 1.141.0
+  resolution: "@tanstack/eslint-plugin-router@npm:1.141.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^8.23.0"
+  peerDependencies:
+    eslint: ^8.57.0 || ^9.0.0
+  checksum: 10/b199292521305797617498d1bb5104254dc7a97d17dc489729cae96fe554d12771a5fd8f1e63aa1a6e3e4eb6a4a3f8a4c072f6416377784a9879f0995faf715e
+  languageName: node
+  linkType: hard
+
 "@tanstack/history@npm:1.140.0":
   version: 1.140.0
   resolution: "@tanstack/history@npm:1.140.0"
@@ -3250,7 +3261,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.49.0":
+"@typescript-eslint/utils@npm:8.49.0, @typescript-eslint/utils@npm:^8.23.0":
   version: 8.49.0
   resolution: "@typescript-eslint/utils@npm:8.49.0"
   dependencies:
@@ -6178,6 +6189,7 @@ __metadata:
     "@rm-hull/chakra-error-fallback": "npm:^0.0.12"
     "@rm-hull/use-local-storage": "npm:^0.3.3"
     "@svgr/webpack": "npm:^8.1.0"
+    "@tanstack/eslint-plugin-router": "npm:^1.141.0"
     "@tanstack/react-router": "npm:^1.140.5"
     "@tanstack/react-router-devtools": "npm:^1.140.5"
     "@tanstack/router-core": "npm:^1.140.5"
