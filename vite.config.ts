@@ -2,6 +2,7 @@
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import viteReact from "@vitejs/plugin-react";
 import { execSync } from "child_process";
+import path from "path";
 import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -22,6 +23,11 @@ export default defineConfig(() => {
       TanStackRouterVite(),
       svgr(),
     ],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "src"),
+      },
+    },
     base: "/gps-routes",
     build: {
       sourcemap: true,
