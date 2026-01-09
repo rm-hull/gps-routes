@@ -6601,7 +6601,7 @@ __metadata:
     ts-md5: "npm:^2.0.1"
     typescript: "npm:~5.9.3"
     typescript-eslint: "npm:^8.52.0"
-    use-debounce: "npm:^10.0.6"
+    use-debounce: "npm:^10.1.0"
     vite: "npm:^7.3.1"
     vite-plugin-svgr: "npm:^4.5.0"
     vite-tsconfig-paths: "npm:^6.0.3"
@@ -9565,12 +9565,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-debounce@npm:^10.0.6":
-  version: 10.0.6
-  resolution: "use-debounce@npm:10.0.6"
+"use-debounce@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "use-debounce@npm:10.1.0"
   peerDependencies:
     react: "*"
-  checksum: 10/d28cc3d688cdb3dfbcab05c1b6ff763764ff4b298fa7598e534e7b255d4ac41cb1a24b1725c31420bac3b570418be630df460a6fcefd57c2cb0f5189264e1a7b
+  checksum: 10/71d58898a687214573112c9e795c93a631b2115e97b3976203fcb3017ed060c32f8c883bc1364655abe6a363da52e6520e1746479052e7883f09a8d7b42e12e6
   languageName: node
   linkType: hard
 
