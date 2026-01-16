@@ -3247,21 +3247,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/leaflet.fullscreen@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@types/leaflet.fullscreen@npm:3.0.3"
+"@types/leaflet.fullscreen@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "@types/leaflet.fullscreen@npm:5.2.0"
   dependencies:
-    "@types/leaflet": "npm:^1.9"
-  checksum: 10/206d00dfa1966525b039f7dd7344e33907e548a409d17705ad3f67e11dbb18facbe7fc6b9d95699602ba7ef1157e867390c06431a4ccd642409c27bb2f83d971
-  languageName: node
-  linkType: hard
-
-"@types/leaflet@npm:^1.9":
-  version: 1.9.20
-  resolution: "@types/leaflet@npm:1.9.20"
-  dependencies:
-    "@types/geojson": "npm:*"
-  checksum: 10/d0d2d907b47264ff3440f1bd27132892b21c43b6e94fe921568ae2c79b0b5648b61d069e2c302e972df786c0395008a62da140d45602fb30b3e5e6a5441be924
+    leaflet.fullscreen: "npm:*"
+  checksum: 10/c6fede00742b2c948937d5a9d4aa375810ff0be0971cb5fc84cf0eaafb12da76a44138e14361d456802da54dec834938edd208fad2b0476a841f3357eb0f6b50
   languageName: node
   linkType: hard
 
@@ -6566,7 +6557,7 @@ __metadata:
     "@tmcw/togeojson": "npm:^7.1.2"
     "@types/geojson": "npm:^7946.0.16"
     "@types/leaflet": "npm:^1.9.21"
-    "@types/leaflet.fullscreen": "npm:^3.0.3"
+    "@types/leaflet.fullscreen": "npm:^5.2.0"
     "@types/node": "npm:^25.0.9"
     "@types/react": "npm:^19.2.8"
     "@types/react-dom": "npm:^19.2.3"
@@ -6583,7 +6574,7 @@ __metadata:
     globals: "npm:^17.0.0"
     jotai: "npm:^2.16.2"
     leaflet: "npm:^1.9.4"
-    leaflet.fullscreen: "npm:^5.2.0"
+    leaflet.fullscreen: "npm:^5.3.0"
     next-themes: "npm:^0.4.6"
     react: "npm:^19.2.3"
     react-dom: "npm:^19.2.3"
@@ -7299,19 +7290,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"leaflet.fullscreen@npm:*, leaflet.fullscreen@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "leaflet.fullscreen@npm:5.3.0"
+  peerDependencies:
+    leaflet: ^1.7.0 || >=2.0.0-alpha.1
+  checksum: 10/79d2988aee1ad9c0c38de1573c3e29825ceb7051e33c269c0c08cc3966ae19dc1f4ed282780e5cd0faa74b28d7b43042cacb1923a7d8c717b9e686de6e011a1b
+  languageName: node
+  linkType: hard
+
 "leaflet.fullscreen@npm:2.4.0":
   version: 2.4.0
   resolution: "leaflet.fullscreen@npm:2.4.0"
   checksum: 10/86fc1e7eb5dc6eda210d4ca594937d34fd1a12ceaccec6ef8b98146bb4bbb629132b4ba94524dfc08accbcb0bd5cf978e895dde769379634e3da20bbd5972c9b
-  languageName: node
-  linkType: hard
-
-"leaflet.fullscreen@npm:^5.2.0":
-  version: 5.2.0
-  resolution: "leaflet.fullscreen@npm:5.2.0"
-  peerDependencies:
-    leaflet: ^1.7.0 || >=2.0.0-alpha.1
-  checksum: 10/8906e9026e705ed3ecca02891a543e03d1596de362a557ebf37bb667808dbae2530d99a92c504d39eef15def15b978d7a9b53f59fae0358970fbcea9925199a3
   languageName: node
   linkType: hard
 
