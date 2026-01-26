@@ -20,7 +20,7 @@
     "@rm-hull/use-local-storage": "^0.3.3",
     "@tanstack/react-router": "^1.154.14",
     "@tmcw/togeojson": "^7.1.2",
-    "axios": "^1.13.2",
+    "axios": "^1.13.3",
     "jotai": "^2.16.2",
     "leaflet": "^1.9.4",
     "leaflet.fullscreen": "^5.3.0",
