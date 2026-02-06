@@ -52,7 +52,7 @@ export function Carousel({ images = [] }: CarouselProps) {
         <ChakraCarousel.Indicators />
 
         <ChakraCarousel.NextTrigger asChild>
-          <IconButton size="xs" variant="ghost">
+          <IconButton size="xs" variant="ghost" aria-label="Next image">
             <LuChevronRight />
           </IconButton>
         </ChakraCarousel.NextTrigger>
