@@ -172,13 +172,13 @@ type NearbySectionProps = {
   nearby?: Summary[];
 };
 
+function byTitle(a: Summary, b: Summary): number {
+  return a.title.localeCompare(b.title);
+}
+
 function NearbySection({ nearby }: NearbySectionProps) {
   if (!nearby) {
     return undefined;
-  }
-
-  function byTitle(a: Summary, b: Summary): number {
-    return a.title.localeCompare(b.title);
   }
 
   return (
