@@ -1,20 +1,17 @@
-import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import {
   AspectRatio,
   Badge,
   Box,
   Group,
   Heading,
-  Link,
-  List,
   Tabs,
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { Md5 } from "ts-md5";
 import { Helmet } from "react-helmet";
-import { Route as refRoute } from "./$ref.tsx";
-import { Nearby, Result } from "@/types";
+import { Result, Summary } from "@/types";
 import {
   fetchGeoJSON,
   GeoJSONCollection,
@@ -24,6 +21,7 @@ import { GlassPane } from "@/components/GlassPane.tsx";
 import { Carousel } from "@/components/Carousel.tsx";
 import { MapView } from "@/components/map/MapView.tsx";
 import { getByObjectId } from "@/services/api-backend.ts";
+import { ResultCard } from "@/components/search/ResultCard.tsx";
 
 export const Route = createFileRoute("/gps-routes/$ref")({
   loader: async ({ params }) => fetchResult(params.ref),
@@ -171,7 +169,7 @@ function DetailPage() {
 }
 
 type NearbySectionProps = {
-  nearby?: Nearby[];
+  nearby?: Summary[];
 };
 
 function NearbySection({ nearby }: NearbySectionProps) {
@@ -179,27 +177,27 @@ function NearbySection({ nearby }: NearbySectionProps) {
     return undefined;
   }
 
-  function byDescription(a: Nearby, b: Nearby): number {
-    return a.description.localeCompare(b.description);
+  function byTitle(a: Summary, b: Summary): number {
+    return a.title.localeCompare(b.title);
   }
 
   return (
-    <List.Root>
-      {nearby.toSorted(byDescription).map(({ ref, description }) => (
-        <List.Item key={ref}>
-          <Link asChild>
-            <RouterLink to={refRoute.to} params={{ ref }}>
-              {description}
-            </RouterLink>
-          </Link>
-        </List.Item>
+    <Box
+      display="grid"
+      gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))"
+      gap={6}
+      justifyItems="center"
+      mx={4}
+    >
+      {nearby.toSorted(byTitle).map((summary) => (
+        <ResultCard key={summary.objectID} hit={summary} />
       ))}
-    </List.Root>
+    </Box>
   );
 }
 
 async function fetchResult(
-  ref: string
+  ref: string,
 ): Promise<[Result, GeoJSONCollection, Error | undefined]> {
   const objectID = Md5.hashStr(ref);
   const result = await getByObjectId(objectID);
