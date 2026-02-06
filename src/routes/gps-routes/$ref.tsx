@@ -119,7 +119,7 @@ function DetailPage() {
 
         <Box width={desktopMode ? "60vw" : "full"} position="sticky" top={6}>
           <Tabs.Root
-            defaultValue="route"
+            defaultValue="images"
             width={desktopMode ? "50vw" : undefined}
           >
             <Tabs.List>
