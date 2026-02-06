@@ -21,8 +21,7 @@ export function SearchHits() {
       gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))"
       gap={6}
       justifyItems="center"
-      marginLeft={4}
-      marginRight={4}
+      mx={4}
     >
       {store?.response?.hits?.map((summary) => (
         <ResultCard key={summary.objectID} hit={summary} />

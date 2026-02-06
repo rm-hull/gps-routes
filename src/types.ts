@@ -1,9 +1,3 @@
-export type Nearby = {
-  objectID: string;
-  ref: string;
-  description: string;
-};
-
 export type Image = {
   src: string;
   title: string;
@@ -41,7 +35,7 @@ export interface Result extends Summary {
   district?: string;
   postcode?: string;
   display_address?: string;
-  nearby?: Nearby[];
+  nearby?: Summary[];
   images?: Image[];
   details?: Detail[];
 }
