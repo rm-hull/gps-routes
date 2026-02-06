@@ -123,28 +123,25 @@ function DetailPage() {
             width={desktopMode ? "50vw" : undefined}
           >
             <Tabs.List>
-              <Tabs.Trigger value="route">Route</Tabs.Trigger>
-              <Tabs.Trigger value="nearby" disabled={!result.nearby}>
-                Nearby
-              </Tabs.Trigger>
               <Tabs.Trigger value="images" disabled={!result.images}>
                 Images
               </Tabs.Trigger>
+              <Tabs.Trigger value="route">Route</Tabs.Trigger>
               <Tabs.Trigger value="video" disabled={!result.video_url}>
                 Video
               </Tabs.Trigger>
+              <Tabs.Trigger value="nearby" disabled={!result.nearby}>
+                Nearby
+              </Tabs.Trigger>
               <Tabs.Trigger value="raw">Raw JSON</Tabs.Trigger>
             </Tabs.List>
+            <Tabs.Content value="images">
+              <Carousel images={result.images} />
+            </Tabs.Content>
             <Tabs.Content value="route">
               <AspectRatio ratio={3 / 2} shadow="md">
                 <MapView route={route} />
               </AspectRatio>
-            </Tabs.Content>
-            <Tabs.Content value="nearby">
-              <NearbySection nearby={result.nearby} />
-            </Tabs.Content>
-            <Tabs.Content value="images">
-              <Carousel images={result.images} />
             </Tabs.Content>
             <Tabs.Content value="video">
               <AspectRatio ratio={3 / 2} shadow="md">
@@ -156,6 +153,9 @@ function DetailPage() {
                   allow="fullscreen"
                 ></iframe>
               </AspectRatio>
+            </Tabs.Content>
+            <Tabs.Content value="nearby">
+              <NearbySection nearby={result.nearby} />
             </Tabs.Content>
             <Tabs.Content value="raw">
               <JsonCodeBlock data={result} />
