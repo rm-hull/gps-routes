@@ -2,9 +2,11 @@ import {
   AspectRatio,
   Carousel as ChakraCarousel,
   Em,
+  IconButton,
   Image,
   Text,
 } from "@chakra-ui/react";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { type Image as ImageType } from "@/types";
 
 type CarouselProps = {
@@ -21,7 +23,7 @@ export function Carousel({ images = [] }: CarouselProps) {
       <ChakraCarousel.ItemGroup width="full">
         {images.map((img, index) => (
           <ChakraCarousel.Item key={img.src} index={index}>
-            <AspectRatio ratio={4 / 3}>
+            <AspectRatio ratio={16 / 10}>
               <Image
                 fit="cover"
                 src={img.src}
@@ -40,8 +42,20 @@ export function Carousel({ images = [] }: CarouselProps) {
         ))}
       </ChakraCarousel.ItemGroup>
 
-      <ChakraCarousel.Control justifyContent="center" width="full">
+      <ChakraCarousel.Control justifyContent="center" width="full" gap={2}>
+        <ChakraCarousel.PrevTrigger asChild>
+          <IconButton size="xs" variant="ghost" aria-label="Previous image">
+            <LuChevronLeft />
+          </IconButton>
+        </ChakraCarousel.PrevTrigger>
+
         <ChakraCarousel.Indicators />
+
+        <ChakraCarousel.NextTrigger asChild>
+          <IconButton size="xs" variant="ghost" aria-label="Next image">
+            <LuChevronRight />
+          </IconButton>
+        </ChakraCarousel.NextTrigger>
       </ChakraCarousel.Control>
     </ChakraCarousel.Root>
   );
