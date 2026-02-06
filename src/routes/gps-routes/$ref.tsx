@@ -22,6 +22,7 @@ import { Carousel } from "@/components/Carousel.tsx";
 import { MapView } from "@/components/map/MapView.tsx";
 import { getByObjectId } from "@/services/api-backend.ts";
 import { ResultCard } from "@/components/search/ResultCard.tsx";
+import { JsonCodeBlock } from "@/components/JsonCodeBlock";
 
 export const Route = createFileRoute("/gps-routes/$ref")({
   loader: async ({ params }) => fetchResult(params.ref),
@@ -157,9 +158,7 @@ function DetailPage() {
               </AspectRatio>
             </Tabs.Content>
             <Tabs.Content value="raw">
-              <Box overflowX="auto" fontSize="xs">
-                <pre>{JSON.stringify(result, null, 2)}</pre>
-              </Box>
+              <JsonCodeBlock data={result} />
             </Tabs.Content>
           </Tabs.Root>
         </Box>

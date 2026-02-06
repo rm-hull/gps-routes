@@ -34,6 +34,7 @@
     "react-leaflet-custom-control": "^1.5.0",
     "react-leaflet-fullscreen": "^4.1.1",
     "screenfull": "^6.0.2",
+    "shiki": "^3.22.0",
     "ts-md5": "^2.0.1",
     "use-debounce": "^10.1.0"
   },
