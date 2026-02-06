@@ -44,7 +44,7 @@ export function Carousel({ images = [] }: CarouselProps) {
 
       <ChakraCarousel.Control justifyContent="center" width="full" gap={2}>
         <ChakraCarousel.PrevTrigger asChild>
-          <IconButton size="xs" variant="ghost">
+          <IconButton size="xs" variant="ghost" aria-label="Previous image">
             <LuChevronLeft />
           </IconButton>
         </ChakraCarousel.PrevTrigger>
