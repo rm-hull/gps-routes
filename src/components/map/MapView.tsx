@@ -9,6 +9,7 @@ import "leaflet/dist/leaflet.css";
 import "react-leaflet-fullscreen/styles.css";
 import L from "leaflet";
 import { CurrentLocation } from "./controls/CurrentLocation";
+import MapGLTileLayer from "./MapGLTileLayer";
 import { Route } from "./Route";
 import { PointsOfInterest } from "./PointsOfInterest";
 import { GeoJSONCollection, getBounds } from "@/services/geojson";
@@ -39,11 +40,30 @@ export function MapView({ route }: MapViewProps) {
       bounds={bounds}
       scrollWheelZoom={true}
       attributionControl={false}
+      maxZoom={20}
     >
       <CurrentLocation />
 
       <LayersControl position="topright">
-        <LayersControl.BaseLayer name="ESRI World TopoMap" checked>
+        <LayersControl.BaseLayer name="Alidade smooth">
+          <MapGLTileLayer url="https://tiles-eu.stadiamaps.com/styles/alidade_smooth.json" />
+        </LayersControl.BaseLayer>
+        <LayersControl.BaseLayer name="OpenFreeMap" checked>
+          <MapGLTileLayer url="https://tiles.openfreemap.org/styles/liberty" />
+        </LayersControl.BaseLayer>
+        <LayersControl.BaseLayer name="Carto Voyager">
+          <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png" />
+        </LayersControl.BaseLayer>
+        <LayersControl.BaseLayer name="Ordnance Survey Outdoor">
+          <TileLayer
+            url="https://api.destructuring-bind.org/mapproxy/wmts/wmts/leisure_3857/grid_3857/{z}/{x}/{y}.png"
+            tileSize={256}
+            maxZoom={16}
+            maxNativeZoom={15}
+            opacity={0.8}
+          />
+        </LayersControl.BaseLayer>
+        <LayersControl.BaseLayer name="ESRI World TopoMap">
           <TileLayer url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}" />
         </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="ESRI World Imagery">

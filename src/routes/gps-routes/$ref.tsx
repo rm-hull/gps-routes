@@ -101,25 +101,26 @@ function DetailPage() {
             </Box>
           ))}
           <Group flexWrap="wrap">
-            {result.district && (
-              <Badge colorPalette="blue">{result.district}</Badge>
-            )}
-            {result.region && (
-              <Badge colorPalette="blue">{result.region}</Badge>
-            )}
-            {result.county && (
-              <Badge colorPalette="blue">{result.county}</Badge>
-            )}
-            {result.state && <Badge colorPalette="blue">{result.state}</Badge>}
-            {result.country && (
-              <Badge colorPalette="blue">{result.country}</Badge>
+            {[
+              result.district,
+              result.region,
+              result.county,
+              result.state,
+              result.country,
+            ].map(
+              (value, index) =>
+                value && (
+                  <Badge key={index} colorPalette="blue">
+                    {value}
+                  </Badge>
+                ),
             )}
           </Group>
         </Box>
 
         <Box width={desktopMode ? "60vw" : "full"} position="sticky" top={6}>
           <Tabs.Root
-            defaultValue="images"
+            defaultValue="routes"
             width={desktopMode ? "50vw" : undefined}
           >
             <Tabs.List>
