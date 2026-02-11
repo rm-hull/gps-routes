@@ -12,6 +12,7 @@ import { CurrentLocation } from "./controls/CurrentLocation";
 import MapGLTileLayer from "./MapGLTileLayer";
 import { Route } from "./Route";
 import { PointsOfInterest } from "./PointsOfInterest";
+import { ResizeFix } from "./ResizeFix";
 import { GeoJSONCollection, getBounds } from "@/services/geojson";
 
 import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
@@ -108,6 +109,7 @@ export function MapView({ route }: MapViewProps) {
       <FullscreenControl />
       <ScaleControl position="bottomright" />
       {/* <Ruler /> */}
+      <ResizeFix />
 
       <PointsOfInterest />
       <Route data={route} />
