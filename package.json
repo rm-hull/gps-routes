@@ -13,7 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.32.0",
+    "@chakra-ui/react": "^3.33.0",
     "@emotion/react": "^11.14.0",
     "@react-leaflet/core": "^3.0.0",
     "@rm-hull/chakra-error-fallback": "^0.1.0",
@@ -39,7 +39,7 @@
     "use-debounce": "^10.1.0"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^3.32.0",
+    "@chakra-ui/cli": "^3.33.0",
     "@eslint/js": "^10.0.1",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/eslint-plugin-router": "^1.155.0",
@@ -50,7 +50,7 @@
     "@types/leaflet": "^1.9.21",
     "@types/leaflet.fullscreen": "^5.2.0",
     "@types/node": "^25.2.3",
-    "@types/react": "^19.2.13",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/react-helmet": "^6.1.11",
     "@vitejs/plugin-react": "^5.1.4",
