@@ -108,9 +108,9 @@ function DetailPage() {
               result.state,
               result.country,
             ].map(
-              (value, index) =>
+              (value) =>
                 value && (
-                  <Badge key={index} colorPalette="blue">
+                  <Badge key={value} colorPalette="blue">
                     {value}
                   </Badge>
                 ),
