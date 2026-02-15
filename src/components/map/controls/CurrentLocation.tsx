@@ -1,38 +1,28 @@
-import { Button } from "@chakra-ui/react";
-import * as L from "leaflet";
-import { type JSX, useEffect } from "react";
+import { useEffect } from "react";
 import { IoMdLocate } from "react-icons/io";
-import { Circle, Marker /*Popup*/ } from "react-leaflet";
-import Control from "react-leaflet-custom-control";
-// import { NearestInfo } from "@/map/NearestInfo";
-import redIconUrl from "@/assets/marker-icon-2x-red.png";
-import shadowIconUrl from "@/assets/marker-shadow.png";
-import { useCurrentLocation } from "@/hooks/useCurrentLocation";
+import { Circle, Marker } from "react-leaflet";
+import { useCurrentLocation } from "../../../hooks/useCurrentLocation";
+import { locateIcon } from "../../../icons";
+import { Control } from "@/components/map/Control";
+import { ControlButton } from "@/components/ControlButton";
+import { useErrorToast } from "@/hooks/useErrorToast";
 
 interface CurrentLocationProps {
   active?: boolean;
 }
-const redIcon = new L.Icon({
-  iconUrl: redIconUrl,
-  shadowUrl: shadowIconUrl,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
-});
 
-export function CurrentLocation({ active }: CurrentLocationProps): JSX.Element {
+export function CurrentLocation({ active }: CurrentLocationProps) {
+  // const { settings } = useGeneralSettings();
   const { activate, location } = useCurrentLocation();
-  useEffect(
-    () => {
-      if (active === true) {
-        activate();
-      }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  );
+  useEffect(() => {
+    if (active === true) {
+      activate();
+    }
+  }, [active, activate]);
 
+  useErrorToast("gps-error", "Error determining GPS location", location.error);
+
+  const locationIsActive = location.active && !location.pending;
   return (
     <>
       {location.position !== undefined && (
@@ -45,33 +35,27 @@ export function CurrentLocation({ active }: CurrentLocationProps): JSX.Element {
           />
           <Marker
             position={location.position}
-            opacity={location.active && !location.pending ? 1 : 0.6}
-            icon={redIcon}
+            icon={locateIcon(
+              `rgba(240,0,0,${locationIsActive ? 0.6 : 0.3})`,
+              locationIsActive ? "pulse" : "",
+            )}
           >
             {/* <NearestInfo
               latLng={location.position}
               accuracy={location.accuracy}
               timestamp={location.timestamp}
-              render={(children) => <Popup autoClose={false}>{children}</Popup>}
-            /> */}
+              render={PopupPassthrough}
+            />*/}
           </Marker>
         </>
       )}
       <Control prepend position="topright">
-        <Button
-          background="white"
-          variant="outline"
+        <ControlButton
           onClick={activate}
-          padding={0}
-          borderWidth={2}
-          borderColor="rgba(0,0,0,0.2)"
-          fontSize="4rem"
-          color={location.active ? "rgba(240,0,0,0.5)" : "rgba(0,0,0,0.5)"}
-          borderRadius={5}
-          size="xl"
+          color={location.active ? "rgba(240,0,0,0.6)" : undefined}
         >
           <IoMdLocate />
-        </Button>
+        </ControlButton>
       </Control>
     </>
   );
