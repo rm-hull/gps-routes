@@ -1,5 +1,5 @@
 import { type LatLng } from "leaflet";
-import { type MouseEvent, useCallback, useState } from "react";
+import { type MouseEvent, useCallback, useRef, useState } from "react";
 import { useMapEvents } from "react-leaflet";
 
 interface LocationDetails {
@@ -8,7 +8,6 @@ interface LocationDetails {
   timestamp?: number;
   active: boolean;
   pending: boolean;
-  cancelTimerId?: NodeJS.Timeout;
   error?: Error;
 }
 
@@ -24,6 +23,8 @@ export function useCurrentLocation(
     active: false,
     pending: true,
   });
+
+  const cancelTimerIdRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const map = useMapEvents({
     locationfound: (event) => {
@@ -43,7 +44,9 @@ export function useCurrentLocation(
 
     locationerror: (event) => {
       map.stopLocate();
-      clearTimeout(locationDetails.cancelTimerId);
+      if (cancelTimerIdRef.current) {
+        clearTimeout(cancelTimerIdRef.current);
+      }
 
       setLocationDetails({
         active: false,
@@ -63,20 +66,22 @@ export function useCurrentLocation(
 
       map.locate({ enableHighAccuracy: true, watch: true });
 
-      clearTimeout(locationDetails.cancelTimerId);
+      if (cancelTimerIdRef.current) {
+        clearTimeout(cancelTimerIdRef.current);
+      }
       const timerId = setTimeout(() => {
         map.stopLocate();
         setLocationDetails((prev) => ({ ...prev, active: false }));
       }, duration);
+      cancelTimerIdRef.current = timerId;
 
       setLocationDetails((prev) => ({
         ...prev,
         pending: true,
         active: true,
-        cancelTimerId: timerId,
       }));
     },
-    [duration, locationDetails.cancelTimerId, map],
+    [duration, map],
   );
 
   return { activate, location: locationDetails };
