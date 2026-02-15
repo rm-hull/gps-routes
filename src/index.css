@@ -42,3 +42,23 @@ input[type="text"]::selection {
   background-color: var(--chakra-colors-blue-400);
   color: var(--chakra-colors-white);
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+  transform-origin: center;
+}

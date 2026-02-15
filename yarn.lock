@@ -6968,7 +6968,6 @@ __metadata:
     react-icons: "npm:^5.5.0"
     react-leaflet: "npm:^5.0.0"
     react-leaflet-cluster: "npm:^4.0.0"
-    react-leaflet-custom-control: "npm:^1.5.0"
     react-leaflet-fullscreen: "npm:^4.1.1"
     screenfull: "npm:^6.0.2"
     shiki: "npm:^3.22.0"
@@ -8732,19 +8731,6 @@ __metadata:
     react-dom: ^19.0.0
     react-leaflet: ^5.0.0
   checksum: 10/ea3836a27a19f590e087907eb2501fd3e1a960e34ea5e054866773889fe3cd520dc7c14325ddcef93447b38ea686ac1ef969e2fb65cb776a29f9ed42d19b4b72
-  languageName: node
-  linkType: hard
-
-"react-leaflet-custom-control@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "react-leaflet-custom-control@npm:1.5.0"
-  dependencies:
-    react-leaflet: "npm:^5.0.0"
-  peerDependencies:
-    leaflet: ^1.9.0
-    react: ^17.0.2 || ^18.0.0 || ^19.0.0
-    react-dom: ^17.0.2 || ^18.0.0 || ^19.0.0
-  checksum: 10/fcb607265f954861cafa69d86b58b9cc33ffbc5ae831056dfd54ec8d9b1f4729a629a44f7f9961409639bf57584080ab41a09d928dac09097c493faa9d4557b9
   languageName: node
   linkType: hard
 
