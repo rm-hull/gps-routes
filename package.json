@@ -22,7 +22,7 @@
     "@tanstack/react-router": "^1.161.1",
     "@tmcw/togeojson": "^7.1.2",
     "axios": "^1.13.5",
-    "jotai": "^2.17.1",
+    "jotai": "^2.18.0",
     "leaflet": "^1.9.4",
     "leaflet.fullscreen": "^5.3.0",
     "maplibre-gl": "^5.18.0",
