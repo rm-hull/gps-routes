@@ -1,11 +1,11 @@
 /// <reference types="vitest" />
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
-import viteReact from "@vitejs/plugin-react";
 import { execSync } from "child_process";
 import path from "path";
 import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
-import tsconfigPaths from "vite-tsconfig-paths";
+import react, { reactCompilerPreset } from "@vitejs/plugin-react";
+import babel from "@rolldown/plugin-babel";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
@@ -18,12 +18,13 @@ export default defineConfig(() => {
 
   return {
     plugins: [
-      viteReact({ babel: { plugins: ["babel-plugin-react-compiler"] } }),
-      tsconfigPaths(),
       TanStackRouterVite(),
+      react(),
+      babel({ presets: [reactCompilerPreset()] }),
       svgr(),
     ],
     resolve: {
+      tsconfigPaths: true,
       alias: {
         "@": path.resolve(__dirname, "src"),
       },
