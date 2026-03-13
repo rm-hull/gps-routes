@@ -3690,9 +3690,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-router@npm:^1.166.7":
-  version: 1.166.7
-  resolution: "@tanstack/react-router@npm:1.166.7"
+"@tanstack/react-router@npm:^1.166.8":
+  version: 1.166.8
+  resolution: "@tanstack/react-router@npm:1.166.8"
   dependencies:
     "@tanstack/history": "npm:1.161.4"
     "@tanstack/react-store": "npm:^0.9.1"
@@ -3703,7 +3703,7 @@ __metadata:
   peerDependencies:
     react: ">=18.0.0 || >=19.0.0"
     react-dom: ">=18.0.0 || >=19.0.0"
-  checksum: 10/7117d744e7031b2157f0f99cda6636e56b5d7078b0bf1f953166f4c496ba5ba01acd7691eaf32021da7305fbd983c25fe05a58ded782fec28c7c1e6d67a642c2
+  checksum: 10/54e741396520c748ca801fc06c959ba0434fd4683fcd75060455cde49ed09afc42df85235c3600153a6663892ec2225b4eb12e0700d65874c2220ee4a366da65
   languageName: node
   linkType: hard
 
@@ -3768,9 +3768,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/router-plugin@npm:^1.166.7":
-  version: 1.166.7
-  resolution: "@tanstack/router-plugin@npm:1.166.7"
+"@tanstack/router-plugin@npm:^1.166.8":
+  version: 1.166.8
+  resolution: "@tanstack/router-plugin@npm:1.166.8"
   dependencies:
     "@babel/core": "npm:^7.28.5"
     "@babel/plugin-syntax-jsx": "npm:^7.27.1"
@@ -3787,7 +3787,7 @@ __metadata:
     zod: "npm:^3.24.2"
   peerDependencies:
     "@rsbuild/core": ">=1.0.2"
-    "@tanstack/react-router": ^1.166.7
+    "@tanstack/react-router": ^1.166.8
     vite: ">=5.0.0 || >=6.0.0 || >=7.0.0"
     vite-plugin-solid: ^2.11.10
     webpack: ">=5.92.0"
@@ -3802,7 +3802,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/9121b3106487c64a7f695dcbb4b761f2702452a465a37e4a6ccf4eacb2675c431fe25d16cd309074b1c593a3c9b4a3c553ed35b744e289421456e5e9481c42c3
+  checksum: 10/f2e10fd840e882ff5e9e826ecf95d146b5b1ef603ce1e9e0869ab180bd6906d3ef06caa8e1c771f44d60f80d5497ecec80af42136e005d760497f71d81960eec
   languageName: node
   linkType: hard
 
@@ -7480,10 +7480,10 @@ __metadata:
     "@rm-hull/use-local-storage": "npm:^0.3.3"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/eslint-plugin-router": "npm:^1.161.4"
-    "@tanstack/react-router": "npm:^1.166.7"
+    "@tanstack/react-router": "npm:^1.166.8"
     "@tanstack/react-router-devtools": "npm:^1.166.7"
     "@tanstack/router-core": "npm:^1.166.7"
-    "@tanstack/router-plugin": "npm:^1.166.7"
+    "@tanstack/router-plugin": "npm:^1.166.8"
     "@tmcw/togeojson": "npm:^7.1.2"
     "@types/geojson": "npm:^7946.0.16"
     "@types/leaflet": "npm:^1.9.21"
