@@ -26,7 +26,7 @@
     "jotai": "^2.18.1",
     "leaflet": "^1.9.4",
     "leaflet.fullscreen": "^5.3.0",
-    "maplibre-gl": "^5.20.2",
+    "maplibre-gl": "^5.21.0",
     "next-themes": "^0.4.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
