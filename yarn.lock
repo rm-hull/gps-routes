@@ -6057,7 +6057,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.5.2"
     framer-motion: "npm:^12.38.0"
     globals: "npm:^17.4.0"
-    jotai: "npm:^2.19.0"
+    jotai: "npm:^2.19.1"
     leaflet: "npm:^1.9.4"
     leaflet.fullscreen: "npm:^5.3.1"
     maplibre-gl: "npm:^5.22.0"
@@ -6623,6 +6623,27 @@ __metadata:
     react:
       optional: true
   checksum: 10/faa363d1041eca4f79519b6a9acbb4895b72af4d0726b1dcc8908748e7aef4808ccb312590d2c7cb52d6f9303a153617b9e07e268c9c4465fd7eb7c03e260ed7
+  languageName: node
+  linkType: hard
+
+"jotai@npm:^2.19.1":
+  version: 2.19.1
+  resolution: "jotai@npm:2.19.1"
+  peerDependencies:
+    "@babel/core": ">=7.0.0"
+    "@babel/template": ">=7.0.0"
+    "@types/react": ">=17.0.0"
+    react: ">=17.0.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@babel/template":
+      optional: true
+    "@types/react":
+      optional: true
+    react:
+      optional: true
+  checksum: 10/bb599ccd305820d9e6c25a23d34d66c4a47caea041065d553ea522c3299562f84fff1724a1a17da3401a3af60cc0500a80c6294bca61e3b8708daf5bebb3b8a2
   languageName: node
   linkType: hard
 
