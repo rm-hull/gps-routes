@@ -1,18 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Box, Center, Image, Spinner, Text, VStack } from "@chakra-ui/react";
+import { Box, Center, Image, ImageProps, Spinner, Text, VStack } from "@chakra-ui/react";
 import { LuCircleX, LuSkull } from "react-icons/lu";
 import { useInView } from "framer-motion";
-
-type FadeInImageProps = {
-  src?: string;
-  alt: string;
-  height?: number;
-};
 
 const MAX_RETRIES = 3;
 const RETRY_DELAY_MS = 10000;
 
-export function FadeInImage({ src, alt, height, ...rest }: FadeInImageProps) {
+export function FadeInImage({ src, alt, height, ...rest }: ImageProps) {
   const [isLoaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
   const [retryCount, setRetryCount] = useState(0);

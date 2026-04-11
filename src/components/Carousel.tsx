@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { type Image as ImageType } from "@/types";
+import { FadeInImage } from "./FadeInImage";
 
 type CarouselProps = {
   images?: ImageType[];
@@ -24,7 +25,8 @@ export function Carousel({ images = [] }: CarouselProps) {
         {images.map((img, index) => (
           <ChakraCarousel.Item key={img.src} index={index}>
             <AspectRatio ratio={16 / 10}>
-              <Image
+              <FadeInImage
+                backgroundColor="bg"
                 fit="cover"
                 src={img.src}
                 alt={img.caption}
