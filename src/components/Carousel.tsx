@@ -3,7 +3,6 @@ import {
   Carousel as ChakraCarousel,
   Em,
   IconButton,
-  Image,
   Text,
 } from "@chakra-ui/react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
