@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import { execSync } from "child_process";
 import path from "path";
 import { defineConfig } from "vite";
@@ -17,7 +17,12 @@ export default defineConfig(() => {
     .trimEnd();
 
   return {
-    plugins: [react(), babel({}), TanStackRouterVite(), svgr()],
+    plugins: [
+      tanstackRouter({ target: "react", autoCodeSplitting: true }),
+      react(),
+      babel({}),
+      svgr(),
+    ],
     resolve: {
       tsconfigPaths: true,
       alias: {
