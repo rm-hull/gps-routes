@@ -1,19 +1,37 @@
 import { CodeBlock, Float, IconButton } from "@chakra-ui/react";
-import { HighlighterGeneric } from "shiki";
+import type { HighlighterGeneric } from "shiki";
 import { createShikiAdapter } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { useColorMode } from "./ui/color-mode";
 
 const shikiAdapter = createShikiAdapter<HighlighterGeneric<any, any>>({
   async load() {
-    const { createHighlighter } = await import("shiki");
-    return createHighlighter({
-      langs: ["json"],
-      themes: ["github-light", "github-dark"],
+    const [
+      { createHighlighterCore },
+      { createJavaScriptRegexEngine },
+      langJson,
+      themeLight,
+      themeDark,
+    ] = await Promise.all([
+      import("@shikijs/core"),
+      import("@shikijs/engine-javascript"),
+      import("@shikijs/langs/json"),
+      import("@shikijs/themes/github-light"),
+      import("@shikijs/themes/github-dark"),
+    ]);
+
+    return createHighlighterCore({
+      langs: [langJson.default],
+      themes: [themeLight.default, themeDark.default],
+      engine: createJavaScriptRegexEngine(),
     });
   },
-  theme: "github-light",
+  theme: {
+    light: "github-light",
+    dark: "github-dark",
+  },
 });
+
 
 type JsonCodeBlockProps = {
   data: object;

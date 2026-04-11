@@ -24,6 +24,10 @@ updates:
       chakra:
         patterns:
           - "@chakra-ui/*"
+      shiki:
+        patterns:
+          - "shiki"
+          - "@shikijs/*"
       react:
         patterns:
           - "react"
