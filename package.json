@@ -49,7 +49,7 @@
     "@babel/core": "^7.29.0",
     "@chakra-ui/cli": "^3.34.0",
     "@eslint/js": "^10.0.1",
-    "@rolldown/plugin-babel": "^0.2.2",
+    "@rolldown/plugin-babel": "^0.2.3",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/eslint-plugin-router": "^1.161.6",
     "@tanstack/react-router-devtools": "^1.166.13",
