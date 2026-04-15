@@ -24,7 +24,7 @@
     "@shikijs/engine-javascript": "4.0.2",
     "@shikijs/langs": "4.0.2",
     "@shikijs/themes": "4.0.2",
-    "@tanstack/react-router": "^1.168.21",
+    "@tanstack/react-router": "^1.168.22",
     "@tmcw/togeojson": "^7.1.2",
     "axios": "^1.15.0",
     "framer-motion": "^12.38.0",
