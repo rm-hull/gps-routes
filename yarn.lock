@@ -2947,12 +2947,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/leaflet.fullscreen@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@types/leaflet.fullscreen@npm:3.0.3"
+"@types/leaflet.fullscreen@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "@types/leaflet.fullscreen@npm:5.2.0"
   dependencies:
-    "@types/leaflet": "npm:^1.9"
-  checksum: 10/206d00dfa1966525b039f7dd7344e33907e548a409d17705ad3f67e11dbb18facbe7fc6b9d95699602ba7ef1157e867390c06431a4ccd642409c27bb2f83d971
+    leaflet.fullscreen: "npm:*"
+  checksum: 10/c6fede00742b2c948937d5a9d4aa375810ff0be0971cb5fc84cf0eaafb12da76a44138e14361d456802da54dec834938edd208fad2b0476a841f3357eb0f6b50
   languageName: node
   linkType: hard
 
@@ -6175,7 +6175,7 @@ __metadata:
     "@types/babel__core": "npm:^7.20.5"
     "@types/geojson": "npm:^7946.0.16"
     "@types/leaflet": "npm:^1.9.21"
-    "@types/leaflet.fullscreen": "npm:^3.0.3"
+    "@types/leaflet.fullscreen": "npm:^5.2.0"
     "@types/mapbox-gl-leaflet": "npm:^0.0.5"
     "@types/node": "npm:^25.6.0"
     "@types/react": "npm:^19.2.14"
@@ -6194,7 +6194,7 @@ __metadata:
     globals: "npm:^17.5.0"
     jotai: "npm:^2.19.1"
     leaflet: "npm:^1.9.4"
-    leaflet.fullscreen: "npm:2.4.0"
+    leaflet.fullscreen: "npm:5.3.1"
     maplibre-gl: "npm:^5.23.0"
     next-themes: "npm:^0.4.6"
     react: "npm:^19.2.5"
@@ -6863,6 +6863,15 @@ __metadata:
   dependencies:
     json-buffer: "npm:3.0.1"
   checksum: 10/167eb6ef64cc84b6fa0780ee50c9de456b422a1e18802209234f7c2cf7eae648c7741f32e50d7e24ccb22b24c13154070b01563d642755b156c357431a191e75
+  languageName: node
+  linkType: hard
+
+"leaflet.fullscreen@npm:*, leaflet.fullscreen@npm:5.3.1":
+  version: 5.3.1
+  resolution: "leaflet.fullscreen@npm:5.3.1"
+  peerDependencies:
+    leaflet: ^1.7.0 || >=2.0.0-alpha.1
+  checksum: 10/9bd90c237ebf958b12746ab5e22a4e472bdfa994b91417fcfc3f2b9c99738789776cfdd1f5908cb80626ef0527d34ceae3b635f759b418bb8ef05cf6f2ed0f40
   languageName: node
   linkType: hard
 
