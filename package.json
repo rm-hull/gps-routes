@@ -54,7 +54,7 @@
     "@tanstack/eslint-plugin-router": "^1.161.6",
     "@tanstack/react-router-devtools": "^1.166.13",
     "@tanstack/router-core": "^1.168.15",
-    "@tanstack/router-plugin": "^1.167.22",
+    "@tanstack/router-plugin": "^1.167.23",
     "@types/babel__core": "^7.20.5",
     "@types/geojson": "^7946.0.16",
     "@types/leaflet": "^1.9.21",
