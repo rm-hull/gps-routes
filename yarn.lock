@@ -3140,12 +3140,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^25.6.0":
-  version: 25.6.0
-  resolution: "@types/node@npm:25.6.0"
+"@types/node@npm:^25.6.1":
+  version: 25.6.1
+  resolution: "@types/node@npm:25.6.1"
   dependencies:
     undici-types: "npm:~7.19.0"
-  checksum: 10/99b18690a4be55904cbf8f6a6ac8eed5ec5b8d791fdd8ee2ae598b46c0fa9b83cda7b70dd7f00dbfb18189dcfc67648fdc7fdd3fcced2619a5a6453d9aec107d
+  checksum: 10/d58e46b92920c746ac801a00b4c95329d2ec320487b583f3cb2220d1dacaeba15741f9e04dc964e21200ffed86cfb9a762c39aba2a43ef92cf6e6586907405c3
   languageName: node
   linkType: hard
 
@@ -6318,7 +6318,7 @@ __metadata:
     "@types/leaflet": "npm:^1.9.21"
     "@types/leaflet.fullscreen": "npm:^3.0.3"
     "@types/mapbox-gl-leaflet": "npm:^0.0.5"
-    "@types/node": "npm:^25.6.0"
+    "@types/node": "npm:^25.6.1"
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     "@types/react-helmet": "npm:^6.1.11"
