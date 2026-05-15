@@ -6350,7 +6350,7 @@ __metadata:
     react-leaflet-fullscreen: "npm:^4.1.1"
     screenfull: "npm:^6.0.2"
     shiki: "npm:^4.0.2"
-    solid-js: "npm:^1.9.12"
+    solid-js: "npm:^1.9.13"
     tiny-invariant: "npm:^1.3.3"
     ts-md5: "npm:^2.0.1"
     typescript: "npm:~6.0.3"
@@ -8890,14 +8890,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"solid-js@npm:^1.9.12":
-  version: 1.9.12
-  resolution: "solid-js@npm:1.9.12"
+"solid-js@npm:^1.9.13":
+  version: 1.9.13
+  resolution: "solid-js@npm:1.9.13"
   dependencies:
     csstype: "npm:^3.1.0"
     seroval: "npm:~1.5.0"
     seroval-plugins: "npm:~1.5.0"
-  checksum: 10/bb38cf47fb94c6f4076901c8d7f0723eaddb6d9b62be22dd814abf4554026bd1e2615900a54e6bef5d29ed8779bef61af21025aba1c2124e000c95a3b4afd217
+  checksum: 10/9c8097ecbb3436f76501390fe8c5630efae8af983d9594f3c732e8916117bfeb92ee79dd02e21b3191747fdc3330accdac121f32d3bbcf93aba1ac866e93b491
   languageName: node
   linkType: hard
 
