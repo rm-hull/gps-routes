@@ -27,7 +27,7 @@
     "@tanstack/react-router": "^1.170.6",
     "@tmcw/togeojson": "^7.1.2",
     "axios": "^1.16.1",
-    "framer-motion": "^12.39.0",
+    "framer-motion": "^12.40.0",
     "jotai": "^2.20.0",
     "leaflet": "^1.9.4",
     "leaflet.fullscreen": "2.4.0",
