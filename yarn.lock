@@ -6581,7 +6581,7 @@ __metadata:
     react-leaflet-fullscreen: "npm:^4.1.1"
     screenfull: "npm:^6.0.2"
     shiki: "npm:^4.3.0"
-    solid-js: "npm:^1.9.13"
+    solid-js: "npm:^1.9.14"
     tiny-invariant: "npm:^1.3.3"
     ts-md5: "npm:^2.0.1"
     typescript: "npm:~6.0.3"
@@ -8958,7 +8958,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"seroval-plugins@npm:^1.5.4":
+"seroval-plugins@npm:^1.5.4, seroval-plugins@npm:~1.5.4":
   version: 1.5.4
   resolution: "seroval-plugins@npm:1.5.4"
   peerDependencies:
@@ -8967,26 +8967,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"seroval-plugins@npm:~1.5.0":
-  version: 1.5.2
-  resolution: "seroval-plugins@npm:1.5.2"
-  peerDependencies:
-    seroval: ^1.0
-  checksum: 10/c44b603cd44e03a07d13c5c4483a3f9527f3d345958905e48e28c84fd91405072ec767382d5ba44a49382ad7a16e652be35a50b14dda1e539ef9d201f890cb39
-  languageName: node
-  linkType: hard
-
-"seroval@npm:^1.5.4":
+"seroval@npm:^1.5.4, seroval@npm:~1.5.4":
   version: 1.5.4
   resolution: "seroval@npm:1.5.4"
   checksum: 10/37fb735b2ccbcaa81da20b4ec4afa81dba75c95b82b6f70407b28b305d9ee1811b83e00d099b4912e5132fbccf68bdfddb01256eb8030ba67efea8960c9d1014
-  languageName: node
-  linkType: hard
-
-"seroval@npm:~1.5.0":
-  version: 1.5.2
-  resolution: "seroval@npm:1.5.2"
-  checksum: 10/e7bfa304da5e280d34da61dc42533b313a2246fee651a2b80a634fbbfdac524fae8c2e83fef07340f159e0e90cd244a32a740e6627dc667f3905f44f51252360
   languageName: node
   linkType: hard
 
@@ -9182,14 +9166,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"solid-js@npm:^1.9.13":
-  version: 1.9.13
-  resolution: "solid-js@npm:1.9.13"
+"solid-js@npm:^1.9.14":
+  version: 1.9.14
+  resolution: "solid-js@npm:1.9.14"
   dependencies:
     csstype: "npm:^3.1.0"
-    seroval: "npm:~1.5.0"
-    seroval-plugins: "npm:~1.5.0"
-  checksum: 10/9c8097ecbb3436f76501390fe8c5630efae8af983d9594f3c732e8916117bfeb92ee79dd02e21b3191747fdc3330accdac121f32d3bbcf93aba1ac866e93b491
+    seroval: "npm:~1.5.4"
+    seroval-plugins: "npm:~1.5.4"
+  checksum: 10/1d379de1bf03046417cf9456a69bc034b00ab09bb707fba6ebae64d7c41d71dd3f05b290dc3326da7c6dff2ef59ec702976aecb841899b8246a831ed9fd4d64d
   languageName: node
   linkType: hard
 
