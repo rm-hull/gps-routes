@@ -48,3 +48,4 @@ coverage/
 Thumbs.db
 
 src/routeTree.gen.ts
+.tanstack/tmp
