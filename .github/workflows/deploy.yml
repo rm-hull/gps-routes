@@ -31,16 +31,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # - name: Lint
-      #   run: pnpm lint
+      - name: Lint
+        run: pnpm lint
+        continue-on-error: true
 
       - name: Test
         run: pnpm test:ci
 
-      # - name: Coveralls
-      #   uses: coverallsapp/github-action@v2
-      #   with:
-      #     file: coverage/clover.xml
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
+        continue-on-error: true
 
       - name: Build
         env:
