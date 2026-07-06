@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useRef, useState } from "react";
 import { Box, Center, Image, ImageProps, Spinner, Text, VStack } from "@chakra-ui/react";
-import { LuCircleX, LuSkull } from "react-icons/lu";
 import { useInView } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { LuCircleX, LuSkull } from "react-icons/lu";
 
 const MAX_RETRIES = 3;
 const RETRY_DELAY_MS = 10000;

@@ -1,3 +1,4 @@
+import L from "leaflet";
 import {
   LayersControl,
   MapContainer,
@@ -5,18 +6,16 @@ import {
   TileLayer,
 } from "react-leaflet";
 import { FullscreenControl } from "react-leaflet-fullscreen";
+import { GeoJSONCollection, getBounds } from "@/services/geojson";
 import "leaflet/dist/leaflet.css";
 import "react-leaflet-fullscreen/styles.css";
-import L from "leaflet";
-import { CurrentLocation } from "./controls/CurrentLocation";
-import MapGLTileLayer from "./MapGLTileLayer";
-import { Route } from "./Route";
-import { PointsOfInterest } from "./PointsOfInterest";
-import { ResizeFix } from "./ResizeFix";
-import { GeoJSONCollection, getBounds } from "@/services/geojson";
-
 import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css";
+import { CurrentLocation } from "./controls/CurrentLocation";
+import MapGLTileLayer from "./MapGLTileLayer";
+import { PointsOfInterest } from "./PointsOfInterest";
+import { ResizeFix } from "./ResizeFix";
+import { Route } from "./Route";
 
 type MapViewProps = {
   route?: GeoJSONCollection;

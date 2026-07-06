@@ -1,8 +1,8 @@
 import { Badge, Card, Link } from "@chakra-ui/react";
 import { Link as RouterLink } from "@tanstack/react-router";
-import { FadeInImage } from "../FadeInImage";
-import { Summary } from "@/types.ts";
 import { Route as refRoute } from "@/routes/gps-routes/$ref.tsx";
+import { Summary } from "@/types.ts";
+import { FadeInImage } from "../FadeInImage";
 
 type ResultCardProps = {
   hit: Summary;

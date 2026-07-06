@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import {
   AspectRatio,
   Badge,
@@ -9,20 +8,21 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { Md5 } from "ts-md5";
+import { createFileRoute } from "@tanstack/react-router";
 import { Helmet } from "react-helmet";
-import { Result, Summary } from "@/types";
+import { Md5 } from "ts-md5";
+import { Carousel } from "@/components/Carousel.tsx";
+import { GlassPane } from "@/components/GlassPane.tsx";
+import { JsonCodeBlock } from "@/components/JsonCodeBlock";
+import { MapView } from "@/components/map/MapView.tsx";
+import { ResultCard } from "@/components/search/ResultCard.tsx";
+import { getByObjectId } from "@/services/api-backend.ts";
 import {
   fetchGeoJSON,
   GeoJSONCollection,
   SupportedMimeTypes,
 } from "@/services/geojson.ts";
-import { GlassPane } from "@/components/GlassPane.tsx";
-import { Carousel } from "@/components/Carousel.tsx";
-import { MapView } from "@/components/map/MapView.tsx";
-import { getByObjectId } from "@/services/api-backend.ts";
-import { ResultCard } from "@/components/search/ResultCard.tsx";
-import { JsonCodeBlock } from "@/components/JsonCodeBlock";
+import { Result, Summary } from "@/types";
 
 export const Route = createFileRoute("/gps-routes/$ref")({
   loader: async ({ params }) => fetchResult(params.ref),

@@ -1,10 +1,9 @@
-import "./index.css";
-import { createRoot } from "react-dom/client";
-
 import { createRouter, RouterProvider } from "@tanstack/react-router";
-import { routeTree } from "./routeTree.gen";
+import { createRoot } from "react-dom/client";
 import { Backdrop } from "@/components/Backdrop.tsx";
 import { Provider } from "@/components/ui/provider";
+import "./index.css";
+import { routeTree } from "./routeTree.gen";
 
 const router = createRouter({ routeTree });
 

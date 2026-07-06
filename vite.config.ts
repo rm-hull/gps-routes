@@ -1,11 +1,11 @@
-/// <reference types="vitest" />
-import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import { execSync } from "child_process";
 import path from "path";
+import babel from "@rolldown/plugin-babel";
+/// <reference types="vitest" />
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
+import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
-import react from "@vitejs/plugin-react";
-import babel from "@rolldown/plugin-babel";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {

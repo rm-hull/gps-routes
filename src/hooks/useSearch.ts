@@ -1,8 +1,8 @@
 import { atom, useAtom } from "jotai";
-import { useDebouncedCallback } from "use-debounce";
 import { LatLng } from "leaflet";
-import { SearchRequest, SearchResponse } from "@/types";
+import { useDebouncedCallback } from "use-debounce";
 import { search } from "@/services/api-backend";
+import { SearchRequest, SearchResponse } from "@/types";
 
 type Store = {
   request: SearchRequest;

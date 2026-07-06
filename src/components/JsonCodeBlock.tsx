@@ -1,10 +1,9 @@
 import { CodeBlock, Float, IconButton } from "@chakra-ui/react";
-import type { HighlighterGeneric } from "shiki";
 import { createShikiAdapter } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { useColorMode } from "./ui/color-mode";
 
-const shikiAdapter = createShikiAdapter<HighlighterGeneric<any, any>>({
+const shikiAdapter = createShikiAdapter<any>({
   async load() {
     const [
       { createHighlighterCore },

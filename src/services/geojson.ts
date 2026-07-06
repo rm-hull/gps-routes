@@ -1,6 +1,6 @@
-import { Feature, FeatureCollection, LineString } from "geojson";
-import axios from "axios";
 import { gpx, kml } from "@tmcw/togeojson";
+import axios from "axios";
+import { Feature, FeatureCollection, LineString } from "geojson";
 import { latLng, latLngBounds, LatLngBounds } from "leaflet";
 
 export type GeoJSONCollection = FeatureCollection<LineString> | undefined;

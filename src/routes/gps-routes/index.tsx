@@ -1,10 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { AspectRatio } from "@chakra-ui/react";
+import { createFileRoute } from "@tanstack/react-router";
+import { Footer } from "@/components/Footer";
 import { GlassPane } from "@/components/GlassPane";
-import { useGeneralSettings } from "@/hooks/useGeneralSettings";
 import { MapView } from "@/components/map/MapView";
 import { SearchHits } from "@/components/SearchHits";
-import { Footer } from "@/components/Footer";
+import { useGeneralSettings } from "@/hooks/useGeneralSettings";
 
 export const Route = createFileRoute("/gps-routes/")({
   component: Index,

@@ -1,6 +1,6 @@
 import { Tabs, useBreakpointValue } from "@chakra-ui/react";
-import { LuGrid3X3, LuMap } from "react-icons/lu";
 import { useNavigate } from "@tanstack/react-router";
+import { LuGrid3X3, LuMap } from "react-icons/lu";
 import { SearchView, useGeneralSettings } from "@/hooks/useGeneralSettings";
 import { Route as homeRoute } from "@/routes/gps-routes/index";
 

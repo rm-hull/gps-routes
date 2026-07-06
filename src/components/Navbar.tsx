@@ -1,10 +1,10 @@
 import { Box, Link } from "@chakra-ui/react";
 import { Link as RouterLink } from "@tanstack/react-router";
-import { SearchBox } from "./search/SearchBox";
-import { ViewSelector } from "./ViewSelector";
 // @ts-expect-error: not sure why this errors...
 import Logo from "@/assets/logo.svg?react";
 import { Route as homeRoute } from "@/routes/gps-routes/index";
+import { SearchBox } from "./search/SearchBox";
+import { ViewSelector } from "./ViewSelector";
 
 type NavbarProps = {
   opacity?: string;
