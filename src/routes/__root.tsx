@@ -1,6 +1,6 @@
+import { ErrorFallback } from "@rm-hull/chakra-error-fallback";
 import { CatchBoundary, createRootRoute, Outlet } from "@tanstack/react-router";
 import React, { Suspense } from "react";
-import { ErrorFallback } from "@rm-hull/chakra-error-fallback";
 import { Navbar } from "@/components/Navbar";
 
 const TanStackRouterDevtools =

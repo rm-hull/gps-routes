@@ -2,13 +2,13 @@ import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+import perfectionist from "eslint-plugin-perfectionist";
 import tseslint from "typescript-eslint";
-import importConfig from "eslint-plugin-import";
 import pluginRouter from "@tanstack/eslint-plugin-router";
 import reactCompiler from "eslint-plugin-react-compiler";
 
 export default tseslint.config(
-  { ignores: ["dist", ".yarn"] },
+  { ignores: ["dist"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
@@ -21,7 +21,7 @@ export default tseslint.config(
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       "@tanstack/router": pluginRouter,
-      import: importConfig,
+      perfectionist,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -37,17 +37,21 @@ export default tseslint.config(
           ignoreDeclarationSort: true,
         },
       ],
-      "import/order": [
-        1,
+      "perfectionist/sort-imports": [
+        "error",
         {
+          type: "alphabetical",
+          order: "asc",
           groups: [
-            "external",
             "builtin",
+            "external",
             "internal",
-            "sibling",
+            "side-effect",
             "parent",
+            "sibling",
             "index",
           ],
+          "newlinesBetween": 0,
         },
       ],
     },

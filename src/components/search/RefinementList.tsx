@@ -1,7 +1,7 @@
 import { Box, Heading, Link, List, Text } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
-import { Checkbox } from "../ui/checkbox";
 import { useSearch } from "@/hooks/useSearch";
+import { Checkbox } from "../ui/checkbox";
 
 type RefinementListProps = {
   attribute: string;

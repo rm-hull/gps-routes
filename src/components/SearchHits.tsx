@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { ResultCard } from "./search/ResultCard";
 import { useSearch } from "@/hooks/useSearch";
+import { ResultCard } from "./search/ResultCard";
 
 export function SearchHits() {
   const { store, resetBoundingBox } = useSearch();

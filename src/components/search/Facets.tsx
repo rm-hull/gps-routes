@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
-import { RefinementList } from "./RefinementList";
 import { Separator } from "@chakra-ui/react";
+import { RefinementList } from "./RefinementList";
 
 export function Facets() {
   return (

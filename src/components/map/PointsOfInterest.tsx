@@ -2,8 +2,8 @@ import { LeafletEvent } from "leaflet";
 import { useEffect } from "react";
 import { Marker, Popup, useMap, useMapEvents } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
-import { ResultCard } from "../search/ResultCard";
 import { useSearch } from "@/hooks/useSearch";
+import { ResultCard } from "../search/ResultCard";
 
 export function PointsOfInterest() {
   const { boundingBox, store } = useSearch();

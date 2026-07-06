@@ -1,5 +1,3 @@
-import { Facets } from "./search/Facets";
-import { ClearRefinements } from "./search/ClearRefinements";
 import { Stats } from "@/components/search/Stats";
 import {
   DrawerBackdrop,
@@ -12,6 +10,8 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { ClearRefinements } from "./search/ClearRefinements";
+import { Facets } from "./search/Facets";
 
 type SearchDrawerProps = {
   trigger: React.ReactNode;

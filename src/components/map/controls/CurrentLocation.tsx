@@ -2,10 +2,10 @@ import * as L from "leaflet";
 import { useEffect } from "react";
 import { IoMdLocate } from "react-icons/io";
 import { Circle, Marker } from "react-leaflet";
-import { useCurrentLocation } from "../../../hooks/useCurrentLocation";
-import { Control } from "@/components/map/Control";
 import { ControlButton } from "@/components/ControlButton";
+import { Control } from "@/components/map/Control";
 import { useErrorToast } from "@/hooks/useErrorToast";
+import { useCurrentLocation } from "../../../hooks/useCurrentLocation";
 
 function locateIcon(color: string, className?: string): L.DivIcon {
   const svg = `

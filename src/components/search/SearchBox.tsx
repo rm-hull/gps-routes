@@ -1,4 +1,3 @@
-import { ChangeEvent, useEffect, useRef, useState } from "react";
 import {
   Box,
   IconButton,
@@ -6,14 +5,15 @@ import {
   Link,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { LuSearch, LuSettings2 } from "react-icons/lu";
 import { Link as RouterLink, useNavigate } from "@tanstack/react-router";
-import { Stats } from "./Stats";
-import { InputGroup } from "../ui/input-group";
-import { SearchDrawer } from "../SearchDrawer";
-import { Route as settingsRoute } from "@/routes/gps-routes/settings";
-import { Route as homeRoute } from "@/routes/gps-routes/index";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
+import { LuSearch, LuSettings2 } from "react-icons/lu";
 import { useSearch } from "@/hooks/useSearch";
+import { Route as homeRoute } from "@/routes/gps-routes/index";
+import { Route as settingsRoute } from "@/routes/gps-routes/settings";
+import { SearchDrawer } from "../SearchDrawer";
+import { InputGroup } from "../ui/input-group";
+import { Stats } from "./Stats";
 
 export function SearchBox() {
   const { query, refine } = useSearch();

@@ -1,6 +1,6 @@
 import * as L from "leaflet";
-import { CircleMarker, Polyline, Tooltip, useMap } from "react-leaflet";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { CircleMarker, Polyline, Tooltip, useMap } from "react-leaflet";
 import { GeoJSONCollection, getBounds, lineString } from "@/services/geojson";
 import { getPointOnLine } from "@/utils/geometry";
 
