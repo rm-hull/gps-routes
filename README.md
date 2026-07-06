@@ -52,10 +52,10 @@ We welcome contributions! This project is built with a modern React stack and em
     ```
 
 2.  **Install dependencies:**
-    This project uses Yarn 4.
+    This project uses pnpm.
 
     ```bash
-    yarn install
+    pnpm install
     ```
 
 3.  **Configure Environment:**
@@ -68,7 +68,7 @@ We welcome contributions! This project is built with a modern React stack and em
 
 4.  **Run the Development Server:**
     ```bash
-    yarn dev
+    pnpm dev
     ```
     Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
@@ -86,11 +86,11 @@ We welcome contributions! This project is built with a modern React stack and em
 
 | Command        | Description                           |
 | :------------- | :------------------------------------ |
-| `yarn dev`     | Start the development server.         |
-| `yarn build`   | Type-check and build for production.  |
-| `yarn preview` | Preview the production build locally. |
-| `yarn lint`    | Run ESLint to check code quality.     |
-| `yarn test`    | Run unit tests with Vitest.           |
+| `pnpm dev`     | Start the development server.         |
+| `pnpm build`   | Type-check and build for production.  |
+| `pnpm preview` | Preview the production build locally. |
+| `pnpm lint`    | Run ESLint to check code quality.     |
+| `pnpm test`    | Run unit tests with Vitest.           |
 
 ### License
 

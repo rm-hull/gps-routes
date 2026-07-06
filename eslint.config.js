@@ -8,7 +8,7 @@ import pluginRouter from "@tanstack/eslint-plugin-router";
 import reactCompiler from "eslint-plugin-react-compiler";
 
 export default tseslint.config(
-  { ignores: ["dist", ".yarn"] },
+  { ignores: ["dist"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
