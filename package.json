@@ -28,7 +28,7 @@
     "@tmcw/togeojson": "^7.1.2",
     "axios": "^1.19.0",
     "framer-motion": "^13.1.1",
-    "jotai": "^2.20.2",
+    "jotai": "^2.20.3",
     "leaflet": "^1.9.4",
     "leaflet.fullscreen": "4.0.0",
     "maplibre-gl": "^6.5.0",
