@@ -1,9 +1,13 @@
+import { setWorkerUrl } from "maplibre-gl";
+import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { createRoot } from "react-dom/client";
 import { Backdrop } from "@/components/Backdrop.tsx";
 import { Provider } from "@/components/ui/provider";
 import "./index.css";
 import { routeTree } from "./routeTree.gen";
+
+setWorkerUrl(workerUrl);
 
 const router = createRouter({ routeTree });
 
