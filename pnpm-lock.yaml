@@ -182,8 +182,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0(leaflet@1.9.4)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@rm-hull/chakra-error-fallback':
-        specifier: ^0.1.4
-        version: 0.1.4(@chakra-ui/react@3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: ^0.1.6
+        version: 0.1.6(@chakra-ui/react@3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@rm-hull/use-local-storage':
         specifier: ^0.3.4
         version: 0.3.4(@babel/core@8.0.5)(@babel/template@8.0.0)(@types/react@19.3.0)(react@19.3.0)
@@ -1403,8 +1403,8 @@ packages:
       react: ^19.0.0
       react-dom: ^19.0.0
 
-  '@rm-hull/chakra-error-fallback@0.1.4':
-    resolution: {integrity: sha512-VP0S13QCxuzoHaV17O0aBL1vIfk1jvjzbheZzw5GVSBPR3D+zZmGDCttP4fmuXgPyT4C4lhSd/9LWgSL124mQg==}
+  '@rm-hull/chakra-error-fallback@0.1.6':
+    resolution: {integrity: sha512-tqG6MSSbNvLSqsCo5ZhWOSe1RRrgxZEuVlR2EhMogfAuzZjOyXHEwlp3dLqWbuj/B5poSw+zmyCiJSQKSUBfbQ==}
     peerDependencies:
       '@chakra-ui/react': '>=3.28.0'
       react: '>=19.0.0'
@@ -5645,7 +5645,7 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@rm-hull/chakra-error-fallback@0.1.4(@chakra-ui/react@3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@rm-hull/chakra-error-fallback@0.1.6(@chakra-ui/react@3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       '@chakra-ui/react': 3.37.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       next-themes: 0.4.6(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
