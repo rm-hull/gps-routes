@@ -62,7 +62,7 @@ function DetailPage() {
           property="og:description"
           content={truncateText(result.description)}
         />
-        <meta property="og:image" content={result.headline_image_url} />
+        <meta property="og:image" content={result.headline_image_url ?? undefined} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={window.location.href} />
@@ -71,7 +71,7 @@ function DetailPage() {
           name="twitter:description"
           content={truncateText(result.description)}
         />
-        <meta name="twitter:image" content={result.headline_image_url} />
+        <meta name="twitter:image" content={result.headline_image_url ?? undefined} />
       </Helmet>
       <Box
         display="flex"
@@ -150,7 +150,7 @@ function DetailPage() {
                   loading="lazy"
                   id="video"
                   allowFullScreen
-                  src={result.video_url}
+                  src={result.video_url ?? undefined}
                   allow="fullscreen"
                 ></iframe>
               </AspectRatio>

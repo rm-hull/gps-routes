@@ -24,20 +24,34 @@ export type Summary = {
   _geoloc: GeoLoc;
 };
 
-export interface Result extends Summary {
+export type Result = {
+  objectID: string;
+  ref: string;
+  title: string;
+  description: string;
+  headline_image_url?: string | null;
+  distance_km: number;
+  _geoloc: GeoLoc;
   created_at: string;
-  video_url?: string;
+  video_url?: string | null;
   gpx_url?: string;
-  country?: string;
-  state?: string;
-  county?: string;
-  region?: string;
-  district?: string;
-  postcode?: string;
-  display_address?: string;
+  country?: string | null;
+  state?: string | null;
+  county?: string | null;
+  region?: string | null;
+  district?: string | null;
+  postcode?: string | null;
+  display_address?: string | null;
   nearby?: Summary[];
   images?: Image[];
   details?: Detail[];
+  estimated_duration?: string | null;
+  difficulty?: string | null;
+  terrain?: string[] | null;
+  points_of_interest?: string[] | null;
+  facilities?: string[] | null;
+  route_type?: string | null;
+  activities?: string[] | null;
 }
 
 export type SearchRequest = {
@@ -59,4 +73,22 @@ export type SearchResponse = {
   hits: Summary[];
   total: number;
   facets?: Record<string, Record<string, number>>;
+  attribution?: string[];
+  offset: number;
+  limit: number;
+  hasMore: boolean;
+  nextOffset?: number;
+};
+
+export type RefData = {
+  facets?: Record<string, Record<string, number>>;
+  attribution?: string[];
+};
+
+export type ErrorResponse = {
+  error: {
+    code: string;
+    message: string;
+    field?: string;
+  };
 };
