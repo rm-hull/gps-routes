@@ -4,9 +4,12 @@ import {
   MapContainer,
   ScaleControl,
   TileLayer,
+  useMap,
 } from "react-leaflet";
 import { FullscreenControl } from "react-leaflet-fullscreen";
-import { GeoJSONCollection, getBounds } from "@/services/geojson";
+import { useEffect } from "react";
+import { GeoJSONCollection, getBounds, getBoundsFromHits } from "@/services/geojson";
+import { useSearch } from "@/hooks/useSearch";
 import "leaflet/dist/leaflet.css";
 import "react-leaflet-fullscreen/styles.css";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
@@ -20,6 +23,21 @@ import { Route } from "./Route";
 type MapViewProps = {
   route?: GeoJSONCollection;
 };
+
+function FitSearchBounds() {
+  const map = useMap();
+  const { query, store } = useSearch();
+  const hits = store.response?.hits;
+
+  useEffect(() => {
+    const bounds = getBoundsFromHits(hits);
+    if (bounds !== undefined) {
+      map.flyToBounds(bounds, { padding: [50, 50] });
+    }
+  }, [map, query]);
+
+  return null;
+}
 
 // Remove the _getIconUrl property from the prototype of L.Icon.Default
 delete (L.Icon.Default.prototype as { _getIconUrl?: unknown })._getIconUrl;
@@ -110,6 +128,7 @@ export function MapView({ route }: MapViewProps) {
       {/* <Ruler /> */}
       <ResizeFix />
 
+      <FitSearchBounds />
       <PointsOfInterest />
       <Route data={route} />
     </MapContainer>

@@ -2,6 +2,7 @@ import { gpx, kml } from "@tmcw/togeojson";
 import axios from "axios";
 import { Feature, FeatureCollection, LineString } from "geojson";
 import { latLng, latLngBounds, LatLngBounds } from "leaflet";
+import { Summary } from "@/types";
 
 export type GeoJSONCollection = FeatureCollection<LineString> | undefined;
 
@@ -41,5 +42,16 @@ export const getBounds = (
       feat.geometry.coordinates.map(([lng, lat]) => latLng(lat, lng))
     );
 
+  return latLngBounds(coords);
+};
+
+export const getBoundsFromHits = (
+  hits: Summary[] | undefined
+): LatLngBounds | undefined => {
+  if (hits === undefined || hits.length === 0) {
+    return undefined;
+  }
+
+  const coords = hits.map((hit) => latLng(hit._geoloc.lat, hit._geoloc.lng));
   return latLngBounds(coords);
 };
