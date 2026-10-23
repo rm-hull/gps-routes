@@ -27,7 +27,7 @@ export type Summary = {
   title: string;
   description: string;
   headline_image_url?: string;
-  distance_km: number;
+  distance_km?: number;
   _geoloc: GeoLoc;
 };
 
@@ -37,7 +37,7 @@ export type Result = {
   title: string;
   description: string;
   headline_image_url?: string | null;
-  distance_km: number;
+  distance_km?: number;
   _geoloc: GeoLoc;
   created_at: string;
   video_url?: string | null;

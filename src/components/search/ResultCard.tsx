@@ -25,9 +25,11 @@ export function ResultCard({ hit, shadow = true }: ResultCardProps) {
             alt={hit.title}
             height={60}
           />
-          <Badge colorPalette="blue" position="absolute" top={1} right={1}>
-            {hit.distance_km} km
-          </Badge>
+          {hit.distance_km != null && (
+            <Badge colorPalette="blue" position="absolute" top={1} right={1}>
+              {hit.distance_km} km
+            </Badge>
+          )}
           <Card.Body padding={2}>
             <Card.Title truncate>{hit.title}</Card.Title>
             <Card.Description lineClamp={3}>{hit.description}</Card.Description>

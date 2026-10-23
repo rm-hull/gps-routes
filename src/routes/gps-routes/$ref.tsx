@@ -81,7 +81,8 @@ function DetailPage() {
       >
         <Box spaceY={2}>
           <Heading size="lg">
-            {result.title} ({result.distance_km} km)
+            {result.title}
+            {result.distance_km != null && ` (${result.distance_km} km)`}
           </Heading>
           <Text
             textStyle="xs"
