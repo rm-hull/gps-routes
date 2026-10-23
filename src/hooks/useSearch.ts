@@ -104,12 +104,12 @@ export function useSearch() {
         ...store.request,
         offset: 0,
         limit: 100,
-        boundingBox: [
-          bbox.southWest.lng,
-          bbox.southWest.lat,
-          bbox.northEast.lng,
-          bbox.northEast.lat,
-        ],
+        boundingBox: {
+          minLat: bbox.southWest.lat,
+          minLng: bbox.southWest.lng,
+          maxLat: bbox.northEast.lat,
+          maxLng: bbox.northEast.lng,
+        },
       }),
     300
   );
