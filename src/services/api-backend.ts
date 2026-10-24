@@ -7,6 +7,11 @@ export async function getByObjectId(objectId: string): Promise<Result> {
   const response = await fetch(`${BASE_URL}/v1/gps-routes/${objectId}`, {
     headers: { "X-API-Key": API_KEY },
   });
+
+  if (!response.ok) {
+    const body = await response.json().catch(() => null);
+    throw new Error(body?.message || `${response.status} ${response.statusText}`);
+  }
   return (await response.json()) as Result;
 }
 
@@ -27,5 +32,10 @@ export async function search(criteria: SearchRequest): Promise<SearchResponse> {
     },
     body: JSON.stringify(criteria),
   });
+
+  if (!response.ok) {
+    const body = await response.json().catch(() => null);
+    throw new Error(body?.message || `${response.status} ${response.statusText}`);
+  }
   return (await response.json()) as SearchResponse;
 }
