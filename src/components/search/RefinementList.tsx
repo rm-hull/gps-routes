@@ -10,20 +10,12 @@ type RefinementListProps = {
   header?: string;
 };
 
-export function RefinementList({
-  attribute,
-  showMore = false,
-  showMoreLimit = 10,
-  header,
-}: RefinementListProps) {
+export function RefinementList({ attribute, showMore = false, showMoreLimit = 10, header }: RefinementListProps) {
   const { store, addFacetValue, removeFacetValue } = useSearch();
   const [expanded, setExpanded] = useState(false);
 
   const availableValues = useMemo(
-    () =>
-      Object.entries(store?.response?.facets?.[attribute] || []).toSorted(
-        byDescendingValue
-      ),
+    () => Object.entries(store?.response?.facets?.[attribute] || []).toSorted(byDescendingValue),
     [store?.response?.facets, attribute]
   );
 
@@ -35,49 +27,42 @@ export function RefinementList({
 
   const handleShowMore = () => setExpanded((prev) => !prev);
 
-  const handleCheckChanged =
-    (value: string) => (details: { checked: string | boolean }) => {
-      const fn = details.checked ? addFacetValue : removeFacetValue;
-      fn(attribute, value);
-    };
+  const handleCheckChanged = (value: string) => (details: { checked: string | boolean }) => {
+    const fn = details.checked ? addFacetValue : removeFacetValue;
+    fn(attribute, value);
+  };
 
   return (
     <Box>
       {header && <Heading size="sm">{header}</Heading>}
       <List.Root listStyleType="none">
-        {availableValues
-          .slice(0, expanded ? undefined : showMoreLimit)
-          .map(([value, count]) => (
-            <List.Item
-              key={value}
-              display="flex"
-              flexDirection="row"
-              justifyContent="space-between"
-              alignContent="center"
-              gap={2}
-              paddingLeft={2}
+        {availableValues.slice(0, expanded ? undefined : showMoreLimit).map(([value, count]) => (
+          <List.Item
+            key={value}
+            display="flex"
+            flexDirection="row"
+            justifyContent="space-between"
+            alignContent="center"
+            gap={2}
+            paddingLeft={2}
+          >
+            <Checkbox
+              name={attribute}
+              value={value}
+              checked={selectedValues.has(value)}
+              onCheckedChange={handleCheckChanged(value)}
+              variant="subtle"
+              size="sm"
+              cursor="pointer"
+              truncate
             >
-              <Checkbox
-                name={attribute}
-                value={value}
-                checked={selectedValues.has(value)}
-                onCheckedChange={handleCheckChanged(value)}
-                variant="subtle"
-                size="sm"
-                cursor="pointer"
-                truncate
-              >
-                {value}
-              </Checkbox>
-              <Text
-                fontSize="xs"
-                colorPalette="blue"
-                color="fg"
-              >
-                {count}
-              </Text>
-            </List.Item>
-          ))}
+              {value}
+            </Checkbox>
+            <Text fontSize="xs" colorPalette="blue" color="fg">
+              {count}
+            </Text>
+          </List.Item>
+        ))}
       </List.Root>
       {showMore && availableValues.length > showMoreLimit && (
         <Link fontSize="xs" colorPalette="blue" onClick={handleShowMore}>

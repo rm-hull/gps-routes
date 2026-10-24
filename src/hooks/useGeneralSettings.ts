@@ -13,9 +13,7 @@ type UseGeneralSettingsReturnType = {
 };
 
 export function useGeneralSettings(): UseGeneralSettingsReturnType {
-  const { value, setValue, isLoading } = useLocalStorage<GeneralSettings>(
-    "gps-routes.general-settings"
-  );
+  const { value, setValue, isLoading } = useLocalStorage<GeneralSettings>("gps-routes.general-settings");
   return {
     settings: value,
     updateSettings: setValue,

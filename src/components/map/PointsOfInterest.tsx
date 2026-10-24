@@ -28,11 +28,7 @@ export function PointsOfInterest() {
   useMapEvents({ zoom: onViewChange, dragend: onViewChange });
 
   return (
-    <MarkerClusterGroup
-      chunkedLoading
-      showCoverageOnHover={false}
-      removeOutsideVisibleBounds
-    >
+    <MarkerClusterGroup chunkedLoading showCoverageOnHover={false} removeOutsideVisibleBounds>
       {store.response?.hits?.map((item) => (
         <Marker key={item.objectID} position={item._geoloc}>
           <Popup closeButton={false} maxWidth={400}>

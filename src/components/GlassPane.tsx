@@ -6,11 +6,7 @@ type GlassPaneProps = {
   gap?: number;
 };
 
-export function GlassPane({
-  children,
-  gap,
-  opacity = "30%",
-}: PropsWithChildren<GlassPaneProps>) {
+export function GlassPane({ children, gap, opacity = "30%" }: PropsWithChildren<GlassPaneProps>) {
   return (
     <Card.Root
       flex={1}

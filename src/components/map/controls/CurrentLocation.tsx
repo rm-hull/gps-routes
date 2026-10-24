@@ -50,10 +50,7 @@ export function CurrentLocation({ active }: CurrentLocationProps) {
           />
           <Marker
             position={location.position}
-            icon={locateIcon(
-              `rgba(240,0,0,${locationIsActive ? 0.6 : 0.3})`,
-              locationIsActive ? "pulse" : "",
-            )}
+            icon={locateIcon(`rgba(240,0,0,${locationIsActive ? 0.6 : 0.3})`, locationIsActive ? "pulse" : "")}
           >
             {/* <NearestInfo
               latLng={location.position}
@@ -65,10 +62,7 @@ export function CurrentLocation({ active }: CurrentLocationProps) {
         </>
       )}
       <Control prepend position="topright">
-        <ControlButton
-          onClick={activate}
-          color={location.active ? "rgba(240,0,0,0.6)" : undefined}
-        >
+        <ControlButton onClick={activate} color={location.active ? "rgba(240,0,0,0.6)" : undefined}>
           <IoMdLocate />
         </ControlButton>
       </Control>

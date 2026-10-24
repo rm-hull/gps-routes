@@ -1,10 +1,4 @@
-import {
-  Box,
-  IconButton,
-  Input,
-  Link,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, IconButton, Input, Link, useBreakpointValue } from "@chakra-ui/react";
 import { Link as RouterLink, useNavigate } from "@tanstack/react-router";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { LuSearch, LuSettings2 } from "react-icons/lu";
@@ -46,13 +40,7 @@ export function SearchBox() {
           {desktopMode && <Stats />}
           <Link asChild>
             <RouterLink to={settingsRoute.to}>
-              <IconButton
-                aria-label="Settings"
-                size="xs"
-                rounded="full"
-                variant="subtle"
-                colorPalette="blue"
-              >
+              <IconButton aria-label="Settings" size="xs" rounded="full" variant="subtle" colorPalette="blue">
                 <LuSettings2 />
               </IconButton>
             </RouterLink>

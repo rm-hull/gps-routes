@@ -8,15 +8,7 @@ import holtCountryPark from "@/assets/backgrounds/holt-country-park.webp";
 import regentsCanal from "@/assets/backgrounds/regents-canal.webp";
 import stoneRings from "@/assets/backgrounds/stone-rings.webp";
 
-const backgrounds = [
-  stoneRings,
-  burnBridge,
-  burnhamDeepdale,
-  holtCountryPark,
-  garden,
-  regentsCanal,
-  harrogateRingway,
-];
+const backgrounds = [stoneRings, burnBridge, burnhamDeepdale, holtCountryPark, garden, regentsCanal, harrogateRingway];
 const rnd = Math.floor(Math.random() * backgrounds.length);
 
 export function Backdrop({ children }: PropsWithChildren) {

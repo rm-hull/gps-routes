@@ -1,13 +1,4 @@
-import {
-  AspectRatio,
-  Badge,
-  Box,
-  Group,
-  Heading,
-  Tabs,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { AspectRatio, Badge, Box, Group, Heading, Tabs, Text, useBreakpointValue } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Helmet } from "react-helmet";
 import { Md5 } from "ts-md5";
@@ -17,11 +8,7 @@ import { JsonCodeBlock } from "@/components/JsonCodeBlock";
 import { MapView } from "@/components/map/MapView.tsx";
 import { ResultCard } from "@/components/search/ResultCard.tsx";
 import { getByObjectId } from "@/services/api-backend.ts";
-import {
-  fetchGeoJSON,
-  GeoJSONCollection,
-  SupportedMimeTypes,
-} from "@/services/geojson.ts";
+import { fetchGeoJSON, GeoJSONCollection, SupportedMimeTypes } from "@/services/geojson.ts";
 import { Result, Summary } from "@/types";
 
 export const Route = createFileRoute("/gps-routes/$ref")({
@@ -58,38 +45,22 @@ function DetailPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={window.location.href} />
         <meta property="og:title" content={result.title} />
-        <meta
-          property="og:description"
-          content={truncateText(result.description)}
-        />
+        <meta property="og:description" content={truncateText(result.description)} />
         <meta property="og:image" content={result.headline_image_url ?? undefined} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={window.location.href} />
         <meta name="twitter:title" content={result.title} />
-        <meta
-          name="twitter:description"
-          content={truncateText(result.description)}
-        />
+        <meta name="twitter:description" content={truncateText(result.description)} />
         <meta name="twitter:image" content={result.headline_image_url ?? undefined} />
       </Helmet>
-      <Box
-        display="flex"
-        flexDirection={desktopMode ? "row" : "column"}
-        alignItems="start"
-        gap={4}
-      >
+      <Box display="flex" flexDirection={desktopMode ? "row" : "column"} alignItems="start" gap={4}>
         <Box spaceY={2}>
           <Heading size="lg">
             {result.title}
             {result.distance_km != null && ` (${result.distance_km} km)`}
           </Heading>
-          <Text
-            textStyle="xs"
-            fontWeight="semibold"
-            textTransform="uppercase"
-            color="gray.fg"
-          >
+          <Text textStyle="xs" fontWeight="semibold" textTransform="uppercase" color="gray.fg">
             {result.display_address}
           </Text>
 
@@ -102,28 +73,19 @@ function DetailPage() {
             </Box>
           ))}
           <Group flexWrap="wrap">
-            {[
-              result.district,
-              result.region,
-              result.county,
-              result.state,
-              result.country,
-            ].map(
+            {[result.district, result.region, result.county, result.state, result.country].map(
               (value) =>
                 value && (
                   <Badge key={value} colorPalette="blue">
                     {value}
                   </Badge>
-                ),
+                )
             )}
           </Group>
         </Box>
 
         <Box width={desktopMode ? "60vw" : "full"} position="sticky" top={6}>
-          <Tabs.Root
-            defaultValue="route"
-            width={desktopMode ? "50vw" : undefined}
-          >
+          <Tabs.Root defaultValue="route" width={desktopMode ? "50vw" : undefined}>
             <Tabs.List>
               <Tabs.Trigger value="images" disabled={!result.images}>
                 Images
@@ -183,13 +145,7 @@ function NearbySection({ nearby }: NearbySectionProps) {
   }
 
   return (
-    <Box
-      display="grid"
-      gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))"
-      gap={6}
-      justifyItems="center"
-      mx={4}
-    >
+    <Box display="grid" gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))" gap={6} justifyItems="center" mx={4}>
       {nearby.toSorted(byTitle).map((summary) => (
         <ResultCard key={summary.objectID} hit={summary} />
       ))}
@@ -197,9 +153,7 @@ function NearbySection({ nearby }: NearbySectionProps) {
   );
 }
 
-async function fetchResult(
-  ref: string,
-): Promise<[Result, GeoJSONCollection, Error | undefined]> {
+async function fetchResult(ref: string): Promise<[Result, GeoJSONCollection, Error | undefined]> {
   const objectID = Md5.hashStr(ref);
   const result = await getByObjectId(objectID);
 

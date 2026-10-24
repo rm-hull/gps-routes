@@ -11,43 +11,31 @@ export enum SupportedMimeTypes {
   KML = "application/vnd.google-earth.kml+xml",
 }
 
-export const fetchGeoJSON = async (
-  url: string | undefined,
-  type: SupportedMimeTypes
-): Promise<GeoJSONCollection> => {
+export const fetchGeoJSON = async (url: string | undefined, type: SupportedMimeTypes): Promise<GeoJSONCollection> => {
   if (url === undefined) {
     return undefined;
   }
 
   const resp = await axios.get(url);
   const dom = new DOMParser().parseFromString(resp.data, "text/xml");
-  return (
-    type === "application/gpx+xml" ? gpx(dom) : kml(dom)
-  ) as GeoJSONCollection;
+  return (type === "application/gpx+xml" ? gpx(dom) : kml(dom)) as GeoJSONCollection;
 };
 
-export const lineString = (feat: Feature): boolean =>
-  feat.geometry.type === "LineString";
+export const lineString = (feat: Feature): boolean => feat.geometry.type === "LineString";
 
-export const getBounds = (
-  data: GeoJSONCollection
-): LatLngBounds | undefined => {
+export const getBounds = (data: GeoJSONCollection): LatLngBounds | undefined => {
   if (data === undefined) {
     return undefined;
   }
 
   const coords = data.features
     .filter(lineString)
-    .flatMap((feat) =>
-      feat.geometry.coordinates.map(([lng, lat]) => latLng(lat, lng))
-    );
+    .flatMap((feat) => feat.geometry.coordinates.map(([lng, lat]) => latLng(lat, lng)));
 
   return latLngBounds(coords);
 };
 
-export const getBoundsFromHits = (
-  hits: Summary[] | undefined
-): LatLngBounds | undefined => {
+export const getBoundsFromHits = (hits: Summary[] | undefined): LatLngBounds | undefined => {
   if (hits === undefined || hits.length === 0) {
     return undefined;
   }

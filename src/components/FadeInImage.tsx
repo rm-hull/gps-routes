@@ -69,14 +69,7 @@ export function FadeInImage({ src, alt, height, ...rest }: ImageProps) {
   }, [retryCount]);
 
   return (
-    <Box
-      ref={containerRef}
-      position="relative"
-      w="full"
-      h={height}
-      overflow="hidden"
-      {...rest}
-    >
+    <Box ref={containerRef} position="relative" w="full" h={height} overflow="hidden" {...rest}>
       <Center position="absolute" top="0" left="0" w="100%" h="100%">
         {placeholder()}
       </Center>

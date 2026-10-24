@@ -1,10 +1,7 @@
 import * as L from "leaflet";
 import { GeoJSONCollection, lineString } from "@/services/geojson";
 
-export function getPointOnLine(
-  data: GeoJSONCollection,
-  event: L.LeafletMouseEvent
-): L.LatLng | undefined {
+export function getPointOnLine(data: GeoJSONCollection, event: L.LeafletMouseEvent): L.LatLng | undefined {
   if (data === undefined) {
     return undefined;
   }

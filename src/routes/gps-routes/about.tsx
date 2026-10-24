@@ -31,8 +31,7 @@ function About() {
           </Link>
         </Text>
         <Text>
-          Build info: <Code>{import.meta.env.VITE_GIT_COMMIT_HASH}</Code>,{" "}
-          {import.meta.env.VITE_GIT_COMMIT_DATE}
+          Build info: <Code>{import.meta.env.VITE_GIT_COMMIT_HASH}</Code>, {import.meta.env.VITE_GIT_COMMIT_DATE}
         </Text>
 
         <License />

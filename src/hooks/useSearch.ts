@@ -56,10 +56,7 @@ export function useSearch() {
     }
   };
 
-  const refine = useDebouncedCallback(
-    async (query) => refetch({ ...INIT_REQUEST, query: query.trim() }),
-    300
-  );
+  const refine = useDebouncedCallback(async (query) => refetch({ ...INIT_REQUEST, query: query.trim() }), 300);
 
   const goto = async (offset: number) => refetch({ ...store.request, offset });
 

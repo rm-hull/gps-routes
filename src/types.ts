@@ -59,7 +59,7 @@ export type Result = {
   facilities?: string[] | null;
   route_type?: string | null;
   activities?: string[] | null;
-}
+};
 
 export type SortField = "distance_km" | "difficulty" | "estimated_duration" | "title" | "relevance";
 export type SortDirection = "ASC" | "DESC";

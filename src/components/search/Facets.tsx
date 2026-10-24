@@ -14,11 +14,7 @@ export function Facets() {
       <RefinementList header="Terrain" attribute="terrain" showMore />
       <RefinementList header="Activities" attribute="activities" showMore />
       <RefinementList header="Facilities" attribute="facilities" showMore />
-      <RefinementList
-        header="Points of Interest"
-        attribute="points_of_interest"
-        showMore
-      />
+      <RefinementList header="Points of Interest" attribute="points_of_interest" showMore />
       <Separator variant="dashed" />
       <RefinementList header="Country" attribute="country" />
       <RefinementList header="State" attribute="state" />

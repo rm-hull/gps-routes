@@ -16,13 +16,7 @@ export function SearchHits() {
   }
 
   return (
-    <Box
-      display="grid"
-      gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))"
-      gap={6}
-      justifyItems="center"
-      mx={4}
-    >
+    <Box display="grid" gridTemplateColumns="repeat(auto-fit, minmax(320px, 1fr))" gap={6} justifyItems="center" mx={4}>
       {store?.response?.hits?.map((summary) => (
         <ResultCard key={summary.objectID} hit={summary} />
       ))}

@@ -11,9 +11,7 @@ type RouteProps = {
 export function Route({ data }: RouteProps) {
   const timeoutHandle = useRef<number>(0);
   const map = useMap();
-  const [hoverPosition, setHoverPosition] = useState<L.LatLng | undefined>(
-    undefined
-  );
+  const [hoverPosition, setHoverPosition] = useState<L.LatLng | undefined>(undefined);
 
   useEffect(() => {
     const bounds = getBounds(data);
@@ -46,9 +44,7 @@ export function Route({ data }: RouteProps) {
           opacity={0.6}
           weight={5}
           lineJoin="round"
-          positions={
-            feat.geometry.coordinates.map(([lng, lat]) => [lat, lng]) ?? []
-          }
+          positions={feat.geometry.coordinates.map(([lng, lat]) => [lat, lng]) ?? []}
           eventHandlers={{
             mousemove: handleMouseMove,
             mouseout: handleMouseOut,
@@ -56,14 +52,7 @@ export function Route({ data }: RouteProps) {
         />
       ))}
       {hoverPosition?.alt && (
-        <CircleMarker
-          center={hoverPosition}
-          color="purple"
-          fill
-          fillColor="purple"
-          opacity={0.6}
-          radius={8}
-        >
+        <CircleMarker center={hoverPosition} color="purple" fill fillColor="purple" opacity={0.6} radius={8}>
           <Tooltip permanent direction="right" offset={[10, 0]}>
             Alt: {hoverPosition.alt.toFixed(0)} m
           </Tooltip>

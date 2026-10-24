@@ -1,10 +1,4 @@
-import {
-  AspectRatio,
-  Carousel as ChakraCarousel,
-  Em,
-  IconButton,
-  Text,
-} from "@chakra-ui/react";
+import { AspectRatio, Carousel as ChakraCarousel, Em, IconButton, Text } from "@chakra-ui/react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { type Image as ImageType } from "@/types";
 import { FadeInImage } from "./FadeInImage";

@@ -5,19 +5,14 @@ import { useColorMode } from "./ui/color-mode";
 
 const shikiAdapter = createShikiAdapter<any>({
   async load() {
-    const [
-      { createHighlighterCore },
-      { createJavaScriptRegexEngine },
-      langJson,
-      themeLight,
-      themeDark,
-    ] = await Promise.all([
-      import("@shikijs/core"),
-      import("@shikijs/engine-javascript"),
-      import("@shikijs/langs/json"),
-      import("@shikijs/themes/github-light"),
-      import("@shikijs/themes/github-dark"),
-    ]);
+    const [{ createHighlighterCore }, { createJavaScriptRegexEngine }, langJson, themeLight, themeDark] =
+      await Promise.all([
+        import("@shikijs/core"),
+        import("@shikijs/engine-javascript"),
+        import("@shikijs/langs/json"),
+        import("@shikijs/themes/github-light"),
+        import("@shikijs/themes/github-dark"),
+      ]);
 
     return createHighlighterCore({
       langs: [langJson.default],
@@ -30,7 +25,6 @@ const shikiAdapter = createShikiAdapter<any>({
     dark: "github-dark",
   },
 });
-
 
 type JsonCodeBlockProps = {
   data: object;

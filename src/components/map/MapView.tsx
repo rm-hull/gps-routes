@@ -1,11 +1,5 @@
 import L from "leaflet";
-import {
-  LayersControl,
-  MapContainer,
-  ScaleControl,
-  TileLayer,
-  useMap,
-} from "react-leaflet";
+import { LayersControl, MapContainer, ScaleControl, TileLayer, useMap } from "react-leaflet";
 import { FullscreenControl } from "react-leaflet-fullscreen";
 import { useEffect } from "react";
 import { GeoJSONCollection, getBounds, getBoundsFromHits } from "@/services/geojson";
@@ -42,8 +36,7 @@ function FitSearchBounds() {
 // Remove the _getIconUrl property from the prototype of L.Icon.Default
 delete (L.Icon.Default.prototype as { _getIconUrl?: unknown })._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
 });
@@ -91,11 +84,7 @@ export function MapView({ route }: MapViewProps) {
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="OpenTopoMap">
-          <TileLayer
-            url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
-            maxZoom={15}
-            maxNativeZoom={15}
-          />
+          <TileLayer url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png" maxZoom={15} maxNativeZoom={15} />
         </LayersControl.BaseLayer>
         {/* <LayersControl.BaseLayer name="Stadia Alidade Smooth Dark">
           <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" />

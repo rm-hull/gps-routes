@@ -1,7 +1,4 @@
-import {
-  createLayerComponent,
-  LeafletContextInterface,
-} from "@react-leaflet/core";
+import { createLayerComponent, LeafletContextInterface } from "@react-leaflet/core";
 import L from "leaflet";
 import "@maplibre/maplibre-gl-leaflet";
 
@@ -12,14 +9,11 @@ type MapGLTileLayerProps = {
   attribution?: string;
 };
 
-const createMaplibreLayer = (
-  props: MapGLTileLayerProps,
-  context: LeafletContextInterface,
-) => {
+const createMaplibreLayer = (props: MapGLTileLayerProps, context: LeafletContextInterface) => {
   const MaplibreFactory = (L as any).maplibreGL;
   if (!MaplibreFactory) {
     // plugin not loaded — fall back to an empty LayerGroup so react-leaflet keeps working
-     
+
     console.warn("maplibre-gl-leaflet plugin not available on L");
     return { instance: new L.LayerGroup(), context };
   }
@@ -33,11 +27,7 @@ const createMaplibreLayer = (
   return { instance, context };
 };
 
-const updateMaplibreLayer = (
-  layer: L.Layer,
-  props: MapGLTileLayerProps,
-  prevProps: MapGLTileLayerProps,
-) => {
+const updateMaplibreLayer = (layer: L.Layer, props: MapGLTileLayerProps, prevProps: MapGLTileLayerProps) => {
   if (props.url !== prevProps.url) {
     if (typeof (layer as any).setStyle === "function") {
       try {
@@ -63,9 +53,6 @@ const updateMaplibreLayer = (
   }
 };
 
-const MapGLTileLayer = createLayerComponent<L.Layer, MapGLTileLayerProps>(
-  createMaplibreLayer,
-  updateMaplibreLayer,
-);
+const MapGLTileLayer = createLayerComponent<L.Layer, MapGLTileLayerProps>(createMaplibreLayer, updateMaplibreLayer);
 
 export default MapGLTileLayer;

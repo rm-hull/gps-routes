@@ -13,18 +13,8 @@ export function ResultCard({ hit, shadow = true }: ResultCardProps) {
   return (
     <Link asChild outlineOffset={0}>
       <RouterLink to={refRoute.to} params={{ ref: hit.ref }}>
-        <Card.Root
-          width="xs"
-          overflow="hidden"
-          border={0}
-          outline={0}
-          shadow={shadow ? "md" : "none"}
-        >
-          <FadeInImage
-            src={hit.headline_image_url}
-            alt={hit.title}
-            height={60}
-          />
+        <Card.Root width="xs" overflow="hidden" border={0} outline={0} shadow={shadow ? "md" : "none"}>
+          <FadeInImage src={hit.headline_image_url} alt={hit.title} height={60} />
           {hit.distance_km != null && (
             <Badge colorPalette="blue" position="absolute" top={1} right={1}>
               {hit.distance_km} km
