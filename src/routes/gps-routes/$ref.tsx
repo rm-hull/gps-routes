@@ -88,7 +88,7 @@ function DetailPage() {
             textStyle="xs"
             fontWeight="semibold"
             textTransform="uppercase"
-            color="var(--chakra-colors-gray-fg)"
+            color="gray.fg"
           >
             {result.display_address}
           </Text>

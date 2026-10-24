@@ -8,8 +8,8 @@ export function Stats() {
   }
 
   return (
-    <Text color="var(--chakra-colors-fg-muted)">
-      {plural(store.response.total, "result")} in {store.transitTime}ms
+    <Text color="fg.muted">
+      {plural(store.response.total ?? 0, "result")} in {store.transitTime}ms
     </Text>
   );
 }

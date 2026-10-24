@@ -25,7 +25,7 @@ export function SearchDrawer({ trigger }: SearchDrawerProps) {
       <DrawerContent
         placeContent="flex-start"
         backdropFilter={"blur(10px)"}
-        color="var(--chakra-colors-color-palette-fg)"
+        color="fg"
         background="color-mix(in srgb, var(--chakra-colors-bg-panel) 60%, transparent)"
       >
         <DrawerHeader>

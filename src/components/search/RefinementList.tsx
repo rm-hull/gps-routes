@@ -72,7 +72,7 @@ export function RefinementList({
               <Text
                 fontSize="xs"
                 colorPalette="blue"
-                color="var(--chakra-colors-color-palette-fg)"
+                color="fg"
               >
                 {count}
               </Text>
