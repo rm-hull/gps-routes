@@ -23,6 +23,6 @@ minimumReleaseAgeExclude:
   - vitest@4.1.10
 permissions:
   '@tanstack/router-core':
-    skills: true
+    skills: false
   '@tanstack/router-plugin':
-    skills: true
+    skills: false
