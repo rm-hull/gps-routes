@@ -1,5 +1,4 @@
 allowBuilds:
-  es5-ext: set this to true or false
   esbuild: false
 minimumReleaseAgeExclude:
   - '@typescript-eslint/eslint-plugin@8.63.0'
@@ -22,3 +21,8 @@ minimumReleaseAgeExclude:
   - '@vitest/utils@4.1.10'
   - typescript-eslint@8.63.0
   - vitest@4.1.10
+permissions:
+  '@tanstack/router-core':
+    skills: true
+  '@tanstack/router-plugin':
+    skills: true
