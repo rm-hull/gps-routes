@@ -5,6 +5,7 @@ import { GlassPane } from "@/components/GlassPane";
 import { MapView } from "@/components/map/MapView";
 import { SearchHits } from "@/components/SearchHits";
 import { useGeneralSettings } from "@/hooks/useGeneralSettings";
+import { useRef } from "react";
 
 export const Route = createFileRoute("/gps-routes/")({
   component: Index,
@@ -12,6 +13,11 @@ export const Route = createFileRoute("/gps-routes/")({
 
 function Index() {
   const { settings } = useGeneralSettings();
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollToTop = () => {
+    scrollRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   if (settings?.searchView === "map") {
     return (
@@ -23,10 +29,10 @@ function Index() {
 
   return (
     <>
-      <GlassPane gap={2}>
+      <GlassPane gap={2} onSetScrollContainer={(el) => (scrollRef.current = el)}>
         <SearchHits />
       </GlassPane>
-      <Footer />
+      <Footer scrollToTop={scrollToTop} />
     </>
   );
 }

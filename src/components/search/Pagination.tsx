@@ -8,7 +8,11 @@ import {
 } from "@/components/ui/pagination";
 import { useSearch } from "@/hooks/useSearch";
 
-export function Pagination() {
+type PaginationProps = {
+  scrollToTop?: () => void;
+};
+
+export function Pagination({ scrollToTop }: PaginationProps) {
   const { store, goto } = useSearch();
 
   const page = Math.floor(store?.request?.offset / store?.request?.limit) + 1;
@@ -20,7 +24,10 @@ export function Pagination() {
       count={store?.response?.total || 0}
       pageSize={store?.request?.limit}
       page={page}
-      onPageChange={(e) => goto((e.page - 1) * store?.request?.limit)}
+      onPageChange={(e) => {
+        scrollToTop?.();
+        goto((e.page - 1) * store?.request?.limit);
+      }}
     >
       <HStack>
         <PaginationPrevTrigger />

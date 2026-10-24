@@ -4,9 +4,10 @@ import { SortControl } from "./search/SortControl";
 
 type NavbarProps = {
   opacity?: string;
+  scrollToTop?: () => void;
 };
 
-export function Footer({ opacity = "40%" }: NavbarProps) {
+export function Footer({ opacity = "40%", scrollToTop }: NavbarProps) {
   return (
     <Box
       display="flex"
@@ -20,7 +21,7 @@ export function Footer({ opacity = "40%" }: NavbarProps) {
       <Container>
         <Flex alignItems="center">
           <Box flex="1" display="flex" justifyContent="center">
-            <Pagination />
+            <Pagination scrollToTop={scrollToTop} />
           </Box>
           <SortControl />
         </Flex>
