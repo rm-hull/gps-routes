@@ -2,7 +2,7 @@ import { atom, useAtom } from "jotai";
 import { LatLng } from "leaflet";
 import { useDebouncedCallback } from "use-debounce";
 import { search } from "@/services/api-backend";
-import { SearchRequest, SearchResponse } from "@/types";
+import { SearchRequest, SearchResponse, SortField, SortDirection } from "@/types";
 
 type Store = {
   request: SearchRequest;
@@ -124,6 +124,11 @@ export function useSearch() {
     10
   );
 
+  const setSort = async (field: SortField, direction: SortDirection) =>
+    refetch({ ...store.request, sort: { field, direction }, offset: 0 });
+
+  const sort = store.request?.sort || store.response?.sort;
+
   return {
     query: store.request?.query,
     refine,
@@ -133,6 +138,8 @@ export function useSearch() {
     goto,
     boundingBox,
     resetBoundingBox,
+    setSort,
+    sort,
     store, // FIXME: for debugging only
   };
 }

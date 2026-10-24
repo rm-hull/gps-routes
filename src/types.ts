@@ -61,6 +61,14 @@ export type Result = {
   activities?: string[] | null;
 }
 
+export type SortField = "distance_km" | "difficulty" | "estimated_duration" | "title" | "relevance";
+export type SortDirection = "ASC" | "DESC";
+
+export type Sort = {
+  field: SortField;
+  direction: SortDirection;
+};
+
 export type SearchRequest = {
   query: string;
   offset: number;
@@ -74,6 +82,7 @@ export type SearchRequest = {
   facets?: Record<string, string[] | undefined>;
   truncateText?: boolean;
   skipFacets?: boolean;
+  sort?: Sort;
 };
 
 export type SearchResponse = {
@@ -86,6 +95,7 @@ export type SearchResponse = {
   limit: number;
   hasMore: boolean;
   nextOffset?: number;
+  sort?: Sort;
 };
 
 export type RefData = {
