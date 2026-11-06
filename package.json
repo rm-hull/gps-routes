@@ -14,7 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.37.0",
+    "@chakra-ui/react": "^3.38.0",
     "@emotion/is-prop-valid": "^1.4.0",
     "@emotion/react": "^11.14.0",
     "@maplibre/maplibre-gl-leaflet": "^0.1.4",
@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@babel/core": "^8.0.7",
-    "@chakra-ui/cli": "^3.37.0",
+    "@chakra-ui/cli": "^3.38.0",
     "@eslint/js": "^10.0.1",
     "@rolldown/plugin-babel": "^0.2.4",
     "@svgr/webpack": "^8.1.0",
