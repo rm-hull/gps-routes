@@ -10,9 +10,10 @@ const SORT_FIELD_LABELS: Record<SortField, string> = {
   estimated_duration: "Duration",
   title: "Title",
   relevance: "Relevance",
+  random: "Random",
 };
 
-const SORT_FIELDS: SortField[] = ["distance_km", "difficulty", "estimated_duration", "title", "relevance"];
+const SORT_FIELDS: SortField[] = ["distance_km", "difficulty", "estimated_duration", "title", "relevance", "random"];
 
 const sortFieldCollection = createListCollection({
   items: SORT_FIELDS.map((f) => ({ label: SORT_FIELD_LABELS[f], value: f })),
@@ -57,8 +58,9 @@ export function SortControl() {
       <Tooltip content={direction === "ASC" ? "Ascending" : "Descending"}>
         <IconButton
           size="xs"
-          variant="ghost"
+          variant={field === "random" ? "plain" : "ghost"}
           aria-label={direction === "ASC" ? "Sort descending" : "Sort ascending"}
+          disabled={field === "random"}
           onClick={() => setSort(field, direction === "ASC" ? "DESC" : "ASC")}
         >
           {direction === "ASC" ? <LuArrowUpAZ /> : <LuArrowDownAZ />}

@@ -61,7 +61,7 @@ export type Result = {
   activities?: string[] | null;
 };
 
-export type SortField = "distance_km" | "difficulty" | "estimated_duration" | "title" | "relevance";
+export type SortField = "distance_km" | "difficulty" | "estimated_duration" | "title" | "relevance" | "random";
 export type SortDirection = "ASC" | "DESC";
 
 export type Sort = {

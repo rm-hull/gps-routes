@@ -44,7 +44,7 @@ export function Route({ data }: RouteProps) {
           opacity={0.6}
           weight={5}
           lineJoin="round"
-          positions={feat.geometry.coordinates.map(([lng, lat]) => [lat, lng]) ?? []}
+          positions={feat.geometry.coordinates.map(([lng, lat]) => [lat, lng] as L.LatLngExpression) ?? []}
           eventHandlers={{
             mousemove: handleMouseMove,
             mouseout: handleMouseOut,
