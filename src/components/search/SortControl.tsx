@@ -13,10 +13,8 @@ const SORT_FIELD_LABELS: Record<SortField, string> = {
   random: "Random",
 };
 
-const SORT_FIELDS: SortField[] = ["distance_km", "difficulty", "estimated_duration", "title", "relevance", "random"];
-
 const sortFieldCollection = createListCollection({
-  items: SORT_FIELDS.map((f) => ({ label: SORT_FIELD_LABELS[f], value: f })),
+  items: Object.entries(SORT_FIELD_LABELS).map(([value, label]) => ({ label, value })),
 });
 
 export function SortControl() {
