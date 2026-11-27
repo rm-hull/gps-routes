@@ -177,25 +177,25 @@ importers:
     dependencies:
       '@chakra-ui/react':
         specifier: ^3.38.0
-        version: 3.38.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        version: 3.38.0(@emotion/react@11.14.0(@types/react@19.3.1)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@emotion/is-prop-valid':
         specifier: ^1.4.0
         version: 1.4.0
       '@emotion/react':
         specifier: ^11.14.0
-        version: 11.14.0(@types/react@19.3.0)(react@19.3.1)
+        version: 11.14.0(@types/react@19.3.1)(react@19.3.1)
       '@maplibre/maplibre-gl-leaflet':
         specifier: ^0.1.4
-        version: 0.1.4(@types/leaflet@1.9.22)(leaflet@1.9.4)(maplibre-gl@6.19.0(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))
+        version: 0.1.4(@types/leaflet@1.9.22)(leaflet@1.9.4)(maplibre-gl@6.19.0(@types/react@19.3.1)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))
       '@react-leaflet/core':
         specifier: ^3.0.0
         version: 3.0.0(leaflet@1.9.4)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@rm-hull/chakra-error-fallback':
         specifier: ^0.1.6
-        version: 0.1.6(@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        version: 0.1.6(@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.1)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@rm-hull/use-local-storage':
         specifier: ^0.3.4
-        version: 0.3.4(@babel/core@8.1.2)(@babel/template@8.1.2)(@types/react@19.3.0)(react@19.3.1)
+        version: 0.3.4(@babel/core@8.1.2)(@babel/template@8.1.2)(@types/react@19.3.1)(react@19.3.1)
       '@shikijs/core':
         specifier: 4.6.0
         version: 4.6.0
@@ -222,7 +222,7 @@ importers:
         version: 14.14.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       jotai:
         specifier: ^3.0.2
-        version: 3.0.2(@types/react@19.3.0)(react@19.3.1)
+        version: 3.0.2(@types/react@19.3.1)(react@19.3.1)
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
@@ -231,7 +231,7 @@ importers:
         version: 4.0.0
       maplibre-gl:
         specifier: ^6.19.0
-        version: 6.19.0(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
+        version: 6.19.0(@types/react@19.3.1)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
@@ -274,7 +274,7 @@ importers:
         version: 8.1.2
       '@chakra-ui/cli':
         specifier: ^3.38.0
-        version: 3.38.0(@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
+        version: 3.38.0(@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.1)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.15.0(jiti@2.7.0))
@@ -315,11 +315,11 @@ importers:
         specifier: ^26.6.6
         version: 26.6.6
       '@types/react':
-        specifier: ^19.3.0
-        version: 19.3.0
+        specifier: ^19.3.1
+        version: 19.3.1
       '@types/react-dom':
         specifier: ^19.3.0
-        version: 19.3.0(@types/react@19.3.0)
+        version: 19.3.0(@types/react@19.3.1)
       '@types/react-helmet':
         specifier: ^6.1.11
         version: 6.1.11
@@ -1884,8 +1884,8 @@ packages:
   '@types/react-helmet@6.1.11':
     resolution: {integrity: sha512-0QcdGLddTERotCXo3VFlUSWO3ztraw8nZ6e3zJSgG7apwV5xt+pJUS8ewPBqT4NYB1optGLprNQzFleIY84u/g==}
 
-  '@types/react@19.3.0':
-    resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
+  '@types/react@19.3.1':
+    resolution: {integrity: sha512-HNTkBIm8zmHX8LUXX2vtZ/ONzehrV1J3abl2fUIiZ5qxTYRCj/z+rDeFwOltqCLl9lRdUTKWT41OLtYuFV/Arg==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -5358,12 +5358,12 @@ snapshots:
       hashery: 1.5.1
       keyv: 5.6.0
 
-  '@chakra-ui/cli@3.38.0(@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1))':
+  '@chakra-ui/cli@3.38.0(@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.1)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1))':
     dependencies:
       '@babel/core': 7.29.13
       '@babel/parser': 7.29.14
       '@babel/plugin-transform-typescript': 7.29.9(@babel/core@7.29.13)
-      '@chakra-ui/react': 3.38.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@chakra-ui/react': 3.38.0(@emotion/react@11.14.0(@types/react@19.3.1)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@clack/prompts': 1.5.1
       '@pandacss/is-valid-prop': 1.11.1
       '@types/babel__core': 7.20.5
@@ -5388,11 +5388,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.1)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
       '@ark-ui/react': 5.40.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@emotion/is-prop-valid': 1.4.0
-      '@emotion/react': 11.14.0(@types/react@19.3.0)(react@19.3.1)
+      '@emotion/react': 11.14.0(@types/react@19.3.1)(react@19.3.1)
       '@emotion/serialize': 1.3.3
       '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.3.1)
       '@emotion/utils': 1.4.2
@@ -5463,7 +5463,7 @@ snapshots:
 
   '@emotion/memoize@0.9.0': {}
 
-  '@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1)':
+  '@emotion/react@11.14.0(@types/react@19.3.1)(react@19.3.1)':
     dependencies:
       '@babel/runtime': 7.29.10
       '@emotion/babel-plugin': 11.13.5
@@ -5475,7 +5475,7 @@ snapshots:
       hoist-non-react-statics: 3.3.2
       react: 19.3.1
     optionalDependencies:
-      '@types/react': 19.3.0
+      '@types/react': 19.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -5698,11 +5698,11 @@ snapshots:
     dependencies:
       kdbush: 4.1.0
 
-  '@maplibre/maplibre-gl-leaflet@0.1.4(@types/leaflet@1.9.22)(leaflet@1.9.4)(maplibre-gl@6.19.0(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))':
+  '@maplibre/maplibre-gl-leaflet@0.1.4(@types/leaflet@1.9.22)(leaflet@1.9.4)(maplibre-gl@6.19.0(@types/react@19.3.1)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))':
     dependencies:
       '@types/leaflet': 1.9.22
       leaflet: 1.9.4
-      maplibre-gl: 6.19.0(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
+      maplibre-gl: 6.19.0(@types/react@19.3.1)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
 
   '@maplibre/maplibre-gl-style-spec@26.8.0':
     dependencies:
@@ -5756,9 +5756,9 @@ snapshots:
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@rm-hull/chakra-error-fallback@0.1.6(@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@rm-hull/chakra-error-fallback@0.1.6(@chakra-ui/react@3.38.0(@emotion/react@11.14.0(@types/react@19.3.1)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@chakra-ui/react': 3.38.0(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@chakra-ui/react': 3.38.0(@emotion/react@11.14.0(@types/react@19.3.1)(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       next-themes: 0.4.6(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
@@ -5766,9 +5766,9 @@ snapshots:
       shiki: 4.6.0
       source-map-js: 1.2.3
 
-  '@rm-hull/use-local-storage@0.3.4(@babel/core@8.1.2)(@babel/template@8.1.2)(@types/react@19.3.0)(react@19.3.1)':
+  '@rm-hull/use-local-storage@0.3.4(@babel/core@8.1.2)(@babel/template@8.1.2)(@types/react@19.3.1)(react@19.3.1)':
     dependencies:
-      jotai: 2.20.3(@babel/core@8.1.2)(@babel/template@8.1.2)(@types/react@19.3.0)(react@19.3.1)
+      jotai: 2.20.3(@babel/core@8.1.2)(@babel/template@8.1.2)(@types/react@19.3.1)(react@19.3.1)
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
     transitivePeerDependencies:
@@ -6183,15 +6183,15 @@ snapshots:
 
   '@types/parse-json@4.0.2': {}
 
-  '@types/react-dom@19.3.0(@types/react@19.3.0)':
+  '@types/react-dom@19.3.0(@types/react@19.3.1)':
     dependencies:
-      '@types/react': 19.3.0
+      '@types/react': 19.3.1
 
   '@types/react-helmet@6.1.11':
     dependencies:
-      '@types/react': 19.3.0
+      '@types/react': 19.3.1
 
-  '@types/react@19.3.0':
+  '@types/react@19.3.1':
     dependencies:
       csstype: 3.2.4
 
@@ -8057,16 +8057,16 @@ snapshots:
 
   jiti@2.7.0: {}
 
-  jotai@2.20.3(@babel/core@8.1.2)(@babel/template@8.1.2)(@types/react@19.3.0)(react@19.3.1):
+  jotai@2.20.3(@babel/core@8.1.2)(@babel/template@8.1.2)(@types/react@19.3.1)(react@19.3.1):
     optionalDependencies:
       '@babel/core': 8.1.2
       '@babel/template': 8.1.2
-      '@types/react': 19.3.0
+      '@types/react': 19.3.1
       react: 19.3.1
 
-  jotai@3.0.2(@types/react@19.3.0)(react@19.3.1):
+  jotai@3.0.2(@types/react@19.3.1)(react@19.3.1):
     optionalDependencies:
-      '@types/react': 19.3.0
+      '@types/react': 19.3.1
       react: 19.3.1
 
   js-tokens@10.0.0: {}
@@ -8199,7 +8199,7 @@ snapshots:
       '@babel/types': 7.29.14
       source-map-js: 1.2.3
 
-  maplibre-gl@6.19.0(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)):
+  maplibre-gl@6.19.0(@types/react@19.3.1)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)):
     dependencies:
       '@mapbox/point-geometry': 1.1.0
       '@mapbox/tiny-sdf': 2.3.0
@@ -8219,7 +8219,7 @@ snapshots:
       potpack: 2.1.0
       quickselect: 3.0.0
       tinyqueue: 3.0.0
-      zustand: 5.1.0(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
+      zustand: 5.1.0(@types/react@19.3.1)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     transitivePeerDependencies:
       - '@types/react'
       - immer
@@ -9154,9 +9154,9 @@ snapshots:
 
   zod@4.6.7: {}
 
-  zustand@5.1.0(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)):
+  zustand@5.1.0(@types/react@19.3.1)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)):
     optionalDependencies:
-      '@types/react': 19.3.0
+      '@types/react': 19.3.1
       react: 19.3.1
       use-sync-external-store: 1.7.0(react@19.3.1)
 
