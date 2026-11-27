@@ -53,7 +53,7 @@
     "@rolldown/plugin-babel": "^0.3.1",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/eslint-plugin-router": "^1.162.0",
-    "@tanstack/react-router-devtools": "^1.167.3",
+    "@tanstack/react-router-devtools": "^1.167.4",
     "@tanstack/router-cli": "^1.168.0",
     "@tanstack/router-core": "^1.171.39",
     "@tanstack/router-plugin": "^1.169.0",
